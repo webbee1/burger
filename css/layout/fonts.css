@@ -1,11 +1,10 @@
 
 @font-face {
     font-family:'gagalinregular';
-    src: url('../fonts/gagalin-regular-webfont.woff') format('woff2'),
+    src: url('../fonts/gagalin-regular-webfont.woff2') format('woff2'),
          url('../fonts/gagalin-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
 
@@ -17,7 +16,6 @@
          url('../fonts/lifehack_medium-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
 
@@ -29,7 +27,6 @@
          url('../fonts/gagalin-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
 
@@ -41,7 +38,6 @@
          url('../fonts/ubuntu-light-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
 
@@ -53,7 +49,6 @@
          url('../fonts/ubuntu-medium-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
 
@@ -65,5 +60,4 @@
          url('../fonts/ubuntu-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
