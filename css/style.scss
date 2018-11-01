@@ -1,3 +1,154 @@
-body{
-  background:#161616;
+$yellow:#f9b43b;
+$orange: #eb8c38;
+$black: #2f3234;
+$tomato:#e45028;
+$white: #fff;
+
+.about {
+
+  background: #000 url(../images/section_1/2x/video-bg@2x.png) 0 0 no-repeat;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.about:before{
+  content:'';
+  position: absolute;
+  background:url(../images/section_1/2x/texture@2x.png) 0 0 no-repeat;
+background-size:cover;
+  width:100%;
+  height:650px;
+ 
+
+}
+
+.section {
+  height: 100%;
+  min-height: 650px;
+  border: 1px solid green;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  height: 100%;
+  padding: 10px 0;
+
+}
+
+.logo {
+  display: block;
+  width: 92px;
+  height: 69px;
+}
+
+.logo__img {
+  max-width: 100%;
+  min-height: 100%;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 756px;
+}
+
+.nav__link {
+  color: $white;
+  font-size: 13px;
+  font-family: 'ubuntu';
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 2.31;
+  margin-right: 15px;
+}
+
+.nav__item {
+  align-items: center;
+  display: inline-block;
+  margin-right: 15px;
+
+  &:after {
+    display: inline-block;
+    content: '';
+    vertical-align: middle;
+    background-color: $white;
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+
+  }
+
+}
+
+.nav__item:last-child {
+  margin-right: 0;
+
+  &:after {
+    display: none;
+  }
+}
+
+.nav__list {
+  display: flex;
+
+}
+
+.nav__item {
+  display: inline-flex;
+  margin-right: 17px;
+}
+
+.order__button {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.order__button {
+  background-color: $tomato;
+  width: 100px;
+  height: 35px;
+  border-radius: 5px;
+  color: $white;
+}
+
+.promo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.promo__content {
+  display: flex;
+  align-items: center;
+}
+
+.promo__img {
+  width: 420px;
+  height: 425px;
+}
+
+.promo__title {
+  font-family: 'gagalin';
+  text-transform: uppercase;
+  line-height: 85px;
+  font-size: 72px;
+  color: $yellow;
+
+}
+
+.promo__desc {
+  font-family: 'lifehack';
+  text-transform: lowercase;
+  line-height: 60px;
+  font-weight: 500;
+  font-size: 72px;
+  color: $white;
 }
