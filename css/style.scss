@@ -1,6 +1,7 @@
 $yellow:#f9b43b;
 $orange: #eb8c38;
 $black: #2f3234;
+$grey: rgba(47, 50, 52, 0.8);
 $dark:#000;
 $tomato:#e45028;
 $white: #fff;
@@ -21,17 +22,20 @@ $white: #fff;
   height: 100%;
 
 }
+
 /*section*/
 .section {
-  min-height: 100vh;
+  height: 100%;
+  min-height: 650px;
   position: relative;
-  display:flex;
+  display: flex;
+  justify-content: center;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 
-  justify-content:center;
-  background-size:cover;
-  background-position:center center;
-  background-repeat:no-repeat;
 }
+
 /*header */
 .header {
   display: flex;
@@ -42,6 +46,7 @@ $white: #fff;
   padding: 10px 0;
 
 }
+
 /* logo*/
 .logo {
   display: block;
@@ -108,6 +113,7 @@ $white: #fff;
   display: inline-flex;
   margin-right: 17px;
 }
+
 /* *button*/
 .order__button {
   display: flex;
@@ -122,6 +128,7 @@ $white: #fff;
   border-radius: 5px;
   color: $white;
 }
+
 /*promo */
 .promo {
   position: absolute;
@@ -180,7 +187,7 @@ $white: #fff;
   position: absolute;
   left: 50%;
   transform: translate(-50%);
-  bottom: 95px;
+  bottom: 37px;
 }
 
 .arrow__scroll {
@@ -233,64 +240,67 @@ $white: #fff;
 }
 
 /*products*/
-.section__title{
-  font-family:'gagalin';
-  font-weight:400;
-  font-size:72px;
-  display:flex;
-margin-bottom:14px;
+.section__title {
+  font-family: 'gagalin';
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 0.89;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 60px;
 }
 
-.products{
-  background-image:url(../images/section_2/@2x/bg@2x.png);
-  color:$black;
+.products {
+  background-image: url(../images/section_2/@2x/bg@2x.png);
+  color: $black;
 }
 
-.products__item{
-  width:33%;
-  
- 
-  overflow:hidden;
-}
-.products__list{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  
+.products__item {
+  width: 33%;
+  overflow: hidden;
+  margin-bottom: 20px;
 }
 
-.products__desc{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  padding:5px;
- 
-  
+.products__list {
+  display: flex;
+  justify-content: space-around;
 }
-.products__icon{
-  width:90px;
-  height:90px;
-  display:flex;
+
+.products__desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 5px;
+}
+
+.products__icon {
+  width: 90px;
+  height: 90px;
+  display: flex;
   align-content: flex-start;
-  margin-bottom:35px;
-}
-.products__info{
-text-align:center;
+  margin: auto;
 }
 
-.products__title{
-  font-family: 'lifehackmedium';
-  font-weight:500;
-  font-size: 24px;
-  line-height:28px;
-  align-content: baseline;
-  font-weight:500;
-  margin-bottom:22px;
+.products__info {
+  text-align: center;
 }
-.product__subtitle{
-  font-family: 'ubuntumedium';
-  opacity:.8;
-  font-size:14px;
-  font-weight:300;
-  line-height:1.71;
+
+.products__title {
+  font-family: 'lifehackmedium';
+  font-weight: 500;
+  font-size: 24px;
+
+  padding: 5px 0;
+
+}
+
+.products__subtitle {
+  font-family: 'ubuntulight';
+  color: $grey;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+  margin-bottom: 65px;
 }

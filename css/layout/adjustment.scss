@@ -1,27 +1,30 @@
 html,
-body{
+body {
   width: 100%;
-  height:100%;
+  height: 100%;
 }
+
 $yellow:#f9b43b;
 $orange: #eb8c38;
 $black: #2f3234;
 $tomato:#e45028;
 $white: #fff;
 
-body{
+body {
   font-family: 'ubuntu';
-  font-weight:300;
-  color:$white;
+  font-weight: 300;
+  color: $white;
   background-color: $white;
-  font-size:14px;
-  line-height:1.42;
+  font-size: 14px;
+  line-height: 1.42;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-*, *:before, *:after{
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
@@ -47,11 +50,13 @@ h6 {
   margin: 0;
   font-weight: normal;
 }
-button{
-  border:none;
-  background:transparent;
-  cursor:pointer;
+
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -69,14 +74,15 @@ table {
   display: block;
   height: 60px;
 }
+
 .container {
   max-width: 960px;
-  display:flex;
+  display: flex;
   position: relative;
-  flex-direction:column;
-  align-items:center;
-  justify-content:flex-start;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
   margin: auto;
   padding: 0 10px;
-  
+
 }
