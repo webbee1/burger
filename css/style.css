@@ -1,3 +1,4 @@
+/* about*/
 .about {
   background: #000 url(../images/section_1/2x/video-bg@2x.png) 0 0 no-repeat;
   background-size: cover;
@@ -13,10 +14,22 @@
   height: 100%;
 }
 
+/*section*/
 .section {
   min-height: 100vh;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
+/*header */
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -33,6 +46,7 @@
   padding: 10px 0;
 }
 
+/* logo*/
 .logo {
   display: block;
   width: 92px;
@@ -44,6 +58,7 @@
   min-height: 100%;
 }
 
+/*nav*/
 .nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -110,6 +125,7 @@
   margin-right: 17px;
 }
 
+/* *button*/
 .order__button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -130,6 +146,7 @@
   color: #fff;
 }
 
+/*promo */
 .promo {
   position: absolute;
   top: 40%;
@@ -187,6 +204,11 @@
   text-align: left;
 }
 
+.promo__left {
+  margin-right: 22px;
+}
+
+/*arrow*/
 .arrow {
   position: absolute;
   left: 50%;
@@ -201,10 +223,7 @@
   margin: auto;
 }
 
-.promo__left {
-  margin-right: 22px;
-}
-
+/*sidescroll*/
 .sidescroll {
   position: fixed;
   display: block;
@@ -243,5 +262,86 @@
   height: 16px;
   border: 2px solid #fff;
   border-radius: 100%;
+}
+
+/*products*/
+.section__title {
+  font-family: 'gagalin';
+  font-weight: 400;
+  font-size: 72px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 14px;
+}
+
+.products {
+  background-image: url(../images/section_2/@2x/bg@2x.png);
+  color: #2f3234;
+}
+
+.products__item {
+  width: 33%;
+  overflow: hidden;
+}
+
+.products__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.products__desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px;
+}
+
+.products__icon {
+  width: 90px;
+  height: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  margin-bottom: 35px;
+}
+
+.products__info {
+  text-align: center;
+}
+
+.products__title {
+  font-family: 'lifehackmedium';
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  -ms-flex-line-pack: baseline;
+      align-content: baseline;
+  font-weight: 500;
+  margin-bottom: 22px;
+}
+
+.product__subtitle {
+  font-family: 'ubuntumedium';
+  opacity: .8;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.71;
 }
 /*# sourceMappingURL=style.css.map */
