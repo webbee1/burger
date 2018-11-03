@@ -15,8 +15,8 @@
   background: url(../images/section_2/@2x/bg@2x.png);
   background-size: cover;
   background-repeat: no-repeat;
-  color: $black;
   height: 100vh;
+  color:$charcoal;
 }
 
 .products__item {
@@ -58,7 +58,7 @@
 }
 
 .products__subtitle {
-  font-family: 'ubuntu';
+  font-family:'ubuntu';
   color: $grey;
   font-size: 14px;
   font-weight: 300;

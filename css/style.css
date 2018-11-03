@@ -757,8 +757,8 @@ table {
   background: url(../images/section_2/@2x/bg@2x.png);
   background-size: cover;
   background-repeat: no-repeat;
-  color: #2f3234;
   height: 100vh;
+  color: #2f3234;
 }
 
 .products__item {
