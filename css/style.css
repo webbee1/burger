@@ -805,14 +805,14 @@ table {
 }
 
 .products__title {
-  font-family: 'lifehackmedium';
+  font-family: 'lifehack';
   font-weight: 500;
   font-size: 24px;
   padding: 5px 0;
 }
 
 .products__subtitle {
-  font-family: 'ubuntulight';
+  font-family: 'ubuntu';
   color: rgba(47, 50, 52, 0.8);
   font-size: 14px;
   font-weight: 300;
