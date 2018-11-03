@@ -10,22 +10,22 @@ $white: #fff;
 /* layout*/
 
 
-@import "_misk/normalize.scss";
-@import "_misk/fonts.scss";
-@import "_misk/adjustment.scss";
+@import "./_misk/normalize.scss";
+@import "./_misk/fonts.scss";
+@import "./_misk/adjustment.scss";
 
 
 
 
-@import "blocks/btn.scss";
-@import "blocks/about.scss";
-@import "blocks/section.scss";
-@import "blocks/header.scss";
-@import "blocks/nav.scss";
-@import "blocks/promo.scss";
-@import "blocks/logo.scss";
-@import "blocks/arrow.scss";
-@import "blocks/sidescroll.scss";
-@import "blocks/products.scss";
+@import "./blocks/btn.scss";
+@import "./blocks/about.scss";
+@import "./blocks/section.scss";
+@import "./blocks/header.scss";
+@import "./blocks/nav.scss";
+@import "./blocks/promo.scss";
+@import "./blocks/logo.scss";
+@import "./blocks/arrow.scss";
+@import "./blocks/sidescroll.scss";
+@import "./blocks/products.scss";
 
 
