@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,SAAS;AACT,AAAA,MAAM,CAAC;EACL,QAAQ,EAAE,QAAQ;EAClB,IAAI,EAAE,GAAG;EACT,SAAS,EAAE,eAAe;EAC1B,MAAM,EAAE,IAAI;CACb;;AAED,AAAA,cAAc,CAAC;EACb,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,MAAM,EAAE,IAAI;CACb",
+    "sources": [
+        "arrow.scss"
+    ],
+    "names": [],
+    "file": "arrow.css"
+}

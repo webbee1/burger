@@ -1,0 +1,15 @@
+/*arrow*/
+.arrow {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  bottom: 37px;
+}
+
+.arrow__scroll {
+  width: 30px;
+  height: 15px;
+  margin: auto;
+}
+/*# sourceMappingURL=arrow.css.map */

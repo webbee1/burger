@@ -1,0 +1,12 @@
+/* logo*/
+.logo {
+  display: block;
+  width: 92px;
+  height: 69px;
+}
+
+.logo__img {
+  max-width: 100%;
+  min-height: 100%;
+}
+/*# sourceMappingURL=logo.css.map */
