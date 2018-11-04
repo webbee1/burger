@@ -1,12 +1,5 @@
 //colors
-$yellow:#f9b43b;
-$orange: #eb8c38;
-$charcoal: #2f3234;
-$grey: rgba(47, 50, 52, 0.8);
-$dark:#000;
-$tomato:#e45028;
-$white: #fff;
-$black: rgba(20, 20, 20, 0.7);
+
 
 /* layout*/
 
@@ -14,6 +7,7 @@ $black: rgba(20, 20, 20, 0.7);
 @import "./_misk/normalize.scss";
 @import "./_misk/fonts.scss";
 @import "./_misk/adjustment.scss";
+@import "./_misk/color.scss";
 
 
 

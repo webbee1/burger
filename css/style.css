@@ -491,6 +491,7 @@ table {
 
 .btn--black {
   background-color: rgba(20, 20, 20, 0.7);
+  padding: 12px 17px;
 }
 
 .about {
