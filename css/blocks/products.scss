@@ -17,13 +17,15 @@
   background-repeat: no-repeat;
   height: 100vh;
   color:$charcoal;
+
+  &__item {
+    width: 33%;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
 }
 
-.products__item {
-  width: 33%;
-  overflow: hidden;
-  margin-bottom: 20px;
-}
+
 
 .products__list {
   display: flex;

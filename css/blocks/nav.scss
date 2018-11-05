@@ -45,9 +45,11 @@
 
 .nav__list {
   display: flex;
+
+  &__item {
+    display: inline-flex;
+    margin-right: 17px;
+  }
+  
 }
 
-.nav__item {
-  display: inline-flex;
-  margin-right: 17px;
-}

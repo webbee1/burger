@@ -4,10 +4,11 @@
   left: 50%;
   transform: translate(-50%);
   bottom: 37px;
+  &__scroll {
+    width: 30px;
+    height: 15px;
+    margin: auto;
+  }
+  
 }
 
-.arrow__scroll {
-  width: 30px;
-  height: 15px;
-  margin: auto;
-}
