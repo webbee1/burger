@@ -1,0 +1,9 @@
+.slider {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#f9b43b), color-stop(48%, #eb8c38), color-stop(74%, #f9b43b));
+  background-image: linear-gradient(to top, #f9b43b, #eb8c38 48%, #f9b43b 74%);
+  /* display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;*/
+}
+/*# sourceMappingURL=slider.css.map */

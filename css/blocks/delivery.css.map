@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,SAAS,CAAA;EACP,gBAAgB,EAAE,yCAAyC;CAC5D",
+    "sources": [
+        "delivery.scss"
+    ],
+    "names": [],
+    "file": "delivery.css"
+}

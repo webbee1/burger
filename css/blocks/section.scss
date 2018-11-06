@@ -9,3 +9,19 @@
   background-repeat: no-repeat;
 
 }
+
+.section__title {
+  font-family: 'gagalin';
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 0.89;
+  display: flex;
+ /* justify-content: center;*/
+  /*width: 100%;
+  height: 100%;*/
+  margin-bottom: 60px;
+}
+
+.section__title--orange{
+  color:$orange;
+}

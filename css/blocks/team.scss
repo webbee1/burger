@@ -1,0 +1,24 @@
+.team{
+  position: relative;
+  background: url(../../images/section_4/SBS_1255-X2@2x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.team__desc{
+  width:50%;
+  top:0;
+  right:0;
+  bottom:0;
+  position: absolute;
+  background-color:$black;
+  display:flex;
+  flex-direction:column;
+
+  
+}
+.team__container{
+ height: 650px;
+ padding:60px;
+ 
+}
