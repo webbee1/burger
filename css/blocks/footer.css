@@ -1,8 +1,33 @@
 .footer {
   height: 60px;
+  margin-top: -60px;
   min-width: 100%;
+  position: absolute;
   background: url("../../images/section_7/chalkboard_texture.jpg");
   background-size: cover;
-  margin-top: -60px;
+}
+
+.footer__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.footer__info {
+  width: 50%;
+  font-family: 'ubuntubold';
+  font-size: 14px;
+}
+
+.footer__socials {
+  width: 50%;
 }
 /*# sourceMappingURL=footer.css.map */

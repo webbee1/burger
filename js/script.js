@@ -9,14 +9,14 @@
         
         var coords =[
             [59.98,30.29], 
-            [59.87, 30.45], 
-            [59.92, 30.51], 
+            [59.94, 30.36], 
+            [59.92, 30.49], 
             [59.90, 30.31]
         ];
     
         var myCollection = new ymaps.GeoObjectCollection({}, {
           iconLayout: 'default#image',
-          iconImageHref: '../images/icons/map-marker.svg',
+          iconImageHref: 'images/icons/map-marker.svg',
           iconImageSize: [46, 57]       
       });
 

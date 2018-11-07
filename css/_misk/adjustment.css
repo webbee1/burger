@@ -64,12 +64,6 @@ table {
   overflow: hidden;
 }
 
-.wrapper:after {
-  content: "";
-  display: block;
-  height: 60px;
-}
-
 .container {
   max-width: 960px;
   display: -webkit-box;

@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,MAAM,CAAA;EACJ,gBAAgB,EAAC,mEAAmE;CACrF",
+    "mappings": "AAAA,AAAA,MAAM,CAAA;EACJ,gBAAgB,EAAC,gEAAgE;CAClF",
     "sources": [
         "carte.scss"
     ],
