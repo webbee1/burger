@@ -1,3 +1,12 @@
-.delivery{
+.delivery {
   background-image: url("../images/section_7/form-bg.jpg");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &form {
+    color: $white;
+    font-family: 'ubuntu';
+    font-size: 14px;
+  }
 }

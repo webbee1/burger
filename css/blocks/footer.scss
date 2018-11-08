@@ -1,7 +1,8 @@
 .footer {
 	height: 60px;
 	margin-top: -60px;
-	min-width: 100%;
+	width: 100%;
+	overflow: hidden;
 	position: absolute;
 	background: url("../images/section_7/chalkboard_texture.jpg");
 	background-size: cover;
@@ -9,25 +10,27 @@
 	&__wrap {
 		display: flex;
 		justify-content: space-between;
-
 		align-items: center;
-		height: 100%;
 		max-width: 90%;
-		margin: auto;
+		margin: 0 auto;
 	}
 }
 
-.footer__left {
+.footer__col {
+	display: inline-block;
 	width: 50%;
+	vertical-align: middle;
 	font-family: 'ubuntu';
 	padding: 5px;
 	font-size: 14px;
 }
-.footer__address {
+
+.footer__text {
 	color: $white;
 	font-weight: 300;
 	margin-bottom: 10px;
 }
+
 .footer__link {
 	font-family: 'ubuntu';
 	font-weight: 700;
@@ -42,7 +45,8 @@
 	fill: $tomato;
 }
 
-.footer__right {
-	width: 50%;
+.footer__col--right {
 	text-align: right;
+	vertical-align: middle;
+
 }

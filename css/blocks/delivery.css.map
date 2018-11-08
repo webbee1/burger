@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,SAAS,CAAA;EACP,gBAAgB,EAAE,sCAAsC;CACzD",
+    "mappings": "AAAA,AAAA,SAAS,CAAA;EACP,gBAAgB,EAAE,sCAAsC;EACxD,OAAO,EAAC,IAAI;EACZ,cAAc,EAAC,MAAM;EACrB,WAAW,EAAC,MAAM;CAEnB",
     "sources": [
         "delivery.scss"
     ],
