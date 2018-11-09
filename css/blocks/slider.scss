@@ -1,74 +1,67 @@
 .slider{
-  background-image: linear-gradient(to top, #f9b43b,
+ background-image: linear-gradient(to top, #f9b43b,
    #eb8c38 48%, #f9b43b 74%);
  display:flex;
   align-items:center;
   justify-content:center;
-  overflow:hidden;
+ 
 }
 .slider__content{
   display:flex;
   position: relative;
+  
+  align-items:center;
+  justify-content:center
 }
 .slider__wrap{
   display:flex;
   flex-direction:row;
   justify-content:center;
-  width: 100px;
+  align-items:center;
+  
 }
 .slider__screen{
   position: relative;
   display:flex;
   justify-content:center;
   align-items:center;
-  max-width:50%;
-}
-.slider__frame{
-  width: 450px;
-  height: 350px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-.ingredients{
-  display:flex;
-  position: absolute;
-  left:0;
-  top:0;
-  cursor:pointer;
-}
-.ingredients-btn{
-  position: relative;
-  width: 90px;
-  height: 90px;
-  display:flex;
-  border-radius:5px;
-  justify-content:center;
-  background-color:$tomato;
-  flex-direction:column;
-  align-items:center;
-  cursor:pointer;
-}
-.ingredients-btn__icon{
-  
-  width:46px;
-  height: 44px;
-  margin-bottom:10px;
-}
-
-.ingredients-btn__title{
-  color:$white;
- font-family: 'gagalin';
- font-size:14px;
- font-weight:400;
  
 }
+.slider__frame{
+
+  margin-right:15px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.slider__order{
+  display:flex;
+  width:100%;
+  justify-content:space-between;
+  align-items:baseline;
+}
+
 
 .slider__desc{
-  width:50%;
+  font-size:14px;
+  line-height:24px;
+  font-family:'ubuntu';
+  font-weight:300;
+  
   justify-content:flex-end;
   padding:15px;
   color:$white;
-  
+}
+.slider__price{
+font-family:'gagalin';
+font-size:72px;
+letter-spacing: -1.8px;
+color:$tomato;
+
+}
+
+span.rub{
+  font-size:30px;
+  letter-spacing:-0.8;
 }

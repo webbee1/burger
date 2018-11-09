@@ -537,6 +537,12 @@ table {
   color: #f9b43b;
 }
 
+.section__title--white {
+  color: #fff;
+  width: 80%;
+  text-align: left;
+}
+
 /*header */
 .header {
   display: -webkit-box;
@@ -928,7 +934,6 @@ table {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  overflow: hidden;
 }
 
 .slider__content {
@@ -936,6 +941,12 @@ table {
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .slider__wrap {
@@ -949,7 +960,9 @@ table {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .slider__screen {
@@ -963,12 +976,10 @@ table {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 50%;
 }
 
 .slider__frame {
-  width: 450px;
-  height: 350px;
+  margin-right: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -978,6 +989,43 @@ table {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.slider__order {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.slider__desc {
+  font-size: 14px;
+  line-height: 24px;
+  font-family: 'ubuntu';
+  font-weight: 300;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 15px;
+  color: #fff;
+}
+
+.slider__price {
+  font-family: 'gagalin';
+  font-size: 72px;
+  letter-spacing: -1.8px;
+  color: #e45028;
+}
+
+span.rub {
+  font-size: 30px;
+  letter-spacing: -0.8;
 }
 
 .ingredients {
@@ -990,7 +1038,7 @@ table {
   cursor: pointer;
 }
 
-.ingredients-btn {
+.ingredients__btn {
   position: relative;
   width: 90px;
   height: 90px;
@@ -1012,26 +1060,121 @@ table {
   cursor: pointer;
 }
 
-.ingredients-btn__icon {
-  width: 46px;
-  height: 44px;
-  margin-bottom: 10px;
-}
-
-.ingredients-btn__title {
+.ingredients__btn__title {
   color: #fff;
   font-family: 'gagalin';
   font-size: 14px;
   font-weight: 400;
 }
 
-.slider__desc {
-  width: 50%;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  padding: 15px;
-  color: #fff;
+.calories__icon {
+  width: 60px;
+  height: 60px;
+}
+
+.ingredients__info {
+  background: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  opacity: 0;
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s;
+}
+
+.ingredients__btn:hover
+.ingredients__info {
+  border-radius: 5px;
+  padding: 10px;
+  opacity: 1;
+}
+
+.ingredients__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.ingredients__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 240px;
+  color: #2f3234;
+  margin-bottom: 10px;
+}
+
+.ingredients__icon {
+  width: 44px;
+  height: 40px;
+}
+
+.ingredients__name {
+  font-weight: 500;
+  text-align: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.ingredients__gr {
+  margin-left: auto;
+}
+
+.calories {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: 'gagalin';
+  font-size: 12px;
+  opacity: .8;
+}
+
+.calories__icon {
+  height: 60px;
+  width: 60px;
+  position: relative;
+}
+
+.calories__num {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 20px;
+}
+
+.calories__sum {
+  position: absolute;
+  margin-top: 0;
+  padding: 3px;
+  font-size: 20px;
 }
 
 .team {

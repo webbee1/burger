@@ -1,0 +1,114 @@
+
+.ingredients{
+  display:flex;
+  position: absolute;
+  left:0;
+  top:0;
+  cursor:pointer;
+}
+.ingredients__btn{
+  position: relative;
+  width: 90px;
+  height: 90px;
+  display:flex;
+  border-radius:5px;
+  justify-content:center;
+  background-color:$tomato;
+  flex-direction:column;
+  align-items:center;
+  cursor:pointer;
+}
+
+
+.ingredients__btn__title{
+  color:$white;
+ font-family: 'gagalin';
+ font-size:14px;
+ font-weight:400;
+}
+
+
+.calories__icon{
+  width: 60px;
+  height: 60px;
+}
+.ingredients__info{
+  background:$white;
+  border-radius:5px;
+  padding:10px;
+  position: absolute;
+  top:0;
+  left:100%;
+  opacity: 0;
+  transition: opacity .5s;
+  
+}
+.ingredients__btn:hover
+.ingredients__info{
+  border-radius:5px;
+  padding:10px;
+  opacity:1;
+  
+}
+
+.ingredients__list{
+  display:flex;
+  flex-direction:column;
+}
+
+.ingredients__item{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:240px;
+  color:$charcoal;
+  margin-bottom:10px;
+}
+
+.ingredients__icon{
+  width: 44px;
+  height: 40px;
+}
+
+.ingredients__name{
+  font-weight:500;
+ text-align:center;
+  flex:1;
+}
+
+.ingredients__gr{
+  margin-left:auto;
+}
+
+.calories{
+  position: absolute;
+  bottom:0;
+  left:0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  font-family: 'gagalin';
+  font-size:12px;
+  opacity:.8;
+}
+
+.calories__icon{
+  height: 60px;
+  width: 60px;
+  position: relative;
+
+}
+.calories__num{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  font-size:20px;
+}
+.calories__sum{
+  position: absolute;
+  margin-top:0;
+  padding:3px;
+  font-size:20px;
+}
