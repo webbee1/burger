@@ -1,52 +1,118 @@
-.team{
-  position: relative;
-  background: url(../images/section_4/SBS_1255-X2@2x.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
+.team {
+	position: relative;
+	background: url(../images/section_4/SBS_1255-X2@2x.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh;
 
- &__desc{
-  width:50%;
-  top:0;
-  right:0;
-  bottom:0;
-  position: absolute;
-  background-color:$black;
-  display:flex;
-  flex-direction:column;
-
- }
+	&__desc {
+		width: 50%;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		position: absolute;
+		align-items: center;
+  justify-content: center;
+		background-color: $black;
+		display: flex;
+		flex-direction: column;
+		
+	}
 }
 
-.team__container{
- height: 650px;
- padding:60px;
- 
- &__item{
-  margin-bottom:30px;
+.team__container {
+
+width:70%;
+
+	&__item {
+		width:60%;
+		border:pink;
+		margin-bottom: 40px;
+
+		&:last-child{
+			margin-bottom:0;
+		}
+	}
+
 }
+
+.team__list {
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: center;
+  align-items: center;
+	
+width:100%;
+	
+}
+.team__item{
+
+	width:90%;
+
 }
 
-.team__list{
-  display:inline-flex;
-  flex-direction:column;
-
+.team__content {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	display:none;
+	
+}
+.team__trigger {
+	font-size:14px;
+	font-family:'gagalin';
+  line-height:42px;
+	color:$white;
+}
+.team__photo {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	overflow: hidden;
+	background-size: cover;
+	margin-right: 15px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 
-
-.subteam__wrap{
-  width:100px;
-  height:100px;
-  border-radius:100%;
-  overflow:hidden;
- 
-  margin-right:10px;
+.team__title {
+	text-align: left;
 }
-.subteam__image{
-  min-width:100px;
-  max-height:100px;
- 
- 
- 
+
+.team__text {
+	justify-content: flex-start;
+
+}
+
+.team__occ {
+	width: 50%;
+	line-height:24px;
+}
+
+.triangle{
+	display: inline-block;
+	position: absolute;
+	left:16%;
+    vertical-align:top;
+    border: 6px solid transparent;
+    border-top: 10px solid $yellow;
+    margin: 15px 20px 0 0;
+}
+.team__item--active .triangle{
+	border: 6px solid transparent;
+    border-bottom: 10px solid $yellow;
+		margin: 9px 20px 0 0;
+		color:$yellow;
+		
+}
+//временный активный класс
+.team__content--active{
+	display: flex;
+}
+
+.team__trigger--active{
+	color:$yellow;
 }

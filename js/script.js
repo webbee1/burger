@@ -28,3 +28,4 @@
      myMap.behaviors.disable(['scrollZoom']);
 
     }
+
