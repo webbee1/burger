@@ -1,3 +1,84 @@
 .carte{
-  background-image:url(../images/section_5/photo-1428660386617-8d277e7deaf2@2x.jpg);
+  background-image:url('../images/section_5/burger.jpg');
+}
+.carte__title{
+  position:absolute;
+  display:flex;
+  top:10%;
+  right:50%;
+}
+
+.carte__list{
+  position: absolute;
+  top:0;
+  right:0;
+  top:0;
+  bottom:0;
+  display:flex;
+  justify-content:flex-end;
+}
+
+.carte__item{
+ display:flex;
+ justify-content:flex-end;
+}
+.carte__trigger{
+  width:80px;
+}
+
+.carte__name{
+  position: absolute;
+  font-family:'gagalin';
+  font-size:40px;
+  color:$white;
+  font-weight:400;
+  line-height:64px;
+  white-space:nowrap;
+  display: block;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  -webkit-transform-origin: left top;
+  -ms-transform-origin: left top;
+  transform-origin: left top;
+  top: 90%;
+
+  &--active{
+    color:$yellow;
+  }
+
+} 
+
+.carte__occ{
+  height:100%;
+  position: relative;
+  padding:5%;
+  color:$white;
+  font-weight:300;
+  background: $charcoal;
+  width: 540px;
+ 
+  overflow:hidden;
+  
+}
+
+.carte__text{
+  font-size:14px;
+  font-family:'ubuntu';
+  color:$white;
+  padding:30px 40px;
+  
+  height:100%;
+  line-height:1.8;
+  
+}
+.carte__content{
+  width: 0;
+  overflow:hidden;display:flex;
+  transition: .2s ease-in-out;
+  display:flex;
+  justify-content:flex-end;
+  &--active{
+    width:540px;
+  }
 }

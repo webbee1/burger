@@ -12,57 +12,49 @@
 		bottom: 0;
 		position: absolute;
 		align-items: center;
-  justify-content: center;
+		justify-content: center;
 		background-color: $black;
 		display: flex;
 		flex-direction: column;
-		
 	}
 }
 
 .team__container {
-
-width:70%;
+	width: 70%;
 
 	&__item {
-		width:60%;
-		border:pink;
+		width: 60%;
+		border: pink;
 		margin-bottom: 40px;
 
-		&:last-child{
-			margin-bottom:0;
+		&:last-child {
+			margin-bottom: 0;
 		}
 	}
-
 }
 
 .team__list {
 	display: inline-flex;
 	flex-direction: column;
 	justify-content: center;
-  align-items: center;
-	
-width:100%;
-	
+	align-items: center;
+	width: 100%;
 }
-.team__item{
-
-	width:90%;
-
+.team__item {
+	width: 90%;
 }
 
 .team__content {
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
-	display:none;
-	
+	display: none;
 }
 .team__trigger {
-	font-size:14px;
-	font-family:'gagalin';
-  line-height:42px;
-	color:$white;
+	font-size: 14px;
+	font-family: 'gagalin';
+	line-height: 42px;
+	color: $white;
 }
 .team__photo {
 	width: 100px;
@@ -77,42 +69,40 @@ width:100%;
 	justify-content: center;
 }
 
-
 .team__title {
 	text-align: left;
 }
 
 .team__text {
 	justify-content: flex-start;
-
 }
 
 .team__occ {
 	width: 50%;
-	line-height:24px;
+	line-height: 24px;
 }
 
-.triangle{
+.triangle {
 	display: inline-block;
 	position: absolute;
-	left:16%;
-    vertical-align:top;
-    border: 6px solid transparent;
-    border-top: 10px solid $yellow;
-    margin: 15px 20px 0 0;
-}
-.team__item--active .triangle{
+	left: 16%;
+	vertical-align: top;
 	border: 6px solid transparent;
-    border-bottom: 10px solid $yellow;
-		margin: 9px 20px 0 0;
-		color:$yellow;
-		
+	border-top: 10px solid $yellow;
+	margin: 15px 20px 0 0;
+	transition: .6s;
+}
+.team__item--active .triangle {
+	border: 6px solid transparent;
+	border-bottom: 10px solid $yellow;
+	margin: 9px 20px 0 0;
+	color: $yellow;
 }
 //временный активный класс
-.team__content--active{
+.team__content--active {
 	display: flex;
 }
 
-.team__trigger--active{
-	color:$yellow;
+.team__trigger--active {
+	color: $yellow;
 }
