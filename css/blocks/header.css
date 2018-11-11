@@ -11,7 +11,7 @@
           align-items: center;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  height: 90px;
-  padding: 10px 0;
+  height: rem(90px);
+  padding: rem(10px) 0;
 }
 /*# sourceMappingURL=header.css.map */

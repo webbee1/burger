@@ -4,32 +4,32 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 756px;
+  width: rem(756px);
 
 
   &__link {
     color: $white;
-    font-size: 13px;
+    font-size: rem(13px);
     font-family: 'ubuntu';
     text-transform: uppercase;
     font-weight: 500;
     line-height: 2.31;
-    margin-right: 10px;
+    margin-right: rem(10px);
   }
 }
 
 .nav__item {
   align-items: center;
   display: inline-block;
-  margin-right: 10px;
+  margin-right: rem(10px);
 
   &:after {
     display: inline-block;
     content: '';
     vertical-align: middle;
     background-color: $white;
-    width: 5px;
-    height: 5px;
+    width: rem(5px);
+    height: rem(5px);
     border-radius: 100%;
   }
 
@@ -48,7 +48,7 @@
 
   &__item {
     display: inline-flex;
-    margin-right: 17px;
+    margin-right: rem(17px);
   }
   
 }

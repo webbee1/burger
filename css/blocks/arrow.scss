@@ -3,10 +3,10 @@
   position: absolute;
   left: 50%;
   transform: translate(-50%);
-  bottom: 37px;
+  bottom: rem(37px);
   &__scroll {
-    width: 30px;
-    height: 15px;
+    width: rem(30px);
+    height: rem(15px);
     fill:$white;
     margin: auto;
   }

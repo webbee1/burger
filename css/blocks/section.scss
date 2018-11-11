@@ -13,12 +13,12 @@
 .section__title {
   font-family: 'gagalin';
   font-weight: 400;
-  font-size: 72px;
+  font-size: rem(72px);
   line-height: 0.89;
   display: flex;
   justify-content: center;
   text-align:center;
-  margin-bottom: 60px;
+  margin-bottom: rem(60px);
   color:$charcoal;
 }
 
@@ -33,6 +33,6 @@
 }
 
 .section__title--black{
-  font-size:61px;
+  font-size:rem(61px);
 
 }

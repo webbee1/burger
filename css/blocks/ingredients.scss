@@ -8,10 +8,10 @@
 
 .ingredients__btn {
   position: relative;
-  width: 90px;
-  height: 90px;
+  width: rem(90px);
+  height: rem(90px);
   display: flex;
-  border-radius: 5px;
+  border-radius: rem(5px);
   justify-content: center;
   background-color: $orange;
   flex-direction: column;
@@ -23,35 +23,35 @@
 .ingredients__btn-title {
   color: $white;
   font-family: 'gagalin';
-  font-size: 14px;
+  font-size: rem(14px);
   font-weight: 400;
 }
 
 
 .calories__icon {
-  width: 60px;
-  height: 60px;
+  width: rem(60px);
+  height: rem(60px);
 }
 
 .ingredients__info {
   background: rgba(255, 255, 255, 0.9);
-  border-radius: 5px;
-  padding: 10px;
+  border-radius: rem(5px);
+  padding: rem(10px);
   position: absolute;
   top: 0;
   left: 100%;
   opacity: 0;
   transition: opacity .5s;
-  width: 260px;
-  height: 350px;
+  width: rem(260px);
+  height: rem(350px);
   display: none;
   transition: opacity .5s;
-  right: -9999px;
+  right: rem(-9999px);
 }
 
 .ingredients__btn:hover .ingredients__info {
-  border-radius: 5px;
-  padding: 10px;
+  border-radius: rem(5px);
+  padding: rem(10px);
   opacity: 1;
   right: 0;
   display: block;
@@ -67,11 +67,11 @@
   align-items: center;
   justify-content: center;
   color: $charcoal;
-  margin-bottom: 10px;
+  margin-bottom: rem(10px);
 }
 .ingredients__icon {
-  width: 44px;
-  height: 40px;
+  width: rem(44px);
+  height: rem(40px);
 }
 
 .ingredients__name {
@@ -93,13 +93,13 @@
   align-items: center;
   justify-content: center;
   font-family: 'gagalin';
-  font-size: 14px;
+  font-size: rem(14px);
   color: rgba(255, 255, 255, 0.6);
 }
 
 .calories__icon {
-  height: 60px;
-  width: 60px;
+  height: rem(60px);
+  width: rem(60px);
   position: relative;
   fill: $white;
   fill-opacity: 0.5;
@@ -111,12 +111,12 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 20px;
+  font-size: rem(20px);
 }
 
 .calories__sum {
   position: absolute;
   margin-top: 0;
-  padding: 3px;
-  font-size: 20px;
+  padding: rem(3px);
+  font-size: rem(20px);
 }

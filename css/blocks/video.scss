@@ -6,12 +6,12 @@
 }
 
 .videowrap{
-  width: 660px;
-  height: 370px;
+  width: rem(660px);
+  height: rem(370px);
   background-color:$charcoal;
   
  &__bottom{
-  width:660px;
+  width:rem(660px);
   height:10%;
   background-color:$black;
   position: absolute;

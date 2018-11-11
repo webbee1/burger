@@ -2,17 +2,17 @@
 .sidescroll {
   position: fixed;
   display: block;
-  padding: 6px;
-  top: 85px;
+  padding: rem(6px);
+  top: rem(85px);
   right: 23%;
 }
 
 .sidescroll__link {
-  width: 5px;
-  height: 5px;
+  width: rem(5px);
+  height: rem(5px);
   border-radius: 100%;
   background-color: white;
-  margin-bottom: 20px;
+  margin-bottom: rem(20px);
   display: inline-block;
   position: relative;
   bottom: -25%;
@@ -20,12 +20,12 @@
 }
 
 .sidescroll .sidescroll__item {
-  width: 16px;
-  height: 16px;
-  border: 2px solid transparent;
+  width: rem(16px);
+  height: rem(16px);
+  border: rem(2px) solid transparent;
   border-radius: 100%;
-  margin-bottom: 10px;
-  line-height: 16px;
+  margin-bottom: rem(10px);
+  line-height: rem(16px);
 }
 
 .sidescroll .sidescroll__item:last-child {
@@ -33,9 +33,9 @@
 }
 
 .sidescroll .sidescroll__item--active {
-  width: 16px;
-  height: 16px;
-  border: 2px solid #fff;
+  width: rem(16px);
+  height: rem(16px);
+  border: rem(2px) solid #fff;
   border-radius: 100%;
 }
 /*# sourceMappingURL=sidescroll.css.map */

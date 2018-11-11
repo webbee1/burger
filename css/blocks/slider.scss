@@ -22,7 +22,7 @@
 }
 
 .slider__frame {
-  margin-right: 15px;
+  margin-right: rem(15px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,23 +36,23 @@
 }
 
 .slider__desc {
-  font-size: 14px;
-  line-height: 24px;
+  font-size: rem(14px);
+  line-height: rem(24px);
   font-family: 'ubuntu';
   font-weight: 300;
   justify-content: flex-end;
-  padding: 15px;
+  padding: rem(15px);
   color: $white;
 }
 
 .slider__price {
   font-family: 'gagalin';
-  font-size: 72px;
-  letter-spacing: -1.8px;
+  font-size: rem(72px);
+ 
   color: $tomato;
 }
 
 span.rub {
-  font-size: 30px;
+  font-size: rem(30px);
   letter-spacing: -0.8;
 }

@@ -1,7 +1,7 @@
 .about {
   background: $dark url(../images/section_1/2x/video-bg@2x.png) 0 0 no-repeat;
   background-size: cover;
-  height: 650px;
+  height: rem(650px);
 }
 
 .about:before {

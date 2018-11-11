@@ -2,7 +2,7 @@
 .socials__item {
   display: inline-flex;
   vertical-align:middle;
-	margin-right: 8px;
+	margin-right: rem(8px);
 }
 
 .socials__item:last-child {
@@ -10,8 +10,8 @@
 }
 
 .socials__icon {
-	width: 20px;
-	height: 20px;
+	width: rem(20px);
+	height: rem(20px);
 	display: block;
   background-repeat: no-repeat;
   fill:$silver;

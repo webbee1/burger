@@ -1,6 +1,6 @@
 .review {
   height: 100vh;
-  min-height: 650px;
+  min-height: rem(650px);
 }
 
 .review__list {
@@ -63,7 +63,7 @@
           align-items: flex-start;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 0 20px;
+  padding: 0 rem(20px);
 }
 
 .subrewiew:hover .subreview__ava {
@@ -78,15 +78,15 @@
   color: white;
   font-family: 'gagalin';
   font-weight: 400;
-  line-height: 28px;
+  line-height: rem(28px);
 }
 
 .subreview__text {
   color: white;
   font-family: 'ubuntu';
-  font-size: 13px;
+  font-size: rem(13px);
   font-weight: 300;
-  line-height: 24px;
+  line-height: rem(24px);
   margin-bottom: 2%;
   width: 80%;
 }
