@@ -1,9 +1,9 @@
 /*products*/
 
 .products {
-  background: url(../images/section_2/@2x/bg@2x.png);
+  background: url('../images/section_2/@1x/bg@1x.png')0 0 no-repeat;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-position:center center;
   height: 100vh;
   color:$charcoal;
 
@@ -11,21 +11,44 @@
     width: 33%;
     overflow: hidden;
     margin-bottom: rem(20px);
+   
+    &:last-child{
+      margin-bottom:0;
+    }
+    @include phones{
+      width: 100%;
+      flex-direction:row;
+      
+     }
   }
 }
 
-
+.products .container{
+  justify-content:center;
+ 
+}
 
 .products__list {
   display: flex;
   justify-content: space-around;
+
+  @include phones{
+    flex-direction:column;
+   }
 }
 
 .products__desc {
   display: flex;
-  flex-direction: column;
+  flex-direction:column;
   align-items: center;
   padding: 0 rem(5px);
+
+  @include phones{
+    display: flex;
+  align-items: center;
+  padding: 0 rem(5px);
+  flex-direction:row;
+  }  
 }
 
 .products__icon {
@@ -34,10 +57,21 @@
   display: flex;
   align-content: flex-start;
   margin: auto;
+  @include phones{
+    width: rem(75px);
+  height: rem(75px);
+    margin-right:5%;
+   }
 }
 
 .products__info {
   text-align: center;
+
+  @include phones{
+    text-align:left;
+    display:block;
+    width:90%;
+   }
 }
 
 .products__title {
