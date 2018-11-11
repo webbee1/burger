@@ -1,4 +1,20 @@
 .video{
   background:url("../images/section_7/bg_video@2x.jpg") center center no-repeat;
   background-size: cover;
+  display:flex;
+  align-items:center;
+}
+
+.videowrap{
+  width: 660px;
+  height: 370px;
+  background-color:$charcoal;
+  
+ &__bottom{
+  width:660px;
+  height:10%;
+  background-color:$black;
+  position: absolute;
+  bottom:0;
+ }
 }

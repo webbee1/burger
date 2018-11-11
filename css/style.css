@@ -530,7 +530,8 @@ table {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  margin-bottom: 12%;
+  margin-bottom: 60px;
+  color: #2f3234;
 }
 
 .section__title--orange {
@@ -541,6 +542,10 @@ table {
   color: #fff;
   width: 80%;
   text-align: left;
+}
+
+.section__title--black {
+  font-size: 61px;
 }
 
 /*header */
@@ -1322,6 +1327,26 @@ span.rub {
 .video {
   background: url("../images/section_7/bg_video@2x.jpg") center center no-repeat;
   background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.videowrap {
+  width: 660px;
+  height: 370px;
+  background-color: #2f3234;
+}
+
+.videowrap__bottom {
+  width: 660px;
+  height: 10%;
+  background-color: rgba(20, 20, 20, 0.7);
+  position: absolute;
+  bottom: 0;
 }
 
 .carte {

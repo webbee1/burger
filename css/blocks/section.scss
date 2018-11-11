@@ -18,7 +18,8 @@
   display: flex;
   justify-content: center;
   text-align:center;
-  margin-bottom: 12%;
+  margin-bottom: 60px;
+  color:$charcoal;
 }
 
 .section__title--orange{
@@ -29,4 +30,9 @@
   color:$white;
   width:80%;
   text-align:left;
+}
+
+.section__title--black{
+  font-size:61px;
+
 }
