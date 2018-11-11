@@ -3,8 +3,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: nowrap;
-  height: rem(90px);
-  padding: rem(10px) 0;
+
+  @include tablets{
+    width:100%;
+  }
 
 }

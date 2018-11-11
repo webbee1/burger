@@ -1,11 +1,17 @@
 /*nav*/
+.nav__wrap{
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content:center;
+  padding: rem(3px);
+}
 .nav {
   display: flex;
-  flex-direction: row;
+  flex:1;
   align-items: center;
   justify-content: center;
   width: rem(756px);
-
 
   &__link {
     color: $white;
@@ -15,6 +21,11 @@
     font-weight: 500;
     line-height: 2.31;
     margin-right: rem(10px);
+  }
+
+  @include tablets{
+    display:none;
+    
   }
 }
 
@@ -53,3 +64,11 @@
   
 }
 
+.order{
+  display:flex;
+  align-items:center;
+
+  @include tablets{
+    align-items:flex-end;
+  }
+}

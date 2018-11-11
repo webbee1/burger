@@ -4,11 +4,20 @@
   left: 50%;
   transform: translate(-50%);
   bottom: rem(37px);
+  @include tablets{
+    bottom:rem(16px);
+     }
+
   &__scroll {
     width: rem(30px);
     height: rem(15px);
     fill:$white;
     margin: auto;
+
+    @include tablets{
+      width:rem(25px);
+     height:rem(12px);
+       }
   }
   
 }

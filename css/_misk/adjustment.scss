@@ -3,7 +3,13 @@ body {
   height: 100%;
 }
 html{
-  font-size:rem(14px);
+  font-size:14px;
+  @include tablets{
+    font-size:13px;
+  }
+  @include phones{
+    font-size:12px;
+  }
 }
 
 body {
@@ -61,7 +67,7 @@ table {
 
 .wrapper {
   position: relative;
-  min-width: 100%;
+ /* min-width: 100%;*/
   min-height: 100%;
   overflow: hidden;
 }
@@ -69,13 +75,21 @@ table {
 
 
 .container {
-  max-width: rem(960px);
+  max-width: rem(940px);
+  width:100%;
+  margin:0 auto;
   display: flex;
   position: relative;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  margin: auto;
   padding: 0 rem(10px);
 
+  @include tablets{
+    max-width:95%;
+  }
+
+  @include phones{
+    max-width:95%;
+  }
 }

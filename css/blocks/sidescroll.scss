@@ -6,6 +6,9 @@
   padding: rem(6px);
   top: rem(85px);
   right: 23%;
+  @include tablets{
+    right: 5%;
+     }
 
   &__link {
     width: rem(5px);

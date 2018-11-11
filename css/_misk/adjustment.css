@@ -63,13 +63,14 @@ table {
 
 .wrapper {
   position: relative;
-  min-width: 100%;
+  /* min-width: 100%;*/
   min-height: 100%;
   overflow: hidden;
 }
 
 .container {
-  max-width: rem(960px);
+  max-width: rem(940px);
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

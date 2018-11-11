@@ -7,6 +7,10 @@
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  
+  @include tablets{
+    justify-content: flex-start;
+  }
 
 }
 
