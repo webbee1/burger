@@ -66,7 +66,7 @@
 	align-items: center;
 	justify-content: flex-start;
 	display: none;
-
+margin-bottom:6%;
 
 	@include tablets {
 		width: 100%;
@@ -81,11 +81,11 @@
 	line-height: rem(28px);
 	color: $white;
 	position: relative;
-	margin-bottom: rem(40px);
+	margin-bottom: 2%;
 
 	@include tablets {
 		display: inline-block;
-
+		font-size:rem(20px);
 	}
 
 }
@@ -119,6 +119,8 @@
 .team__occ {
 	width: 50%;
 	line-height: rem(24px);
+	
+
 
 	@include tablets {
 		text-align: center;
@@ -133,8 +135,8 @@
 	top: rem(-5px);
 	width: 0;
 	height: 0;
-	border: rem(8px) solid transparent;
-	border-top: rem(10px) solid $yellow;
+	border: rem(6px) solid transparent;
+	border-top: rem(8px) solid $yellow;
 	margin: rem(15px) rem(20px) 0 0;
 	transition: .6s;
 
@@ -144,8 +146,8 @@
 }
 
 .team__item--active .triangle {
-	border: rem(8px) solid transparent;
-	border-bottom: rem(10px) solid $yellow;
+	border: rem(6px) solid transparent;
+	border-bottom: rem(8px) solid $yellow;
 	margin: rem(9px) rem(20px) 0 0;
 	color: $yellow;
 
@@ -157,6 +159,7 @@
 //временный активный класс
 .team__content--active {
 	display: flex;
+	margin-bottom:6%;
 
 	@include tablets {
 		display: flex;
@@ -170,4 +173,5 @@
 
 .team__trigger--active {
 	color: $yellow;
+	
 }

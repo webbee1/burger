@@ -1,13 +1,13 @@
 /*section*/
 .section {
   height: 100vh;
+  min-height:em(650px);
   position: relative;
   display: flex;
   justify-content: center;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
   
+  overflow:hidden;
+
   @include tablets{
     justify-content: flex-start;
   }
@@ -35,8 +35,10 @@
 .section__title--orange{
   color:$yellow;
   @include tablets {
-    margin-bottom: 5%;
+    margin-bottom: 10%;
+    font-size:rem(68px);
   }
+  
 }
 
 .section__title--white{
