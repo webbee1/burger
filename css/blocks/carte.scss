@@ -1,11 +1,17 @@
 .carte{
-  background-image:url('../images/section_5/burger.jpg');
+  background:url('../images/section_5/burger.jpg') 0 0 no-repeat;
+  background-size: cover;
+  background-position:center center;
+
 }
 .carte__title{
   position:absolute;
   display:flex;
-  top:10%;
-  right:50%;
+  top:15%;
+ left:5%;
+ @include phones {
+  top:5%;
+}
 }
 
 .carte__list{
@@ -24,6 +30,9 @@
 }
 .carte__trigger{
   width:rem(80px);
+  @include phones {
+    width:rem(60px);
+  }
 }
 
 .carte__name{
@@ -45,6 +54,12 @@
 
   &--active{
     color:$yellow;
+    @include tablets {
+      color:$white;
+     }
+    @include phones {
+     color:$white;
+    }
   }
 
 } 
@@ -79,6 +94,14 @@
   display:flex;
   justify-content:flex-end;
   &--active{
-    width:rem(540px);
+    width:rem(430px);
+
+    @include tablets {
+      width:0;
+    }
+
+    @include phones {
+      width:0;
+    }
   }
 }

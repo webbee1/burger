@@ -383,12 +383,12 @@ body {
 }
 
 html {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 @media (max-width: 768px) {
   html {
-    font-size: 13px;
+    font-size: 14px;
   }
 }
 
@@ -481,13 +481,13 @@ table {
 
 @media (max-width: 768px) {
   .container {
-    max-width: 95%;
+    max-width: 98%;
   }
 }
 
 @media (max-width: 480px) {
   .container {
-    max-width: 95%;
+    max-width: 98%;
   }
 }
 
@@ -534,7 +534,7 @@ table {
 /*section*/
 .section {
   height: 100vh;
-  min-height: em(650px);
+  min-height: 46.42857rem;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -550,6 +550,7 @@ table {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+    min-height: initial;
   }
 }
 
@@ -567,13 +568,7 @@ table {
   text-align: center;
   margin-bottom: 12%;
   color: #2f3234;
-}
-
-@media (max-width: 480px) {
-  .section__title {
-    font-size: 4.28571rem;
-    text-align: top;
-  }
+  white-space: nowrap;
 }
 
 .section__title--orange {
@@ -589,8 +584,8 @@ table {
 
 .section__title--white {
   color: #fff;
-  width: 80%;
   text-align: left;
+  margin-bottom: 0;
 }
 
 .section__title--black {
@@ -1685,7 +1680,9 @@ span.rub {
 }
 
 .carte {
-  background-image: url("../images/section_5/burger.jpg");
+  background: url("../images/section_5/burger.jpg") 0 0 no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 
 .carte__title {
@@ -1693,8 +1690,14 @@ span.rub {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  top: 10%;
-  right: 50%;
+  top: 15%;
+  left: 5%;
+}
+
+@media (max-width: 480px) {
+  .carte__title {
+    top: 5%;
+  }
 }
 
 .carte__list {
@@ -1724,6 +1727,12 @@ span.rub {
   width: 5.71429rem;
 }
 
+@media (max-width: 480px) {
+  .carte__trigger {
+    width: 4.28571rem;
+  }
+}
+
 .carte__name {
   position: absolute;
   font-family: 'gagalin';
@@ -1742,6 +1751,18 @@ span.rub {
 
 .carte__name--active {
   color: #f9b43b;
+}
+
+@media (max-width: 768px) {
+  .carte__name--active {
+    color: #fff;
+  }
+}
+
+@media (max-width: 480px) {
+  .carte__name--active {
+    color: #fff;
+  }
 }
 
 .carte__occ {
@@ -1779,7 +1800,19 @@ span.rub {
 }
 
 .carte__content--active {
-  width: 38.57143rem;
+  width: 30.71429rem;
+}
+
+@media (max-width: 768px) {
+  .carte__content--active {
+    width: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .carte__content--active {
+    width: 0;
+  }
 }
 
 .delivery {
@@ -2033,6 +2066,7 @@ span.rub {
 
 .contacts {
   background-color: #fff;
+  position: relative;
 }
 
 .footer {

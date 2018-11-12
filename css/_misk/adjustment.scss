@@ -3,10 +3,10 @@ body {
   height: 100%;
 }
 html{
-  font-size:14px;
+  font-size:16px;
 
   @include tablets{
-    font-size:13px;
+    font-size:14px;
   }
   @include phones{
     font-size:13px;
@@ -86,10 +86,10 @@ table {
   padding: 0 rem(10px);
 
   @include tablets{
-    max-width:95%;
+    max-width:98%;
   }
 
   @include phones{
-    max-width:95%;
+    max-width:98%;
   }
 }
