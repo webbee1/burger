@@ -18,6 +18,11 @@
   background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    position:relative;
+    @include tablets {
+      height: 25%;
+      width: 50%;
+    }
 }
 
 .subreview{
@@ -58,7 +63,9 @@ height:100%;
 .subreview:hover .subreview__hover{
    opacity: 1;
 }
-
+.subreview__hover--example{
+  opacity:1;
+}
 .subreview__name{
   color:white;
   font-family:'gagalin';
@@ -74,4 +81,8 @@ height:100%;
   line-height:rem(24px);
   margin-bottom:2%;
   width:80%;
+  @include tablets {
+    line-height: 1.42;
+    margin-bottom:1%;
+  }
 }
