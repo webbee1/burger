@@ -34,6 +34,9 @@
 
 .section__title--orange{
   color:$yellow;
+  @include tablets {
+    margin-bottom: 5%;
+  }
 }
 
 .section__title--white{

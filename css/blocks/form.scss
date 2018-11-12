@@ -2,13 +2,31 @@
   display: flex; 
   font-family:'ubuntu';
 
+  @include tablets {
+    flex-direction:column;
+    align-items:center;
+  }
+
   &__left {
     width: 50%;
+    @include tablets {
+      width:70%;
+    }
+    @include phones {
+      width:100%;
+    }
   }
 
   &__right {
     width: 50%;
     margin-left: rem(20px);
+    @include tablets {
+      width:70%;
+      margin-left:0;
+    }
+    @include phones {
+      width:100%;
+    }
   }
 
   &__row {
@@ -75,6 +93,7 @@
 .form__buttons {
   margin-right: rem(20px);
   display: flex;
+
 }
 
 .form__block--radio {
