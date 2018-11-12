@@ -4,6 +4,7 @@ body {
 }
 html{
   font-size:14px;
+
   @include tablets{
     font-size:13px;
   }
@@ -15,12 +16,11 @@ html{
 body {
   font-family: 'ubuntu';
   font-weight: 300;
-  color: white;
-  background-color: white;
+  color: $white;
+  background-color: $white;
   font-size: rem(14px);
   line-height: 1.42;
   position: relative;
-  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -67,7 +67,7 @@ table {
 
 .wrapper {
   position: relative;
- /* min-width: 100%;*/
+  min-width:100%;
   min-height: 100%;
   overflow: hidden;
 }
@@ -76,10 +76,10 @@ table {
 
 .container {
   max-width: rem(940px);
-  width:100%;
+  width:95%;
   margin:0 auto;
-  display: flex;
   position: relative;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
