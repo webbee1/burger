@@ -7,11 +7,13 @@
 .carte__title{
   position:absolute;
   display:flex;
-  top:15%;
- left:5%;
+  top:4%;
+ left:8%;
+
  @include phones {
   top:5%;
 }
+
 }
 
 .carte__list{

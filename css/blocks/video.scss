@@ -7,15 +7,26 @@
 }
 
 .videowrap{
-  width: rem(660px);
-  height: rem(370px);
-  background-color:$charcoal;
-  
- &__bottom{
   width:rem(660px);
-  height:10%;
-  background-color:$black;
-  position: absolute;
-  bottom:0;
+  height:rem(330px);
+  background-color:$grey;
+border-bottom:50px solid $black;
+
+@include phones {
+  width:95%;
  }
+@include phones {
+ width:90%;
+}
+ 
+}
+.video__btn{
+  width:15%;
+  height:15%;
+  position: absolute;
+ left:45%;
+ top:50%;
+ 
+ 
+ 
 }

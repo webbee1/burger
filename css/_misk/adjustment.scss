@@ -3,10 +3,10 @@ body {
   height: 100%;
 }
 html{
-  font-size:16px;
+  font-size:14px;
 
   @include tablets{
-    font-size:14px;
+    font-size:13px;
   }
   @include phones{
     font-size:13px;
