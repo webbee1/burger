@@ -6,30 +6,42 @@
 	height: 100vh;
 
 	&__desc {
-		width: 50%;
+		left: 50%;
 		top: 0;
 		right: 0;
 		bottom: 0;
 		position: absolute;
-		align-items: center;
-		justify-content: center;
+		padding: 5% 2% 0% 7%;
 		background-color: $black;
-		display: flex;
-		flex-direction: column;
+
+		@include tablets {
+			left: 0;
+			text-align: center;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
 	}
 }
 
 .team__container {
-	width: 70%;
+	width: 100%;
 
 	&__item {
-		width: 60%;
-		border: pink;
+		width: 100%;
 		margin-bottom: rem(40px);
 
 		&:last-child {
 			margin-bottom: 0;
 		}
+	}
+
+	@include tablets {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+
 	}
 }
 
@@ -38,10 +50,15 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	width: 100%;
 }
+
 .team__item {
 	width: 90%;
+
+	@include tablets {
+		text-align: center;
+	}
+
 }
 
 .team__content {
@@ -49,13 +66,30 @@
 	align-items: center;
 	justify-content: flex-start;
 	display: none;
+
+
+	@include tablets {
+		width: 100%;
+		margin: auto;
+	}
+
 }
+
 .team__trigger {
 	font-size: rem(14px);
 	font-family: 'gagalin';
-	line-height: rem(42px);
+	line-height: rem(28px);
 	color: $white;
+	position: relative;
+	margin-bottom: rem(40px);
+
+	@include tablets {
+		display: inline-block;
+
+	}
+
 }
+
 .team__photo {
 	width: rem(100px);
 	height: rem(100px);
@@ -71,6 +105,11 @@
 
 .team__title {
 	text-align: left;
+
+	@include tablets {
+		text-align: center;
+
+	}
 }
 
 .team__text {
@@ -80,28 +119,54 @@
 .team__occ {
 	width: 50%;
 	line-height: rem(24px);
+
+	@include tablets {
+		text-align: center;
+		width: 100%;
+	}
 }
 
 .triangle {
-	display: inline-block;
+	display: block;
 	position: absolute;
-	left: 16%;
-	vertical-align: top;
-	border: rem(6px) solid transparent;
+	left: -5%;
+	top: rem(-5px);
+	width: 0;
+	height: 0;
+	border: rem(8px) solid transparent;
 	border-top: rem(10px) solid $yellow;
 	margin: rem(15px) rem(20px) 0 0;
 	transition: .6s;
+
+	@include tablets {
+		left: -20%;
+	}
 }
+
 .team__item--active .triangle {
-	border: rem(6px) solid transparent;
+	border: rem(8px) solid transparent;
 	border-bottom: rem(10px) solid $yellow;
 	margin: rem(9px) rem(20px) 0 0;
 	color: $yellow;
+
+	@include tablets {
+		text-align: center;
+	}
 }
+
 //временный активный класс
 .team__content--active {
 	display: flex;
+
+	@include tablets {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+	}
+
 }
+
 
 .team__trigger--active {
 	color: $yellow;
