@@ -13,6 +13,11 @@
 		align-items: center;
 		max-width: 90%;
 		margin: 0 auto;
+
+		@include phones{
+			flex-direction:column;
+			text-align:center;
+		}
 	}
 }
 
@@ -23,12 +28,19 @@
 	font-family: 'ubuntu';
 	padding: rem(5px);
 	font-size: rem(14px);
+	@include tablets{
+    width:100%;
+  }
 }
 
 .footer__text {
 	color: $white;
 	font-weight: 300;
 	margin-bottom: rem(10px);
+	@include tablets{
+		white-space:nowrap;
+		margin-bottom:rem(5px);
+  }
 }
 
 .footer__link {
@@ -48,5 +60,11 @@
 .footer__col--right {
 	text-align: right;
 	vertical-align: middle;
+	margin-bottom:0;
+	display:flex;
+	justify-content:flex-end;
 
+	@include tablets{
+    justify-content: center;
+  }
 }
