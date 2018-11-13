@@ -2,7 +2,7 @@
   display: flex;
   position: absolute;
   left: 0;
-  top: 0;
+  top: 10%;
   cursor: pointer;
 }
 
@@ -28,10 +28,6 @@
 }
 
 
-.calories__icon {
-  width: rem(60px);
-  height: rem(60px);
-}
 
 .ingredients__info {
   background: rgba(255, 255, 255, 0.9);
@@ -95,6 +91,10 @@
   font-family: 'gagalin';
   font-size: rem(14px);
   color: rgba(255, 255, 255, 0.6);
+  @include tablets {
+   top: -70%;
+  right: -80%;
+  }
 }
 
 .calories__icon {

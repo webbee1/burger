@@ -597,6 +597,14 @@ table {
   color: #fff;
   text-align: left;
   margin-bottom: 0;
+  margin-right: 0;
+  line-height: 64px;
+}
+
+@media (max-width: 768px) {
+  .section__title--white {
+    line-height: 48px;
+  }
 }
 
 /*header */
@@ -1193,12 +1201,19 @@ table {
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  overflow: hidden;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .slider__content {
+    height: 100%;
+  }
 }
 
 .slider__wrap {
@@ -1217,8 +1232,20 @@ table {
           align-items: center;
 }
 
+@media (max-width: 768px) {
+  .slider__wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 10% 0;
+  }
+}
+
 .slider__frame {
-  margin-right: 1.07143rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1228,6 +1255,12 @@ table {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.slaider__frame-img {
+  max-width: 30rem;
+  height: auto;
+  display: block;
 }
 
 .slider__order {
@@ -1243,7 +1276,16 @@ table {
           align-items: baseline;
 }
 
+@media (max-width: 768px) {
+  .slider__order {
+    width: 90%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
 .slider__desc {
+  width: 90%;
   font-size: 1rem;
   line-height: 1.71429rem;
   font-family: 'ubuntu';
@@ -1253,6 +1295,14 @@ table {
           justify-content: flex-end;
   padding: 1.07143rem;
   color: #fff;
+}
+
+@media (max-width: 768px) {
+  .slider__desc {
+    line-height: 20px;
+    padding: 5px;
+    text-align: center;
+  }
 }
 
 .slider__price {
@@ -1266,13 +1316,30 @@ span.rub {
   letter-spacing: -0.8;
 }
 
+.arr__left, .arr__right {
+  position: absolute;
+  padding: 6px;
+  width: 1.92857rem;
+  height: 1.07143rem;
+}
+
+.arr__left {
+  left: 0;
+  top: 35%;
+}
+
+.arr__right {
+  left: 95%;
+  top: 35%;
+}
+
 .ingredients {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: absolute;
   left: 0;
-  top: 0;
+  top: 10%;
   cursor: pointer;
 }
 
@@ -1303,11 +1370,6 @@ span.rub {
   font-family: 'gagalin';
   font-size: 1rem;
   font-weight: 400;
-}
-
-.calories__icon {
-  width: 4.28571rem;
-  height: 4.28571rem;
 }
 
 .ingredients__info {
@@ -1396,6 +1458,13 @@ span.rub {
   font-family: 'gagalin';
   font-size: 1rem;
   color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 768px) {
+  .calories {
+    top: -70%;
+    right: -80%;
+  }
 }
 
 .calories__icon {
