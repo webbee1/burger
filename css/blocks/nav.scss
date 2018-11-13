@@ -1,0 +1,55 @@
+/*nav*/
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 756px;
+
+
+  &__link {
+    color: $white;
+    font-size: 13px;
+    font-family: 'ubuntu';
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 2.31;
+    margin-right: 10px;
+  }
+}
+
+.nav__item {
+  align-items: center;
+  display: inline-block;
+  margin-right: 10px;
+
+  &:after {
+    display: inline-block;
+    content: '';
+    vertical-align: middle;
+    background-color: $white;
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+  }
+
+}
+
+.nav__item:last-child {
+  margin-right: 0;
+
+  &:after {
+    display: none;
+  }
+}
+
+.nav__list {
+  display: flex;
+
+  &__item {
+    display: inline-flex;
+    margin-right: 17px;
+  }
+  
+}
+

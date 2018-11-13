@@ -1,0 +1,69 @@
+/*products*/
+.section__title {
+  font-family: 'gagalin';
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 0.89;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 60px;
+}
+
+.products {
+  background: url(../images/section_2/@2x/bg@2x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  color:$charcoal;
+
+  &__item {
+    width: 33%;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+}
+
+
+
+.products__list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.products__desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 5px;
+}
+
+.products__icon {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-content: flex-start;
+  margin: auto;
+}
+
+.products__info {
+  text-align: center;
+}
+
+.products__title {
+  font-family: 'lifehack';
+  font-weight: 500;
+  font-size: 24px;
+  padding: 5px 0;
+
+}
+
+.products__subtitle {
+  font-family:'ubuntu';
+  color: $grey;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+  margin-bottom: 65px;
+}

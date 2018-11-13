@@ -1,0 +1,19 @@
+/* *button*/
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.btn{
+  background-color: $tomato;
+  padding:10px 15px;
+  border-radius: 5px;
+  color: $white;
+  
+}
+
+.btn--black{
+  background-color:$black;
+  padding:12px 17px;
+}

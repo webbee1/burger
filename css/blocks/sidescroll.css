@@ -1,0 +1,41 @@
+/*sidescroll*/
+.sidescroll {
+  position: fixed;
+  display: block;
+  padding: 6px;
+  top: 85px;
+  right: 23%;
+}
+
+.sidescroll__link {
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  background-color: white;
+  margin-bottom: 20px;
+  display: inline-block;
+  position: relative;
+  bottom: -25%;
+  right: -26%;
+}
+
+.sidescroll .sidescroll__item {
+  width: 16px;
+  height: 16px;
+  border: 2px solid transparent;
+  border-radius: 100%;
+  margin-bottom: 10px;
+  line-height: 16px;
+}
+
+.sidescroll .sidescroll__item:last-child {
+  margin-bottom: 0;
+}
+
+.sidescroll .sidescroll__item--active {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #fff;
+  border-radius: 100%;
+}
+/*# sourceMappingURL=sidescroll.css.map */
