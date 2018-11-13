@@ -39,7 +39,7 @@
 
 .carte__name{
   position: absolute;
-  font-family:'gagalin';
+  font-family:'gagalinregular';
   font-size:rem(40px);
   color:$white;
   font-weight:400;
@@ -81,10 +81,10 @@
 
 .carte__text{
   font-size:rem(14px);
-  font-family:'ubuntu';
+  font-family: 'ubuntubold';
   color:$white;
   padding:rem(30px) rem(40px);
-  
+  font-weight:300;
   height:100%;
   line-height:1.8;
   

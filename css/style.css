@@ -335,48 +335,6 @@ template {
   display: none;
 }
 
-@font-face {
-  font-family: 'gagalinregular';
-  src: url("../fonts/gagalin-regular-webfont.woff2") format("woff2"), url("../fonts/gagalin-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'lifehackmedium';
-  src: url("../fonts/lifehack_medium-webfont.woff2") format("woff2"), url("../fonts/lifehack_medium-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'ubuntubold';
-  src: url("../fonts/gagalin-regular-webfont.woff") format("woff2"), url("../fonts/gagalin-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'ubuntulight';
-  src: url("../fonts/ubuntu-light-webfont.woff2") format("woff2"), url("../fonts/ubuntu-light-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'ubuntumedium';
-  src: url("../fonts/ubuntu-medium-webfont.woff2") format("woff2"), url("../fonts/ubuntu-medium-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'ubunturegular';
-  src: url("../fonts/ubuntu-regular-webfont.woff2") format("woff2"), url("../fonts/ubuntu-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
 html,
 body {
   height: 100%;
@@ -489,6 +447,48 @@ table {
   .container {
     max-width: 98%;
   }
+}
+
+@font-face {
+  font-family: 'gagalinregular';
+  src: url("../../fonts/gagalin-regular-webfont.woff2") format("woff2"), url("../../fonts/gagalin-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'lifehackmedium';
+  src: url("../../fonts/lifehack_medium-webfont.woff2") format("woff2"), url("../../fonts/lifehack_medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ubuntubold';
+  src: url("../../fonts/ubuntu-b-webfont.woff2") format("woff2"), url("../../fonts/ubuntu-b-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ubuntulight';
+  src: url("../../fonts/ubuntu-light-webfont.woff2") format("woff2"), url("../../fonts/ubuntu-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ubuntumedium';
+  src: url("../../fonts/ubuntu-medium-webfont.woff2") format("woff2"), url("../../fonts/ubuntu-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ubunturegular';
+  src: url("../../fonts/ubuntu-regular-webfont.woff2") format("woff2"), url("../../fonts/ubuntu-regular-webfont.woff2") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* *button*/
@@ -663,7 +663,7 @@ table {
 .nav__link {
   color: #fff;
   font-size: 0.92857rem;
-  font-family: 'ubuntu';
+  font-family: 'ubuntumedium';
   text-transform: uppercase;
   font-weight: 500;
   line-height: 2.31;
@@ -768,7 +768,7 @@ table {
 }
 
 .promo__title {
-  font-family: 'gagalin';
+  font-family: 'gagalinregular';
   text-transform: uppercase;
   font-size: 5.14286rem;
   color: #f9b43b;
@@ -781,7 +781,7 @@ table {
 }
 
 .promo__desc {
-  font-family: 'lifehack';
+  font-family: 'lifehackmedium';
   text-transform: lowercase;
   line-height: 4.64286rem;
   font-weight: 500;
@@ -1055,14 +1055,14 @@ table {
 }
 
 .products__title {
-  font-family: 'lifehack';
+  font-family: 'lifehackmedium';
   font-weight: 500;
   font-size: 1.71429rem;
   padding: 0.35714rem 0;
 }
 
 .products__subtitle {
-  font-family: 'ubuntu';
+  font-family: 'ubuntulight';
   color: rgba(39, 40, 41, 0.9);
   font-size: 1rem;
   font-weight: 300;
@@ -1160,14 +1160,14 @@ table {
 }*/
 .subreview__name {
   color: white;
-  font-family: 'gagalin';
+  font-family: 'gagalinregular';
   font-weight: 400;
   line-height: 2rem;
 }
 
 .subreview__text {
   color: white;
-  font-family: 'ubuntu';
+  font-family: 'ubuntulight';
   font-size: 0.92857rem;
   font-weight: 300;
   line-height: 1.71429rem;
@@ -1364,7 +1364,7 @@ table {
   width: 75%;
   font-size: 1rem;
   line-height: 1.71429rem;
-  font-family: 'ubuntu';
+  font-family: 'ubuntulight';
   font-weight: 300;
   padding: 1.07143rem;
   color: #fff;
@@ -1380,7 +1380,7 @@ table {
 }
 
 .slider__price {
-  font-family: 'gagalin';
+  font-family: 'gagalinregular';
   font-size: 5.14286rem;
   color: #e45028;
   /*@include tablets {
@@ -1473,7 +1473,7 @@ span.rub {
 
 .ingredients__btn-title {
   color: #fff;
-  font-family: 'gagalin';
+  font-family: 'gagalinregular';
   font-size: 1rem;
   font-weight: 400;
 }
@@ -1574,7 +1574,7 @@ span.rub {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-family: 'gagalin';
+  font-family: 'gagalinregular';
   font-size: 1rem;
   color: rgba(255, 255, 255, 0.6);
 }
@@ -1737,7 +1737,7 @@ span.rub {
 
 .team__trigger {
   font-size: 1rem;
-  font-family: 'gagalin';
+  font-family: 'gagalinregular';
   line-height: 2rem;
   color: #fff;
   position: relative;
@@ -1955,7 +1955,7 @@ span.rub {
 
 .carte__name {
   position: absolute;
-  font-family: 'gagalin';
+  font-family: 'gagalinregular';
   font-size: 2.85714rem;
   color: #fff;
   font-weight: 400;
@@ -1998,9 +1998,10 @@ span.rub {
 
 .carte__text {
   font-size: 1rem;
-  font-family: 'ubuntu';
+  font-family: 'ubuntubold';
   color: #fff;
   padding: 2.14286rem 2.85714rem;
+  font-weight: 300;
   height: 100%;
   line-height: 1.8;
 }
@@ -2051,7 +2052,7 @@ span.rub {
 
 .deliveryform {
   color: #fff;
-  font-family: 'ubuntu';
+  font-family: 'ubuntubold';
   font-size: 1rem;
 }
 
@@ -2059,7 +2060,7 @@ span.rub {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-family: 'ubuntu';
+  font-family: 'ubuntulight';
 }
 
 @media (max-width: 768px) {
@@ -2328,7 +2329,7 @@ span.rub {
   display: inline-block;
   width: 50%;
   vertical-align: middle;
-  font-family: 'ubuntu';
+  font-family: 'ubuntubold';
   padding: 0.35714rem;
   font-size: 1rem;
 }
@@ -2353,7 +2354,7 @@ span.rub {
 }
 
 .footer__link {
-  font-family: 'ubuntu';
+  font-family: 'ubuntubold';
   font-weight: 700;
   color: #e45028;
 }

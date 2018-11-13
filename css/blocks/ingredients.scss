@@ -30,7 +30,7 @@
 
 .ingredients__btn-title {
   color: $white;
-  font-family: 'gagalin';
+  font-family: 'gagalinregular';
   font-size: rem(14px);
   font-weight: 400;
   @include phones {
@@ -103,7 +103,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: 'gagalin';
+  font-family: 'gagalinregular';
   font-size: rem(14px);
   color: rgba(255, 255, 255, 0.6);
 
