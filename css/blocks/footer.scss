@@ -1,9 +1,10 @@
 .footer {
 	height: rem(60px);
-	margin-top: rem(-60px);
 	width: 100%;
-	overflow: hidden;
 	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
 	background: url("../images/section_7/chalkboard_texture.jpg");
 	background-size: cover;
 

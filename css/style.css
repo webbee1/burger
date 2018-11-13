@@ -337,42 +337,42 @@ template {
 
 @font-face {
   font-family: 'gagalinregular';
-  src: url("../../fonts/gagalin-regular-webfont.woff2") format("woff2"), url("../../fonts/gagalin-regular-webfont.woff") format("woff");
+  src: url("../fonts/gagalin-regular-webfont.woff2") format("woff2"), url("../fonts/gagalin-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'lifehackmedium';
-  src: url("../../fonts/lifehack_medium-webfont.woff2") format("woff2"), url("../../fonts/lifehack_medium-webfont.woff") format("woff");
+  src: url("../fonts/lifehack_medium-webfont.woff2") format("woff2"), url("../fonts/lifehack_medium-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'ubuntubold';
-  src: url("../../fonts/gagalin-regular-webfont.woff") format("woff2"), url("../../fonts/gagalin-regular-webfont.woff") format("woff");
+  src: url("../fonts/gagalin-regular-webfont.woff") format("woff2"), url("../fonts/gagalin-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'ubuntulight';
-  src: url("../../fonts/ubuntu-light-webfont.woff2") format("woff2"), url("../../fonts/ubuntu-light-webfont.woff") format("woff");
+  src: url("../fonts/ubuntu-light-webfont.woff2") format("woff2"), url("../fonts/ubuntu-light-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'ubuntumedium';
-  src: url("../../fonts/ubuntu-medium-webfont.woff2") format("woff2"), url("../../fonts/ubuntu-medium-webfont.woff") format("woff");
+  src: url("../fonts/ubuntu-medium-webfont.woff2") format("woff2"), url("../fonts/ubuntu-medium-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'ubunturegular';
-  src: url("../../fonts/ubuntu-regular-webfont.woff2") format("woff2"), url("../../fonts/ubuntu-regular-webfont.woff") format("woff");
+  src: url("../fonts/ubuntu-regular-webfont.woff2") format("woff2"), url("../fonts/ubuntu-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -597,7 +597,7 @@ table {
   color: #fff;
   text-align: left;
   margin-bottom: 0;
-  margin-right: 0;
+  margin-left: 0;
   line-height: 64px;
 }
 
@@ -900,7 +900,7 @@ table {
   display: block;
   padding: 0.42857rem;
   top: 6.07143rem;
-  right: 23%;
+  right: 0%;
 }
 
 @media (max-width: 768px) {
@@ -1154,10 +1154,10 @@ table {
   opacity: 1;
 }
 
-.subreview__hover--example {
-  opacity: 1;
-}
-
+/*
+.subreview__hover--example{
+  opacity:1;
+}*/
 .subreview__name {
   color: white;
   font-family: 'gagalin';
@@ -1185,34 +1185,29 @@ table {
 .slider {
   background-image: -webkit-gradient(linear, left bottom, left top, from(#f9b43b), color-stop(48%, #eb8c38), color-stop(74%, #f9b43b));
   background-image: linear-gradient(to top, #f9b43b, #eb8c38 48%, #f9b43b 74%);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .slider__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
-  overflow: hidden;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  padding: 1%;
+  max-width: 80%;
+  min-height: 90%;
 }
 
 @media (max-width: 768px) {
   .slider__content {
-    height: 100%;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    padding: 1%;
   }
 }
 
@@ -1230,6 +1225,8 @@ table {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  max-width: 100%;
+  min-height: 100%;
 }
 
 @media (max-width: 768px) {
@@ -1241,7 +1238,18 @@ table {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 10% 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider__wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -1255,52 +1263,118 @@ table {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 505px;
+  height: 330px;
+  margin-right: 1%;
+  position: relative;
 }
 
-.slaider__frame-img {
-  max-width: 30rem;
-  height: auto;
-  display: block;
+@media (max-width: 768px) {
+  .slider__frame {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 15%;
+    width: 450px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider__frame {
+    margin-top: 10%;
+  }
+}
+
+.slider__frame-img {
+  background-size: cover;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+@media (max-width: 768px) {
+  .slider__frame-img {
+    max-width: 80%;
+    max-height: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider__frame-img {
+    max-width: 80%;
+    max-height: 80%;
+  }
 }
 
 .slider__order {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   width: 100%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media (max-width: 768px) {
   .slider__order {
-    width: 90%;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: auto;
+    width: 100%;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider__order {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-right: 50px;
+    width: 100%;
+  }
+}
+
+.slider__occ {
+  text-align: right;
+}
+
+.slider__info {
+  width: 50%;
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .slider__info {
+    width: 100%;
+    text-align: center;
   }
 }
 
 .slider__desc {
-  width: 90%;
+  width: 75%;
   font-size: 1rem;
   line-height: 1.71429rem;
   font-family: 'ubuntu';
   font-weight: 300;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
   padding: 1.07143rem;
   color: #fff;
+  text-align: left;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .slider__desc {
+    width: 95%;
     line-height: 20px;
-    padding: 5px;
     text-align: center;
   }
 }
@@ -1309,6 +1383,23 @@ table {
   font-family: 'gagalin';
   font-size: 5.14286rem;
   color: #e45028;
+  /*@include tablets {
+    display:inline-flex;
+    align-items:center;
+    }*/
+}
+
+@media (max-width: 480px) {
+  .slider__price {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-right: 2%;
+    font-size: 2.85714rem;
+  }
 }
 
 span.rub {
@@ -1316,21 +1407,29 @@ span.rub {
   letter-spacing: -0.8;
 }
 
-.arr__left, .arr__right {
+@media (max-width: 480px) {
+  span.rub {
+    font-size: 1.78571rem;
+  }
+}
+
+.slider__control-left,
+.slider__control-right {
   position: absolute;
-  padding: 6px;
-  width: 1.92857rem;
-  height: 1.07143rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 50%;
+  width: 1.07143rem;
+  height: 2.14286rem;
 }
 
-.arr__left {
+.slider__control-left {
   left: 0;
-  top: 35%;
 }
 
-.arr__right {
-  left: 95%;
-  top: 35%;
+.slider__control-right {
+  right: 0;
 }
 
 .ingredients {
@@ -1338,8 +1437,8 @@ span.rub {
   display: -ms-flexbox;
   display: flex;
   position: absolute;
-  left: 0;
-  top: 10%;
+  left: 5%;
+  top: 5%;
   cursor: pointer;
 }
 
@@ -1365,11 +1464,24 @@ span.rub {
   cursor: pointer;
 }
 
+@media (max-width: 480px) {
+  .ingredients__btn {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
 .ingredients__btn-title {
   color: #fff;
   font-family: 'gagalin';
   font-size: 1rem;
   font-weight: 400;
+}
+
+@media (max-width: 480px) {
+  .ingredients__btn-title {
+    font-size: 0.85714rem;
+  }
 }
 
 .ingredients__info {
@@ -1426,6 +1538,13 @@ span.rub {
   height: 2.85714rem;
 }
 
+@media (max-width: 480px) {
+  .ingredients__icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
 .ingredients__name {
   font-weight: 500;
   text-align: center;
@@ -1441,7 +1560,7 @@ span.rub {
 .calories {
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1462,7 +1581,7 @@ span.rub {
 
 @media (max-width: 768px) {
   .calories {
-    top: -70%;
+    top: -80%;
     right: -80%;
   }
 }
@@ -1473,6 +1592,13 @@ span.rub {
   position: relative;
   fill: #fff;
   fill-opacity: 0.5;
+}
+
+@media (max-width: 480px) {
+  .calories__icon {
+    width: 3.57143rem;
+    height: 3.57143rem;
+  }
 }
 
 .calories__num {
@@ -1489,6 +1615,12 @@ span.rub {
   margin-top: 0;
   padding: 0.21429rem;
   font-size: 1.42857rem;
+}
+
+@media (max-width: 480px) {
+  .calories__sum {
+    font-size: 1.14286rem;
+  }
 }
 
 .team {
@@ -2159,10 +2291,11 @@ span.rub {
 
 .footer {
   height: 4.28571rem;
-  margin-top: -4.28571rem;
   width: 100%;
-  overflow: hidden;
   position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   background: url("../images/section_7/chalkboard_texture.jpg");
   background-size: cover;
 }

@@ -1,9 +1,11 @@
 .ingredients {
   display: flex;
   position: absolute;
-  left: 0;
-  top: 10%;
+  left: 5%;
+  top: 5%;
   cursor: pointer;
+  @include phones {
+   }
 }
 
 .ingredients__btn {
@@ -17,6 +19,12 @@
   flex-direction: column;
   align-items: center;
   cursor: pointer;
+
+  @include phones {
+    width: rem(70px);
+  height: rem(70px);
+   }
+  
 }
 
 
@@ -25,6 +33,9 @@
   font-family: 'gagalin';
   font-size: rem(14px);
   font-weight: 400;
+  @include phones {
+   font-size:rem(12px);
+   }
 }
 
 
@@ -68,6 +79,10 @@
 .ingredients__icon {
   width: rem(44px);
   height: rem(40px);
+  @include phones {
+    width: rem(35px);
+  height: rem(35px);
+   }
 }
 
 .ingredients__name {
@@ -83,7 +98,7 @@
 .calories {
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -91,9 +106,10 @@
   font-family: 'gagalin';
   font-size: rem(14px);
   color: rgba(255, 255, 255, 0.6);
+
   @include tablets {
-   top: -70%;
-  right: -80%;
+    top: -80%;
+    right: -80%;
   }
 }
 
@@ -103,6 +119,10 @@
   position: relative;
   fill: $white;
   fill-opacity: 0.5;
+  @include phones {
+    width: rem(50px);
+  height: rem(50px);
+   }
 
 }
 
@@ -119,4 +139,7 @@
   margin-top: 0;
   padding: rem(3px);
   font-size: rem(20px);
+  @include phones {
+    font-size:rem(16px);
+   }
 }
