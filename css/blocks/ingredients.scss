@@ -4,7 +4,9 @@
   left: 5%;
   top: 5%;
   cursor: pointer;
-  @include phones {
+  @include tablets {
+    left: 0%;
+    top: 1%;
    }
 }
 
@@ -97,6 +99,8 @@
 
 .calories {
   position: absolute;
+  min-width:rem(80px);
+  max-height:rem(80px);
   bottom: 0;
   left: 5%;
   display: flex;
@@ -108,8 +112,8 @@
   color: rgba(255, 255, 255, 0.6);
 
   @include tablets {
-    top: -80%;
-    right: -80%;
+    top: 1%;
+    left:78%;
   }
 }
 

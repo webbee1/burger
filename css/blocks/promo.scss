@@ -28,13 +28,17 @@
 
 }
 
-.promo__title {
+.section__title.promo__title {
   font-family: 'gagalinregular';
   text-transform: uppercase;
   font-size: rem(92px);
   color: $yellow;
+
   @include tablets{
     font-size:rem(72px);
+    text-align:center;
+   
+    margin:0;
      }
 }
 
@@ -49,6 +53,7 @@
 
   @include tablets{
     font-size: rem(55px);
+    text-align:center;
     line-height:55px;
      }
 }
@@ -57,9 +62,9 @@
   width: 50%;
   display: flex;
   flex-direction: column;
-  position: relative;
   /*bottom: rem(-34px);*/
   text-align: left;
+
   @include tablets{
     flex-direction:column;
     bottom: rem(0px);

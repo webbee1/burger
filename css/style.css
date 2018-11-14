@@ -599,7 +599,7 @@ table {
   text-align: left;
   margin-bottom: 0;
   margin-left: 0;
-  line-height: 64px;
+  line-height: 54px;
 }
 
 @media (max-width: 768px) {
@@ -770,7 +770,7 @@ table {
   display: block;
 }
 
-.promo__title {
+.section__title.promo__title {
   font-family: 'gagalinregular';
   text-transform: uppercase;
   font-size: 6.57143rem;
@@ -778,8 +778,10 @@ table {
 }
 
 @media (max-width: 768px) {
-  .promo__title {
+  .section__title.promo__title {
     font-size: 5.14286rem;
+    text-align: center;
+    margin: 0;
   }
 }
 
@@ -797,6 +799,7 @@ table {
 @media (max-width: 768px) {
   .promo__desc {
     font-size: 3.92857rem;
+    text-align: center;
     line-height: 55px;
   }
 }
@@ -810,7 +813,6 @@ table {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  position: relative;
   /*bottom: rem(-34px);*/
   text-align: left;
 }
@@ -1049,14 +1051,14 @@ table {
   }
 }
 
-.products__title {
+.products h3 {
   font-family: 'lifehackmedium';
   font-weight: 500;
   font-size: 1.71429rem;
   padding: 0.35714rem 0;
 }
 
-.products__subtitle {
+.products p {
   font-family: 'ubuntulight';
   color: rgba(39, 40, 41, 0.9);
   font-size: 1rem;
@@ -1193,7 +1195,7 @@ table {
   position: relative;
   overflow: hidden;
   padding: 1%;
-  max-width: 80%;
+  max-width: 70%;
   min-height: 90%;
 }
 
@@ -1258,8 +1260,9 @@ table {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 505px;
+  /* width:505px;*/
   height: 330px;
+  padding: 0 10px;
   margin-right: 1%;
   position: relative;
 }
@@ -1270,8 +1273,8 @@ table {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-top: 15%;
-    width: 450px;
+    margin-top: 10%;
+    /*  width:450px;*/
     height: 300px;
   }
 }
@@ -1279,6 +1282,7 @@ table {
 @media (max-width: 480px) {
   .slider__frame {
     margin-top: 10%;
+    /* max-width:450px;*/
   }
 }
 
@@ -1290,8 +1294,8 @@ table {
 
 @media (max-width: 768px) {
   .slider__frame-img {
-    max-width: 80%;
-    max-height: 80%;
+    max-width: 90%;
+    max-height: 90%;
   }
 }
 
@@ -1307,6 +1311,7 @@ table {
   display: -ms-inline-flexbox;
   display: inline-flex;
   width: 100%;
+  padding: 5% 0;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-box-align: center;
@@ -1339,24 +1344,8 @@ table {
   }
 }
 
-.slider__occ {
-  text-align: right;
-}
-
 .slider__info {
-  width: 50%;
-  text-align: right;
-}
-
-@media (max-width: 768px) {
-  .slider__info {
-    width: 100%;
-    text-align: center;
-  }
-}
-
-.slider__desc {
-  width: 75%;
+  width: 49%;
   font-size: 1rem;
   line-height: 1.71429rem;
   font-family: 'ubuntulight';
@@ -1366,11 +1355,27 @@ table {
   text-align: left;
 }
 
+@media (max-width: 768px) {
+  .slider__info {
+    width: 100%;
+    line-height: 20px;
+    padding: 0 10px;
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 @media (max-width: 480px) {
-  .slider__desc {
-    width: 95%;
+  .slider__info {
+    width: 100%;
     line-height: 20px;
     text-align: center;
+    padding: 0;
   }
 }
 
@@ -1378,10 +1383,6 @@ table {
   font-family: 'gagalinregular';
   font-size: 5.14286rem;
   color: #e45028;
-  /*@include tablets {
-    display:inline-flex;
-    align-items:center;
-    }*/
 }
 
 @media (max-width: 480px) {
@@ -1415,16 +1416,16 @@ span.rub {
       -ms-flex-align: center;
           align-items: center;
   top: 50%;
-  width: 1.07143rem;
-  height: 2.14286rem;
+  min-width: 1.07143rem;
+  min-height: 2.14286rem;
 }
 
 .slider__control-left {
-  left: 0;
+  left: 15%;
 }
 
 .slider__control-right {
-  right: 0;
+  right: 15%;
 }
 
 .ingredients {
@@ -1435,6 +1436,13 @@ span.rub {
   left: 5%;
   top: 5%;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .ingredients {
+    left: 0%;
+    top: 1%;
+  }
 }
 
 .ingredients__btn {
@@ -1554,6 +1562,8 @@ span.rub {
 
 .calories {
   position: absolute;
+  min-width: 5.71429rem;
+  max-height: 5.71429rem;
   bottom: 0;
   left: 5%;
   display: -webkit-box;
@@ -1576,8 +1586,8 @@ span.rub {
 
 @media (max-width: 768px) {
   .calories {
-    top: -80%;
-    right: -80%;
+    top: 1%;
+    left: 78%;
   }
 }
 

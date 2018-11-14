@@ -14,6 +14,8 @@
     &:last-child{
       margin-bottom:0;
     }
+   
+
     @include phones{
       width: 100%;
       flex-direction:row;
@@ -58,7 +60,7 @@
   margin: auto;
   @include phones{
     width: rem(75px);
-  height: rem(75px);
+    height: rem(75px);
     margin-right:5%;
    }
 }
@@ -73,7 +75,7 @@
    }
 }
 
-.products__title {
+.products h3 {
   font-family: 'lifehackmedium';
   font-weight: 500;
   font-size: rem(24px);
@@ -81,7 +83,7 @@
 
 }
 
-.products__subtitle {
+.products p {
   font-family:'ubuntulight';
   color: $grey;
   font-size: rem(14px);

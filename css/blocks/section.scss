@@ -48,7 +48,8 @@
   text-align:left;
   margin-bottom:0;
   margin-left:0;
-line-height:64px;
+line-height:54px;
+
 @include tablets {
   line-height: 48px;
 }
