@@ -613,6 +613,7 @@ table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 0.85714rem 0;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -750,6 +751,7 @@ table {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 10%;
 }
 
 @media (max-width: 768px) {
@@ -763,7 +765,7 @@ table {
 }
 
 .promo__img {
-  max-width: 30rem;
+  max-width: 31.42857rem;
   height: auto;
   display: block;
 }
@@ -771,13 +773,13 @@ table {
 .promo__title {
   font-family: 'gagalinregular';
   text-transform: uppercase;
-  font-size: 5.14286rem;
+  font-size: 6.57143rem;
   color: #f9b43b;
 }
 
 @media (max-width: 768px) {
   .promo__title {
-    font-size: 4.42857rem;
+    font-size: 5.14286rem;
   }
 }
 
@@ -809,7 +811,7 @@ table {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
-  bottom: -2.42857rem;
+  /*bottom: rem(-34px);*/
   text-align: left;
 }
 
@@ -824,7 +826,7 @@ table {
 }
 
 .promo__left {
-  margin-right: 1.57143rem;
+  margin-right: 3.57143rem;
   -webkit-box-flex: .75;
       -ms-flex: .75;
           flex: .75;
@@ -899,27 +901,20 @@ table {
 .sidescroll {
   position: fixed;
   display: block;
-  padding: 0.42857rem;
   top: 6.07143rem;
-  right: 0%;
-}
-
-@media (max-width: 768px) {
-  .sidescroll {
-    right: 5%;
-  }
+  right: 1%;
 }
 
 .sidescroll__link {
-  width: 0.35714rem;
-  height: 0.35714rem;
+  width: 0.5rem;
+  height: 0.5rem;
   border-radius: 100%;
   background-color: white;
-  margin-bottom: 1.42857rem;
+  margin-bottom: 0.71429rem;
   display: inline-block;
   position: relative;
-  bottom: -25%;
-  right: -26%;
+  bottom: -25.5%;
+  right: -25.5%;
 }
 
 .sidescroll .sidescroll__item {
@@ -936,9 +931,9 @@ table {
 }
 
 .sidescroll .sidescroll__item--active {
-  width: 1.14286rem;
-  height: 1.14286rem;
-  border: 0.14286rem solid #fff;
+  width: 1.21429rem;
+  height: 1.21429rem;
+  border: 0.07143rem solid white;
   border-radius: 100%;
 }
 
@@ -954,7 +949,6 @@ table {
 .products__item {
   width: 33%;
   overflow: hidden;
-  margin-bottom: 1.42857rem;
 }
 
 .products__item:last-child {

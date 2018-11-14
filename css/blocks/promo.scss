@@ -11,7 +11,7 @@
   .promo__content {
     display: flex;
     align-items: center;
-
+    margin-bottom:10%;
 
     @include tablets{
      flex-direction:column;
@@ -22,7 +22,7 @@
 
 
 .promo__img {
-  max-width: rem(420px);
+  max-width: rem(440px);
   height: auto;
   display: block;
 
@@ -31,10 +31,10 @@
 .promo__title {
   font-family: 'gagalinregular';
   text-transform: uppercase;
-  font-size: rem(72px);
+  font-size: rem(92px);
   color: $yellow;
   @include tablets{
-    font-size:rem(62px);
+    font-size:rem(72px);
      }
 }
 
@@ -46,6 +46,7 @@
   font-size: rem(65px);
   color: $white;
   align-self: flex-start;
+
   @include tablets{
     font-size: rem(55px);
     line-height:55px;
@@ -57,7 +58,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  bottom: rem(-34px);
+  /*bottom: rem(-34px);*/
   text-align: left;
   @include tablets{
     flex-direction:column;
@@ -66,7 +67,7 @@
 }
 
 .promo__left {
-  margin-right: rem(22px);
+  margin-right: rem(50px);
   flex: .75;
   
 }

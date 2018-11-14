@@ -2,21 +2,20 @@
 .sidescroll {
   position: fixed;
   display: block;
-  padding: rem(6px);
   top: rem(85px);
-  right: 23%;
+  right: 1%;
 }
 
 .sidescroll__link {
-  width: rem(5px);
-  height: rem(5px);
+  width: rem(7px);
+  height: rem(7px);
   border-radius: 100%;
   background-color: white;
-  margin-bottom: rem(20px);
+  margin-bottom: rem(10px);
   display: inline-block;
   position: relative;
-  bottom: -25%;
-  right: -26%;
+  bottom: -25.5%;
+  right: -25.5%;
 }
 
 .sidescroll .sidescroll__item {
@@ -33,9 +32,9 @@
 }
 
 .sidescroll .sidescroll__item--active {
-  width: rem(16px);
-  height: rem(16px);
-  border: rem(2px) solid #fff;
+  width: rem(17px);
+  height: rem(17px);
+  border: rem(1px) solid white;
   border-radius: 100%;
 }
 /*# sourceMappingURL=sidescroll.css.map */
