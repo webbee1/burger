@@ -15,6 +15,10 @@
       margin-bottom:0;
     }
    
+  @include tablets{
+    max-width:100%;
+    flex-wrap:wrap;
+  }  
 
     @include phones{
       width: 100%;
@@ -26,15 +30,20 @@
 
 .products .container{
   justify-content:center;
- 
 }
 
 .products__list {
   display: flex;
   justify-content: space-around;
 
+  @include tablets{
+    flex-direction:row;
+    align-content: space-between;
+    min-width:100%;
+   }
   @include phones{
     flex-direction:column;
+    width:100%;
    }
 }
 

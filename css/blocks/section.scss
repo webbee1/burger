@@ -4,8 +4,8 @@
  min-height:rem(650px);
   position: relative;
   display: flex;
-  justify-content: center;
-  overflow:hidden;
+  /*justify-content: center;
+  overflow:hidden;*/
 
   @include tablets{
     justify-content: flex-start;
@@ -17,26 +17,27 @@
 .section__title {
   font-family: 'gagalinregular';
   font-weight: 400;
-  font-size: rem(72px);
-  display: flex;
-  justify-content: center;
+  font-size: rem(106px);
+  display: inline-flex;
   text-align:center;
-  padding: 4% 0;
+ /* padding: 4% 0;*/
   color:$charcoal;
   white-space:nowrap;
 
     @include tablets {
-      font-size:rem(62px);
+      font-size:rem(72px);
+      justify-content:center;
     }
     @include phones {
-      font-size:rem(52px);
-      margin-bottom:7%;
+      font-size:rem(62px);
+      justify-content:center;
     }
 
 }
 
 .section__title--orange{
   color:$yellow; 
+
 
   @include phones {
     font-size:rem(40px);
@@ -46,12 +47,11 @@
 .section__title--white{
   color:$white;
   text-align:left;
-  margin-bottom:0;
   margin-left:0;
-line-height:54px;
+line-height:64px;
 
-@include tablets {
-  line-height: 48px;
-}
+@include phones {
+  line-height:45px;
 }
 
+}

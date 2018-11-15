@@ -76,7 +76,7 @@ margin-bottom:6%;
 }
 
 .team__trigger {
-	font-size: rem(14px);
+	font-size: rem(20px);
 	font-family: 'gagalinregular';
 	line-height: rem(28px);
 	color: $white;
@@ -119,7 +119,7 @@ margin-bottom:6%;
 .team__occ {
 	width: 50%;
 	line-height: rem(24px);
-	
+	font-size:rem(15px);
 
 
 	@include tablets {

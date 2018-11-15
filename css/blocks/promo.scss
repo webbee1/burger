@@ -6,12 +6,11 @@
   transform: translate(-50%, -50%);
   width: 100%;
 }
-
-
   .promo__content {
     display: flex;
     align-items: center;
-    margin-bottom:10%;
+    justify-content:center;
+    padding-bottom:35px;
 
     @include tablets{
      flex-direction:column;
@@ -19,25 +18,22 @@
        }
   }
 
-
-
 .promo__img {
   max-width: rem(440px);
   height: auto;
   display: block;
-
 }
 
 .section__title.promo__title {
   font-family: 'gagalinregular';
   text-transform: uppercase;
-  font-size: rem(92px);
+  font-size: rem(106px);
+  padding:0;
   color: $yellow;
 
   @include tablets{
     font-size:rem(72px);
     text-align:center;
-   
     margin:0;
      }
 }
@@ -45,25 +41,24 @@
 .promo__desc {
   font-family: 'lifehackmedium';
   text-transform: lowercase;
-  line-height: rem(65px);
+  line-height: rem(60px);
   font-weight: 500;
   font-size: rem(65px);
+  letter-spacing:rem(-1.6px);
   color: $white;
   align-self: flex-start;
-
-  @include tablets{
-    font-size: rem(55px);
-    text-align:center;
-    line-height:55px;
-     }
+  
+     @include phones{
+      font-size: rem(50px);
+      text-align:center;
+      line-height:50px;
+       }
 }
 
 .promo__right {
   width: 50%;
   display: flex;
   flex-direction: column;
-  /*bottom: rem(-34px);*/
-  text-align: left;
 
   @include tablets{
     flex-direction:column;
@@ -71,11 +66,6 @@
      }
 }
 
-.promo__left {
-  margin-right: rem(50px);
-  flex: .75;
-  
-}
 .promo__right,
 .promo__right{
   @include tablets{

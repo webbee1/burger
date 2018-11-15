@@ -33,7 +33,7 @@
 .ingredients__btn-title {
   color: $white;
   font-family: 'gagalinregular';
-  font-size: rem(14px);
+  font-size: rem(18px);
   font-weight: 400;
   @include phones {
    font-size:rem(12px);
@@ -108,12 +108,12 @@
   align-items: center;
   justify-content: center;
   font-family: 'gagalinregular';
-  font-size: rem(14px);
+  font-size: rem(16px);
   color: rgba(255, 255, 255, 0.6);
 
   @include tablets {
     top: 1%;
-    left:78%;
+    left:85%;
   }
 }
 
@@ -123,10 +123,11 @@
   position: relative;
   fill: $white;
   fill-opacity: 0.5;
-  @include phones {
+  @include tablets {
     width: rem(50px);
   height: rem(50px);
    }
+  
 
 }
 
