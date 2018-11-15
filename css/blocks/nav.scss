@@ -67,8 +67,30 @@
 .order{
   display:flex;
   align-items:center;
-
   @include tablets{
     align-items:flex-end;
+    
   }
+}
+
+
+.hamburger {
+  box-sizing: border-box;
+  margin-left: 15px;
+  width: 24px;
+  cursor: pointer;
+  visibility: hidden;
+  
+  @include tablets{
+    visibility: visible;
+  }
+}
+ 
+
+.hamburger span {
+  background:$white;
+  border-radius:10px;
+  display: block;
+  height: 4px;
+  margin-bottom: 5px; 
 }

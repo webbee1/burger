@@ -3,7 +3,6 @@
 .sidescroll {
   position: fixed;
   display: block;
-  
   top: rem(85px);
   right: 1%;
  
@@ -39,4 +38,8 @@
     border: rem(1px) solid rgb(255, 255, 255);
     border-radius: 100%;
   }
+
+  @include tablets {
+    display: none;
+}
 }

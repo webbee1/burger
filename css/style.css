@@ -540,8 +540,6 @@ table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  /*justify-content: center;
-  overflow:hidden;*/
 }
 
 @media (max-width: 768px) {
@@ -561,7 +559,6 @@ table {
   display: -ms-inline-flexbox;
   display: inline-flex;
   text-align: center;
-  /* padding: 4% 0;*/
   color: #2f3234;
   white-space: nowrap;
 }
@@ -731,6 +728,29 @@ table {
         -ms-flex-align: end;
             align-items: flex-end;
   }
+}
+
+.hamburger {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-left: 15px;
+  width: 24px;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    visibility: visible;
+  }
+}
+
+.hamburger span {
+  background: #fff;
+  border-radius: 10px;
+  display: block;
+  height: 4px;
+  margin-bottom: 5px;
 }
 
 /*promo */
@@ -932,6 +952,12 @@ table {
   height: 1.21429rem;
   border: 0.07143rem solid white;
   border-radius: 100%;
+}
+
+@media (max-width: 768px) {
+  .sidescroll {
+    display: none;
+  }
 }
 
 /*products*/
@@ -1389,7 +1415,7 @@ table {
         -ms-flex-align: center;
             align-items: center;
     margin-right: 2%;
-    font-size: 3.57143rem;
+    font-size: 4.28571rem;
   }
 }
 
@@ -1454,7 +1480,7 @@ span.rub {
 
 @media (max-width: 768px) {
   .ingredients {
-    left: 0%;
+    left: 2%;
     top: 1%;
   }
 }
@@ -1601,7 +1627,7 @@ span.rub {
 @media (max-width: 768px) {
   .calories {
     top: 0%;
-    left: 85%;
+    left: 77%;
   }
 }
 
@@ -2339,7 +2365,6 @@ span.rub {
 }
 
 .footer {
-  height: 4.28571rem;
   width: 100%;
   position: absolute;
   bottom: 0;
@@ -2378,7 +2403,6 @@ span.rub {
   width: 50%;
   vertical-align: middle;
   font-family: 'ubuntubold';
-  padding: 0.35714rem;
   font-size: 1rem;
 }
 
