@@ -23,8 +23,8 @@
   cursor: pointer;
 
   @include phones {
-    width: rem(70px);
-  height: rem(70px);
+    width: rem(84px);
+  height: rem(84px);
    }
   
 }
@@ -36,7 +36,7 @@
   font-size: rem(18px);
   font-weight: 400;
   @include phones {
-   font-size:rem(12px);
+   font-size:rem(22px);
    }
 }
 
@@ -101,7 +101,7 @@
   position: absolute;
   min-width:rem(80px);
   max-height:rem(80px);
-  bottom: 0;
+  bottom: 60px;
   left: 5%;
   display: flex;
   flex-direction: column;
@@ -112,7 +112,7 @@
   color: rgba(255, 255, 255, 0.6);
 
   @include tablets {
-    top: 1%;
+    top: 0%;
     left:85%;
   }
 }
@@ -131,20 +131,23 @@
 
 }
 
-.calories__num {
+.calories__name {
   position: absolute;
-  top: 50%;
+  bottom:-85%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: rem(20px);
+  font-size: rem(25px);
+  @include tablets {
+    bottom:-40%;
+   }
 }
 
 .calories__sum {
   position: absolute;
-  margin-top: 0;
+  margin-top: 10%;
   padding: rem(3px);
-  font-size: rem(20px);
+  font-size: rem(30px);
   @include phones {
-    font-size:rem(16px);
+    font-size:rem(25px);
    }
 }

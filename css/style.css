@@ -767,7 +767,7 @@ table {
 }
 
 .promo__img {
-  max-width: 31.42857rem;
+  max-width: 27.85714rem;
   height: auto;
   display: block;
 }
@@ -871,7 +871,7 @@ table {
   left: 50%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
-  bottom: 2.64286rem;
+  bottom: 0.35714rem;
 }
 
 @media (max-width: 768px) {
@@ -1483,8 +1483,8 @@ span.rub {
 
 @media (max-width: 480px) {
   .ingredients__btn {
-    width: 5rem;
-    height: 5rem;
+    width: 6rem;
+    height: 6rem;
   }
 }
 
@@ -1497,7 +1497,7 @@ span.rub {
 
 @media (max-width: 480px) {
   .ingredients__btn-title {
-    font-size: 0.85714rem;
+    font-size: 1.57143rem;
   }
 }
 
@@ -1578,7 +1578,7 @@ span.rub {
   position: absolute;
   min-width: 5.71429rem;
   max-height: 5.71429rem;
-  bottom: 0;
+  bottom: 60px;
   left: 5%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1600,7 +1600,7 @@ span.rub {
 
 @media (max-width: 768px) {
   .calories {
-    top: 1%;
+    top: 0%;
     left: 85%;
   }
 }
@@ -1620,25 +1620,31 @@ span.rub {
   }
 }
 
-.calories__num {
+.calories__name {
   position: absolute;
-  top: 50%;
+  bottom: -85%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  font-size: 1.42857rem;
+  font-size: 1.78571rem;
+}
+
+@media (max-width: 768px) {
+  .calories__name {
+    bottom: -40%;
+  }
 }
 
 .calories__sum {
   position: absolute;
-  margin-top: 0;
+  margin-top: 10%;
   padding: 0.21429rem;
-  font-size: 1.42857rem;
+  font-size: 2.14286rem;
 }
 
 @media (max-width: 480px) {
   .calories__sum {
-    font-size: 1.14286rem;
+    font-size: 1.78571rem;
   }
 }
 
