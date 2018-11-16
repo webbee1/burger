@@ -668,6 +668,11 @@ table {
   margin-right: 0.71429rem;
 }
 
+.nav__link:hover {
+  border-bottom: 2px solid #e45028;
+  margin-bottom: 2px;
+}
+
 @media (max-width: 768px) {
   .nav {
     display: none;

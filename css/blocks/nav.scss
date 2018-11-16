@@ -21,6 +21,11 @@
     font-weight: 500;
     line-height: 2.31;
     margin-right: rem(10px);
+
+    &:hover{
+      border-bottom:2px solid $tomato;
+      margin-bottom:2px;
+    }
   }
 
   @include tablets{
@@ -63,6 +68,9 @@
   }
   
 }
+
+
+
 
 .order{
   display:flex;
