@@ -1,7 +1,8 @@
 /*header */
 .header {
   display: flex;
-  padding:rem(12px) 0;
+  padding:12px 0;
+  width:94%;
   justify-content: space-between;
   align-items: center;
 
@@ -9,4 +10,7 @@
     width:100%;
   }
 
+}
+.header__logo, .nav{
+  flex-grow:1;
 }

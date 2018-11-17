@@ -1,25 +1,24 @@
 /*nav*/
-.nav__wrap{
+/*.nav__wrap{
   display:flex;
   flex-direction:row;
   align-items:center;
   justify-content:center;
   padding: rem(3px);
-}
+}*/
 .nav {
   display: flex;
-  flex:1;
-  align-items: center;
-  justify-content: center;
-  width: rem(756px);
-
+  align-items: baseline;
+  justify-content: flex-end;
+  /*width: rem(756px);*/
+  white-space:nowrap;
   &__link {
     color: $white;
     font-size: rem(13px);
     font-family: 'ubuntumedium';
     text-transform: uppercase;
     font-weight: 500;
-    line-height: 2.31;
+    
     margin-right: rem(10px);
 
     &:hover{
@@ -36,11 +35,11 @@
 
 .nav__item {
   align-items: center;
-  display: inline-block;
+  display: inline-flex;
   margin-right: rem(10px);
-
+  flex-wrap:nowrap;
   &:after {
-    display: inline-block;
+    display: inline-flex;
     content: '';
     vertical-align: middle;
     background-color: $white;
@@ -87,7 +86,8 @@
   margin-left: 15px;
   width: 24px;
   cursor: pointer;
-  visibility: hidden;
+ visibility: hidden;
+
   
   @include tablets{
     visibility: visible;
@@ -96,21 +96,23 @@
  
 
 .hamburger .line {
-  background:$white;
   border-radius:10px;
   display: block;
   height: 4px;
   margin-bottom: 5px; 
+  background: $white;
 }
 
 .hamburger.active .line:nth-child(1){
-  -webkit-transform: rotate(-45deg) translate(-10px, 6px);
+ 
     transform: rotate(-45deg) translate(-10px, 6px);
+    background-color:$tomato;
 }
 .hamburger.active .line:nth-child(2){
   opacity: 0;
 }
 .hamburger.active .line:nth-child(3){
-  -webkit-transform: rotate(44deg) translate(-6px, -3px);
+ 
   transform: rotate(44deg) translate(-6px, -3px);
+  background-color:$tomato;
 }

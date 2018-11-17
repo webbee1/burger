@@ -72,8 +72,6 @@ table {
   overflow: hidden;
 }
 
-
-
 .container {
   max-width: rem(940px);
   width:95%;
@@ -87,9 +85,11 @@ table {
 
   @include tablets{
     max-width:98%;
+    margin:0 auto;
   }
 
   @include phones{
     max-width:98%;
+  margin:0 auto;
   }
 }
