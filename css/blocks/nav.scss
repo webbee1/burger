@@ -95,10 +95,22 @@
 }
  
 
-.hamburger span {
+.hamburger .line {
   background:$white;
   border-radius:10px;
   display: block;
   height: 4px;
   margin-bottom: 5px; 
+}
+
+.hamburger.active .line:nth-child(1){
+  -webkit-transform: rotate(-45deg) translate(-10px, 6px);
+    transform: rotate(-45deg) translate(-10px, 6px);
+}
+.hamburger.active .line:nth-child(2){
+  opacity: 0;
+}
+.hamburger.active .line:nth-child(3){
+  -webkit-transform: rotate(44deg) translate(-6px, -3px);
+  transform: rotate(44deg) translate(-6px, -3px);
 }

@@ -28,4 +28,8 @@
 
     }
 
-//scroll
+    //hamburger_menu
+    let hamburger = document.querySelector('.hamburger');
+    hamburger.addEventListener('click', function(e) {
+      hamburger.classList.toggle('active');
+    });
