@@ -20,11 +20,6 @@
     font-weight: 500;
     
     margin-right: rem(10px);
-
-    &:hover{
-      border-bottom:2px solid $tomato;
-      margin-bottom:2px;
-    }
   }
 
   @include tablets{
@@ -38,6 +33,7 @@
   display: inline-flex;
   margin-right: rem(10px);
   flex-wrap:nowrap;
+  
   &:after {
     display: inline-flex;
     content: '';
@@ -112,7 +108,10 @@
   opacity: 0;
 }
 .hamburger.active .line:nth-child(3){
- 
+
   transform: rotate(44deg) translate(-6px, -3px);
   background-color:$tomato;
+}
+.line:last-child{
+  margin-bottom:0;
 }

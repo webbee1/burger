@@ -360,7 +360,7 @@ body {
   font-family: 'ubuntu';
   font-weight: 300;
   color: #fff;
-  background-color: #fff;
+  background-color: black;
   font-size: 1rem;
   line-height: 1.42;
   position: relative;
@@ -655,11 +655,6 @@ table {
   margin-right: 0.71429rem;
 }
 
-.nav__link:hover {
-  border-bottom: 2px solid #e45028;
-  margin-bottom: 2px;
-}
-
 @media (max-width: 768px) {
   .nav {
     display: none;
@@ -765,6 +760,10 @@ table {
   -webkit-transform: rotate(44deg) translate(-6px, -3px);
           transform: rotate(44deg) translate(-6px, -3px);
   background-color: #e45028;
+}
+
+.line:last-child {
+  margin-bottom: 0;
 }
 
 /*promo */
@@ -919,6 +918,10 @@ table {
   height: 1.07143rem;
   fill: #fff;
   margin: auto;
+}
+
+.arrow__scroll:hover {
+  fill: #f9b43b;
 }
 
 @media (max-width: 768px) {
