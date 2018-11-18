@@ -1,11 +1,4 @@
 /*nav*/
-/*.nav__wrap{
-  display:flex;
-  flex-direction:row;
-  align-items:center;
-  justify-content:center;
-  padding: rem(3px);
-}*/
 .nav {
   display: flex;
   align-items: baseline;
@@ -21,10 +14,6 @@
     
     margin-right: rem(10px);
 
-    &:hover{
-      border-bottom:2px solid $tomato;
-      margin-bottom:2px;
-    }
   }
 
   @include tablets{
@@ -115,4 +104,7 @@
  
   transform: rotate(44deg) translate(-6px, -3px);
   background-color:$tomato;
+}
+.line:last-child{
+  margin-bottom:0;
 }

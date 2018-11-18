@@ -360,7 +360,7 @@ body {
   font-family: 'ubuntu';
   font-weight: 300;
   color: #fff;
-  background-color: #fff;
+  background-color: black;
   font-size: 1rem;
   line-height: 1.42;
   position: relative;
@@ -625,13 +625,6 @@ table {
 }
 
 /*nav*/
-/*.nav__wrap{
-  display:flex;
-  flex-direction:row;
-  align-items:center;
-  justify-content:center;
-  padding: rem(3px);
-}*/
 .nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -653,11 +646,6 @@ table {
   text-transform: uppercase;
   font-weight: 500;
   margin-right: 0.71429rem;
-}
-
-.nav__link:hover {
-  border-bottom: 2px solid #e45028;
-  margin-bottom: 2px;
 }
 
 @media (max-width: 768px) {
@@ -765,6 +753,10 @@ table {
   -webkit-transform: rotate(44deg) translate(-6px, -3px);
           transform: rotate(44deg) translate(-6px, -3px);
   background-color: #e45028;
+}
+
+.line:last-child {
+  margin-bottom: 0;
 }
 
 /*promo */
@@ -919,6 +911,10 @@ table {
   height: 1.07143rem;
   fill: #fff;
   margin: auto;
+}
+
+.arrow__scroll:hover {
+  fill: #f9b43b;
 }
 
 @media (max-width: 768px) {
@@ -2372,6 +2368,18 @@ span.rub {
           transform: rotate(45deg);
   -webkit-transition: .2s;
   transition: .2s;
+}
+
+@media (max-width: 480px) {
+  .form__row--botom {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .contacts {

@@ -14,7 +14,9 @@
     height: rem(15px);
     fill:$white;
     margin: auto;
-
+    &:hover{
+      fill:$yellow;
+    }
     @include tablets{
       width:rem(25px);
      height:rem(12px);
