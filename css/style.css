@@ -2316,10 +2316,8 @@ span.rub {
 }
 
 .form__block--radio .radio:after {
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  top: 0.28571rem;
+  left: 0.28571rem;
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 100%;
