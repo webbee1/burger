@@ -2377,6 +2377,18 @@ span.rub {
   transition: .2s;
 }
 
+@media (max-width: 480px) {
+  .form__row--botom {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .contacts {
   background-color: #fff;
   position: relative;
