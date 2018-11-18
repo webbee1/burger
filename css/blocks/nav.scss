@@ -64,7 +64,7 @@
   display:flex;
   align-items:center;
   @include tablets{
-    align-items:flex-end;
+    align-items:center;
     
   }
 }
