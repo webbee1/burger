@@ -418,7 +418,7 @@ table {
 
 .container {
   max-width: 67.14286rem;
-  width: 95%;
+  width: 100%;
   margin: 0 auto;
   position: relative;
   display: -webkit-box;
@@ -434,21 +434,7 @@ table {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  padding: 0 0.71429rem;
-}
-
-@media (max-width: 768px) {
-  .container {
-    max-width: 98%;
-    margin: 0 auto;
-  }
-}
-
-@media (max-width: 480px) {
-  .container {
-    max-width: 98%;
-    margin: 0 auto;
-  }
+  padding: 0 1.07143rem;
 }
 
 @font-face {
