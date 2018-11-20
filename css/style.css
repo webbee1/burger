@@ -2118,6 +2118,9 @@ span.rub {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .deliveryform {
@@ -2126,25 +2129,15 @@ span.rub {
   font-size: 1rem;
 }
 
-.delivery__title {
-  padding: 5% 0;
-}
-
 @media (max-width: 768px) {
   .delivery__title {
     font-size: 5.14286rem;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
   }
 }
 
 @media (max-width: 480px) {
   .delivery__title {
     font-size: 3.57143rem;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
   }
 }
 

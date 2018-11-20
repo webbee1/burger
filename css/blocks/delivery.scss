@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content:center;
 
   &form {
     color: $white;
@@ -13,14 +14,14 @@
 }
 
 .delivery__title{
-  padding:5% 0;
+
 
     @include tablets {
       font-size:rem(72px);
-      justify-content:center;
+     
     }
     @include phones {
       font-size:rem(50px);
-      justify-content:center;
+      
     }
 }
