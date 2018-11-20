@@ -29,7 +29,16 @@
     }
 
     //hamburger_menu
-    let hamburger = document.querySelector('.hamburger');
-    hamburger.addEventListener('click', function(e) {
-      hamburger.classList.toggle('active');
+   
+
+var btn = document.querySelector('.hamburger__btn');
+     menu = document.querySelector('.hamburger');
+
+    btn.addEventListener('click', function(e) {
+        event.preventDefault();
+   
+    // menu.classList.toggle('hidden');
+    menu.classList.toggle('active');
+    btn.classList.toggle('active'); // при клике на иконку активировать функцию 
+ 
     });

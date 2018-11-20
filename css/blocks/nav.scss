@@ -11,9 +11,7 @@
     font-family: 'ubuntumedium';
     text-transform: uppercase;
     font-weight: 500;
-    
     margin-right: rem(10px);
-
   }
 
   @include tablets{
@@ -57,9 +55,7 @@
   
 }
 
-
-
-
+/*order*/
 .order{
   display:flex;
   align-items:center;
@@ -68,9 +64,55 @@
     
   }
 }
+/*hamburger__nav*/
 
+.hamburger{
+  visibility: hidden;
+  background:$charcoal;
+  position:fixed;
+  top:0;
+  right:0;
+  left:0;
+  bottom:0;
+  z-index:-80;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
 
-.hamburger {
+        &__link{
+      color: $white;
+      font-size: rem(28px);
+      font-family: 'ubuntumedium';
+      text-transform: uppercase;
+      font-weight: 500;
+      line-height:rem(62px);
+      
+        &:after {
+          display:flex;
+          content: '';
+          background-color: $white;
+          position: absolute;
+          left:50%;
+          width: rem(5px);
+          height: rem(5px);
+          border-radius: 100%;
+        }
+    }
+   
+}
+
+.hamburger__item{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.hamburger__item:last-child .hamburger__link:after{
+  display:none;
+}
+/*hamburger_btn*/
+.hamburger__btn {
   box-sizing: border-box;
   margin-left: 15px;
   width: 24px;
@@ -83,8 +125,7 @@
   }
 }
  
-
-.hamburger .line {
+.hamburger__btn .line {
   border-radius:10px;
   display: block;
   height: 4px;
@@ -92,19 +133,43 @@
   background: $white;
 }
 
-.hamburger.active .line:nth-child(1){
- 
+.hamburger__btn.active .line:nth-child(1){
     transform: rotate(-45deg) translate(-10px, 6px);
     background-color:$tomato;
 }
-.hamburger.active .line:nth-child(2){
+.hamburger__btn.active .line:nth-child(2){
   opacity: 0;
 }
-.hamburger.active .line:nth-child(3){
- 
+.hamburger__btn.active .line:nth-child(3){
   transform: rotate(44deg) translate(-6px, -3px);
   background-color:$tomato;
 }
 .line:last-child{
   margin-bottom:0;
+}
+
+.hamburger.active{
+  visibility: visible;
+  @include tablets{
+    visibility:visible;
+    border:10px solid pink;
+  }
+
+   @include phones{
+    visibility: visible;
+    border:10px solid yellow;
+   }
+
+}
+.hamburger.hidden{
+  visibility:hidden;
+  
+  @include tablets{
+    visibility:hidden;
+  }
+
+   @include phones{
+    visibility: hidden;
+   }
+  
 }
