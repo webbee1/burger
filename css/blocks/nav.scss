@@ -69,16 +69,20 @@
 .hamburger{
   visibility: hidden;
   background:$charcoal;
-  position:fixed;
+  padding:0;
+  transition: all .3s;
+  position:absolute;
+  
   top:0;
-  right:0;
   left:0;
+  right:0;
   bottom:0;
+  max-width:100%;
   z-index:-80;
-  height:100%;
   display:flex;
   flex-direction:column;
   justify-content:center;
+
 
         &__link{
       color: $white;
@@ -150,20 +154,32 @@
 
 .hamburger.active{
   visibility: visible;
+  transition: all 0.7s ease;
+  opacity:0;
+ 
   @include tablets{
     visibility:visible;
-    border:10px solid pink;
+    opacity:1;
+   
   }
 
    @include phones{
     visibility: visible;
-    border:10px solid yellow;
+    opacity:1;
    }
-
 }
+.hamburger__link{
+      @include tablets{
+        font-size: rem(20px);
+      }
+
+      @include phones{
+        font-size: rem(16px);
+    }
+}
+
 .hamburger.hidden{
   visibility:hidden;
-  
   @include tablets{
     visibility:hidden;
   }

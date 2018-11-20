@@ -30,14 +30,12 @@
 
     //hamburger_menu
    
-
 var btn = document.querySelector('.hamburger__btn');
      menu = document.querySelector('.hamburger');
 
     btn.addEventListener('click', function(e) {
         event.preventDefault();
-   
-    // menu.classList.toggle('hidden');
+    
     menu.classList.toggle('active');
     btn.classList.toggle('active'); // при клике на иконку активировать функцию 
  

@@ -722,13 +722,16 @@ table {
 .hamburger {
   visibility: hidden;
   background: #2f3234;
-  position: fixed;
+  padding: 0;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  position: absolute;
   top: 0;
-  right: 0;
   left: 0;
+  right: 0;
   bottom: 0;
+  max-width: 100%;
   z-index: -80;
-  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -825,19 +828,34 @@ table {
 
 .hamburger.active {
   visibility: visible;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  opacity: 0;
 }
 
 @media (max-width: 768px) {
   .hamburger.active {
     visibility: visible;
-    border: 10px solid pink;
+    opacity: 1;
   }
 }
 
 @media (max-width: 480px) {
   .hamburger.active {
     visibility: visible;
-    border: 10px solid yellow;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .hamburger__link {
+    font-size: 1.42857rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hamburger__link {
+    font-size: 1.14286rem;
   }
 }
 
@@ -968,6 +986,7 @@ table {
   display: flex;
   width: 6.57143rem;
   height: 4.92857rem;
+  z-index: 1;
 }
 
 .logo__img {
@@ -2209,6 +2228,9 @@ span.rub {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .deliveryform {
@@ -2217,25 +2239,15 @@ span.rub {
   font-size: 1rem;
 }
 
-.delivery__title {
-  padding: 5% 0;
-}
-
 @media (max-width: 768px) {
   .delivery__title {
     font-size: 5.14286rem;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
   }
 }
 
 @media (max-width: 480px) {
   .delivery__title {
     font-size: 3.57143rem;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
   }
 }
 
