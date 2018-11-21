@@ -67,12 +67,11 @@
 /*hamburger__nav*/
 
 .hamburger{
-  visibility: hidden;
+ visibility: hidden;
+ transition: .3s;
+  right: -9999px;
   background:$charcoal;
-  padding:0;
-  transition: all .3s;
   position:absolute;
-  
   top:0;
   left:0;
   right:0;
@@ -82,7 +81,6 @@
   display:flex;
   flex-direction:column;
   justify-content:center;
-
 
         &__link{
       color: $white;
@@ -115,6 +113,31 @@
 .hamburger__item:last-child .hamburger__link:after{
   display:none;
 }
+
+
+.hamburger.active{
+  visibility: visible;
+  transition: .3s;
+     @include tablets{
+     visibility: visible;
+     }
+     @include phones{
+     visibility: visible;
+     }
+ }
+ .hamburger__link{
+       @include tablets{
+         font-size: rem(20px);
+       }
+       @include phones{
+         font-size: rem(16px);
+     }
+ }
+ 
+ .hamburger.hidden{
+   visibility:hidden;
+ }
+
 /*hamburger_btn*/
 .hamburger__btn {
   box-sizing: border-box;
@@ -123,7 +146,6 @@
   cursor: pointer;
  visibility: hidden;
 
-  
   @include tablets{
     visibility: visible;
   }
@@ -150,42 +172,4 @@
 }
 .line:last-child{
   margin-bottom:0;
-}
-
-.hamburger.active{
-  visibility: visible;
-  transition: all 0.7s ease;
-  opacity:0;
- 
-  @include tablets{
-    visibility:visible;
-    opacity:1;
-   
-  }
-
-   @include phones{
-    visibility: visible;
-    opacity:1;
-   }
-}
-.hamburger__link{
-      @include tablets{
-        font-size: rem(20px);
-      }
-
-      @include phones{
-        font-size: rem(16px);
-    }
-}
-
-.hamburger.hidden{
-  visibility:hidden;
-  @include tablets{
-    visibility:hidden;
-  }
-
-   @include phones{
-    visibility: hidden;
-   }
-  
 }
