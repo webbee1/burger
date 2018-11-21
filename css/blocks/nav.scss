@@ -68,7 +68,8 @@
 
 .hamburger{
  visibility: hidden;
- transition: .3s;
+ transition:visibility 0s linear 0.5s,opacity 0.5s linear;
+ opacity:0;
   right: -9999px;
   background:$charcoal;
   position:absolute;
@@ -117,7 +118,8 @@
 
 .hamburger.active{
   visibility: visible;
-  transition: .3s;
+  opacity:1;
+  transition-delay:0s;
      @include tablets{
      visibility: visible;
      }

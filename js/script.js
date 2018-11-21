@@ -40,3 +40,7 @@ var btn = document.querySelector('.hamburger__btn');
     btn.classList.toggle('active'); // при клике на иконку активировать функцию 
  
     });
+
+    //slider
+
+    

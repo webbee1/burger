@@ -707,8 +707,9 @@ table {
 /*hamburger__nav*/
 .hamburger {
   visibility: hidden;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: visibility 0s linear 0.5s,opacity 0.5s linear;
+  transition: visibility 0s linear 0.5s,opacity 0.5s linear;
+  opacity: 0;
   right: -9999px;
   background: #2f3234;
   position: absolute;
@@ -770,8 +771,9 @@ table {
 
 .hamburger.active {
   visibility: visible;
-  -webkit-transition: .3s;
-  transition: .3s;
+  opacity: 1;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
 }
 
 @media (max-width: 768px) {
@@ -1335,7 +1337,7 @@ table {
   margin: auto;
   position: relative;
   overflow: hidden;
-  min-height: 90%;
+  border: 1px solid red;
 }
 
 @media (max-width: 480px) {
@@ -1347,10 +1349,18 @@ table {
   }
 }
 
+.slides__slides {
+  border: 2px solid violet;
+  background-color: red;
+}
+
 .slider__wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 93%;
+  margin: auto;
+  border: 1px solid green;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -1399,6 +1409,7 @@ table {
           justify-content: center;
   height: 330px;
   position: relative;
+  border: 5px solid pink;
 }
 
 @media (max-width: 768px) {
@@ -1553,7 +1564,7 @@ span.rub {
 
 @media (max-width: 480px) {
   .slider__control-left {
-    left: 5%;
+    left: 1%;
   }
 }
 
@@ -1563,7 +1574,7 @@ span.rub {
 
 @media (max-width: 480px) {
   .slider__control-right {
-    right: 5%;
+    right: 1%;
   }
 }
 
@@ -1579,7 +1590,7 @@ span.rub {
 
 @media (max-width: 768px) {
   .ingredients {
-    left: 2%;
+    left: 4%;
     top: 1%;
   }
 }

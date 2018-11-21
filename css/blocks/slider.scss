@@ -9,7 +9,8 @@
   margin:auto;
   position: relative;
   overflow:hidden;
-  min-height:90%;
+ // min-height:90%;
+  border:1px solid red;
 
   @include phones {
   margin:auto;
@@ -19,8 +20,16 @@
   }
 }
 
+.slides__slides{
+  border: 2px solid violet;
+  background-color:red;
+}
+
 .slider__wrap {
   display: flex;
+  width:93%;
+  margin:auto;
+  border:1px solid green;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -42,6 +51,7 @@
   justify-content: center;
   height:330px;
   position: relative;
+  border:5px solid pink;
    @include tablets {
      flex-direction:column;
   padding:5%;
@@ -153,14 +163,14 @@ span.rub {
 .slider__control-left{
   left:0%;
   @include phones {
-    left:5%;
+    left:1%;
     }
 }
 
 .slider__control-right{
   right:0%;
   @include phones {
-    right:5%;
+    right:1%;
     }
 }
 
