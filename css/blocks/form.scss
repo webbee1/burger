@@ -1,0 +1,198 @@
+.form {
+  display: flex; 
+  font-family:'ubuntulight';
+
+  @include tablets {
+    flex-direction:column;
+    align-items:center;
+  }
+
+  &__left {
+    width: 50%;
+    @include tablets {
+      width:70%;
+    }
+    @include phones {
+      width:100%;
+    }
+  }
+
+  &__right {
+    width: 50%;
+    margin-left: rem(20px);
+    @include tablets {
+      width:70%;
+      margin-left:0;
+    }
+    @include phones {
+      width:100%;
+    }
+  }
+
+  &__row {
+    margin-bottom:rem(18px);
+    display: flex;
+  }
+  &__title{
+  margin-bottom:rem(5px);
+  }
+  &__block {
+    display: block;
+    flex: 1;
+    margin-right: rem(20px);
+
+    &:last-child {
+      margin-right: 0;
+    }
+    span {
+      margin-right: rem(20px);
+    }
+  }
+  &__reset {
+    color: $white;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__input {
+    padding: rem(10px) rem(20px);
+    background-color: $white;
+    border: rem(1px) solid $silver;
+    border-radius: rem(5px);
+    width: 100%;
+    font-size: rem(15px);
+    font-weight: 300;
+    line-height: rem(24px);
+    color: $black;
+    height: rem(35px);
+    
+  }
+
+  &__textarea {
+    max-height: rem(110px);
+    margin-top: rem(5px);
+    padding: rem(10px) rem(20px);
+    background-color: white;
+    border: rem(1px) solid $silver;
+    border-radius:rem(5px); 
+    width: 100%;
+    font-size: rem(14px);
+    font-weight: 300;
+    line-height: rem(24px);
+    color: $black;
+  }
+
+  &__radio, &__checkbox {
+    cursor: pointer;
+    margin-right: rem(10px);
+    border: none;
+  }
+}
+
+.form__buttons {
+  margin-right: rem(20px);
+  display: flex;
+
+}
+
+.form__block--radio {
+  display: block;
+  position: relative;
+  padding-left: rem(25px);
+  margin-bottom: rem(10px);
+  margin-right: rem(20px);
+  cursor: pointer;
+  font-size: rem(15px);
+  user-select: none;
+}
+
+.form__block--radio input {
+  position: absolute;
+  display: none;
+  cursor: pointer;
+}
+
+.radio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:rem(15px);
+  height:rem(15px);
+  border-radius:100%;
+  background-color:$white;
+}
+
+.radio:after {
+  content: "";
+  position: absolute;
+  opacity: 0;
+}
+
+.form__block--radio input:checked ~ .radio:after {
+  opacity: 1;
+}
+
+.form__block--radio .radio:after {
+  top: rem(4px);
+  left: rem(4px);
+  width:rem(7px);
+  height:rem(7px);
+  border-radius:100%;
+  background-color:$tomato;
+  transition: .2s;
+}
+
+.form__block--checkbox {
+  display: block;
+  position: relative;
+  padding-left: rem(35px);
+  cursor: pointer;
+  font-size: rem(15px);
+  user-select: none;
+  margin-left: rem(-10px);
+}
+
+.form__block--checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left:rem(10px);
+  height: rem(15px);
+  width: rem(15px);
+  background-color: $white;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  opacity: 0;
+}
+
+.form__block--checkbox input:checked ~ .checkmark:after {
+  opacity: 1;
+}
+
+.form__block--checkbox .checkmark:after {
+  left: rem(5px);
+  top: rem(2px);
+  width: rem(5px);
+  height: rem(10px);
+  border: solid $tomato;
+  border-width: 0 rem(3px) rem(2px) 0;
+  transform: rotate(45deg);
+  transition: .2s;
+}
+
+.form__row--botom{
+  @include phones{
+ width:100%;
+  display:flex;
+  justify-content:center;
+  }
+}

@@ -1,0 +1,25 @@
+
+.socials__item {
+  display: inline-flex;
+  vertical-align:middle;
+	margin-right: rem(8px);
+}
+
+.socials__item:last-child {
+	margin-right: 0;
+}
+
+.socials__icon {
+	width: rem(20px);
+	height: rem(20px);
+	display: block;
+  background-repeat: no-repeat;
+  fill:$silver;
+
+  &:hover {
+    fill:$white;
+    transition: 0.5s;
+  }
+}
+
+

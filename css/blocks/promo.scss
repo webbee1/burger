@@ -1,55 +1,75 @@
 /*promo */
 .promo {
   position: absolute;
-  top: 40%;
-  left: 52%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-
-  &__content {
+}
+  .promo__content {
     display: flex;
     align-items: center;
-    margin-bottom: px;
+    justify-content:center;
+    padding-bottom:35px;
+
+    @include tablets{
+     flex-direction:column;
+     padding:0 12%;
+       }
   }
 
-}
-
-
-
 .promo__img {
-  max-width: 420px;
+  max-width: rem(390px);
   height: auto;
   display: block;
-
 }
 
-.promo__title {
-  font-family: 'gagalin';
+.section__title.promo__title {
+  font-family: 'gagalinregular';
   text-transform: uppercase;
-  font-size: 72px;
+  font-size: rem(106px);
+  padding:0;
   color: $yellow;
+
+  @include tablets{
+    font-size:rem(72px);
+    text-align:center;
+    margin:0;
+     }
 }
 
 .promo__desc {
-  font-family: 'lifehack';
+  font-family: 'lifehackmedium';
   text-transform: lowercase;
-  line-height: 65px;
+  line-height: rem(60px);
   font-weight: 500;
-  font-size: 65px;
+  font-size: rem(65px);
+  letter-spacing:rem(-1.6px);
   color: $white;
   align-self: flex-start;
+  
+     @include phones{
+      font-size: rem(50px);
+      text-align:center;
+      line-height:50px;
+       }
 }
 
 .promo__right {
   width: 50%;
   display: flex;
   flex-direction: column;
-  position: relative;
-  bottom: -34px;
-  text-align: left;
+
+  @include tablets{
+    flex-direction:column;
+    bottom: rem(0px);
+     }
 }
 
-.promo__left {
-  margin-right: 22px;
-  flex: .75;
+.promo__right,
+.promo__right{
+  @include tablets{
+    width:100%;
+   text-align:center;
+     }
 }

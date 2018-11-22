@@ -1,0 +1,153 @@
+.ingredients {
+  display: flex;
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  cursor: pointer;
+  @include tablets {
+    left: 2%;
+    top: 1%;
+   }
+}
+
+.ingredients__btn {
+  position: relative;
+  width: rem(90px);
+  height: rem(90px);
+  display: flex;
+  border-radius: rem(5px);
+  justify-content: center;
+  background-color: $orange;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+
+  @include phones {
+    width: rem(84px);
+  height: rem(84px);
+   }
+  
+}
+
+
+.ingredients__btn-title {
+  color: $white;
+  font-family: 'gagalinregular';
+  font-size: rem(18px);
+  font-weight: 400;
+  @include phones {
+   font-size:rem(22px);
+   }
+}
+
+
+
+.ingredients__info {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: rem(5px);
+  padding: rem(10px);
+  position: absolute;
+  top: 0;
+  left: 100%;
+  opacity: 0;
+  transition: opacity .5s;
+  width: rem(260px);
+  height: rem(350px);
+  display: none;
+  transition: opacity .5s;
+  right: rem(-9999px);
+}
+
+.ingredients__btn:hover .ingredients__info {
+  border-radius: rem(5px);
+  padding: rem(10px);
+  opacity: 1;
+  right: 0;
+  display: block;
+}
+
+.ingredients__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.ingredients__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $charcoal;
+  margin-bottom: rem(10px);
+}
+.ingredients__icon {
+  width: rem(44px);
+  height: rem(40px);
+  @include phones {
+    width: rem(35px);
+  height: rem(35px);
+   }
+}
+
+.ingredients__name {
+  font-weight: 500;
+  text-align: center;
+  flex: 1;
+}
+
+.ingredients__gr {
+  margin-left: auto;
+}
+
+.calories {
+  position: absolute;
+  min-width:rem(80px);
+  max-height:rem(80px);
+  bottom: 60px;
+  left: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'gagalinregular';
+  font-size: rem(16px);
+  color: rgba(255, 255, 255, 0.6);
+
+  @include tablets {
+    top: 0%;
+    left:77%;
+  }
+}
+
+.calories__icon {
+  height: rem(60px);
+  width: rem(60px);
+  position: relative;
+  fill: $white;
+  fill-opacity: 0.5;
+  @include tablets {
+    width: rem(50px);
+  height: rem(50px);
+   }
+  
+
+}
+
+.calories__name {
+  position: absolute;
+  bottom:-85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: rem(25px);
+  @include tablets {
+    bottom:-40%;
+   }
+}
+
+.calories__sum {
+  position: absolute;
+  margin-top: 10%;
+  padding: rem(3px);
+  font-size: rem(30px);
+  @include phones {
+    font-size:rem(25px);
+   }
+}

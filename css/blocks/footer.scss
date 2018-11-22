@@ -1,0 +1,71 @@
+.footer {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: url("../images/section_7/chalkboard_texture.jpg");
+	background-size: cover;
+
+	&__wrap {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		max-width: 90%;
+		padding:10px 0;
+		margin: 0 auto;
+
+		@include phones{
+			flex-direction:column;
+			text-align:center;
+		}
+	}
+}
+
+.footer__col {
+	display: inline-block;
+	width: 50%;
+	vertical-align: middle;
+	font-family: 'ubuntubold';
+
+	font-size: rem(14px);
+	@include tablets{
+    width:100%;
+  }
+}
+
+.footer__text {
+	color: $white;
+	font-weight: 300;
+	margin-bottom: rem(10px);
+	@include tablets{
+		white-space:nowrap;
+		margin-bottom:rem(5px);
+  }
+}
+
+.footer__link {
+	font-family: 'ubuntubold';
+	font-weight: 700;
+	color: $tomato;
+}
+
+.footer__icon {
+	width: rem(12px);
+	height: rem(11px);
+	margin-right: rem(10px);
+	text-decoration: none;
+	fill: $tomato;
+}
+
+.footer__col--right {
+	text-align: right;
+	vertical-align: middle;
+	margin-bottom:0;
+	display:flex;
+	white-space:nowrap;
+
+	@include tablets{
+    justify-content: center;
+  }
+}

@@ -1,19 +1,26 @@
 html,
 body {
- 
   height: 100%;
 }
+html{
+  font-size:14px;
 
+  @include tablets{
+    font-size:13px;
+  }
+  @include phones{
+    font-size:13px;
+  }
+}
 
 body {
   font-family: 'ubuntu';
   font-weight: 300;
-  color: white;
-  background-color: white;
-  font-size: 14px;
+  color: $white;
+  background-color: black;
+  font-size: rem(14px);
   line-height: 1.42;
   position: relative;
-  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -60,25 +67,29 @@ table {
 
 .wrapper {
   position: relative;
-  min-width: 100%;
+  min-width:100%;
   min-height: 100%;
   overflow: hidden;
 }
 
-.wrapper:after {
-  content: "";
-  display: block;
-  height: 60px;
-}
-
 .container {
-  max-width: 960px;
-  display: flex;
+  max-width: rem(940px);
+  width:95%;
+  margin:0 auto;
   position: relative;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  margin: auto;
-  padding: 0 10px;
+  padding: 0 rem(10px);
 
+  @include tablets{
+    max-width:98%;
+    margin:0 auto;
+  }
+
+  @include phones{
+    max-width:98%;
+  margin:0 auto;
+  }
 }

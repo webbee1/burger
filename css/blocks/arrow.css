@@ -4,12 +4,12 @@
   left: 50%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
-  bottom: 37px;
+  bottom: rem(37px);
 }
 
 .arrow__scroll {
-  width: 30px;
-  height: 15px;
+  width: rem(30px);
+  height: rem(15px);
   margin: auto;
 }
 /*# sourceMappingURL=arrow.css.map */

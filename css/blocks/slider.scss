@@ -1,0 +1,166 @@
+.slider {
+  background-image: linear-gradient(to top, #f9b43b,
+    #eb8c38 48%, #f9b43b 74%);
+}
+
+.slider__content {
+  display: flex;
+  justify-content:center;
+  margin:auto;
+  position: relative;
+  overflow:hidden;
+  min-height:90%;
+
+  @include phones {
+  margin:auto;
+  position: relative;
+  max-width:100%;
+  padding:1%;
+  }
+}
+
+.slider__wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  @include tablets {
+    flex-direction:column;
+    align-items:center;
+  }
+
+  @include phones {
+    flex-direction:column;
+    align-items:center;
+  }
+
+}
+
+.slider__frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height:330px;
+  position: relative;
+   @include tablets {
+     flex-direction:column;
+  padding:5%;
+   }
+ 
+}
+
+.slider__info{
+  text-align:center;
+  align-items:center;
+  justify-content:center;
+}
+.slider__frame-img{
+ background-size:cover;
+  max-width: 100%;
+  max-height: 100%;
+   @include phones {
+    max-width: 90%;
+    max-height: 90%;
+    text-align:center;
+   }
+}
+
+.slider__order {
+  display: inline-flex;
+  width: 90%;
+  justify-content:space-between;
+  align-items:center;
+
+
+
+  @include phones {
+  justify-content:space-around;
+  align-items:center;
+  margin-right:50px;
+  width:85%;
+  }
+}
+
+
+.slider__desc{
+  font-size: rem(16px);
+  line-height: rem(24px);
+  font-family: 'ubuntulight';
+  font-weight: 300;
+  line-height:rem(26px);
+  color: $white;
+  text-align:left;
+  max-width:440px;
+ 
+
+
+  @include tablets {
+    width:100%;
+    line-height: 20px;
+    padding:0 10px;
+    text-align:center;
+    align-items:center;
+    justify-content:center;
+  }
+
+  @include phones {
+  
+    line-height: 20px;
+    text-align:center;
+    align-items:center;
+    justify-content:center;
+   
+  }
+}
+
+
+
+.slider__price {
+  font-family: 'gagalinregular';
+  font-size: rem(106px);
+  color: $tomato;
+
+    @include phones {
+      display:inline-flex;
+      align-items:center;
+      margin-right:2%;
+      font-size:rem(60px);
+      }
+}
+
+span.rub {
+  font-size: rem(50px);
+  letter-spacing: -0.8;
+
+  @include phones {
+    
+    font-size:rem(25px);
+    }
+}
+
+.slider__control-left, 
+.slider__control-right{
+  position: absolute;
+  align-items:center;
+  top:50%;
+  min-width:rem(15px);
+  min-height:rem(30px);
+  @include phones {
+   top:35%;
+    }
+}
+
+.slider__control-left{
+  left:0%;
+  @include phones {
+    left:5%;
+    }
+}
+
+.slider__control-right{
+  right:0%;
+  @include phones {
+    right:5%;
+    }
+}
+

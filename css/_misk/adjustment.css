@@ -3,12 +3,16 @@ body {
   height: 100%;
 }
 
+html {
+  font-size: rem(14px);
+}
+
 body {
   font-family: 'ubuntu';
   font-weight: 300;
   color: white;
   background-color: white;
-  font-size: 14px;
+  font-size: rem(14px);
   line-height: 1.42;
   position: relative;
   overflow-x: hidden;
@@ -59,19 +63,14 @@ table {
 
 .wrapper {
   position: relative;
-  min-width: 100%;
+  /* min-width: 100%;*/
   min-height: 100%;
   overflow: hidden;
 }
 
-.wrapper:after {
-  content: "";
-  display: block;
-  height: 60px;
-}
-
 .container {
-  max-width: 960px;
+  max-width: rem(940px);
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -87,6 +86,6 @@ table {
       -ms-flex-pack: start;
           justify-content: flex-start;
   margin: auto;
-  padding: 0 10px;
+  padding: 0 rem(10px);
 }
 /*# sourceMappingURL=adjustment.css.map */

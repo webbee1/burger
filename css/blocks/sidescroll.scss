@@ -3,29 +3,28 @@
 .sidescroll {
   position: fixed;
   display: block;
-  padding: 6px;
-  top: 85px;
-  right: 23%;
-
+  top: rem(85px);
+  right: 1%;
+ 
   &__link {
-    width: 5px;
-    height: 5px;
+    width: rem(7px);
+    height: rem(7px);
     border-radius: 100%;
     background-color: rgb(255, 255, 255);
-    margin-bottom: 20px;
+    margin-bottom: rem(10px);
     display: inline-block;
     position: relative;
-    bottom: -25%;
-    right: -26%;
+    bottom: -25.5%;
+    right: -25.5%;
   }
 
   .sidescroll__item {
-    width: 16px;
-    height: 16px;
-    border: 2px solid transparent;
+    width: rem(16px);
+    height: rem(16px);
+    border: rem(2px) solid transparent;
     border-radius: 100%;
-    margin-bottom: 10px;
-    line-height: 16px;
+    margin-bottom: rem(10px);
+    line-height: rem(16px);
 
     &:last-child {
       margin-bottom: 0;
@@ -34,9 +33,13 @@
   }
 
   .sidescroll__item--active {
-    width: 16px;
-    height: 16px;
-    border: 2px solid #fff;
+    width: rem(17px);
+    height: rem(17px);
+    border: rem(1px) solid rgb(255, 255, 255);
     border-radius: 100%;
   }
+
+  @include tablets {
+    display: none;
+}
 }

@@ -1,0 +1,20 @@
+.carte {
+  background-image: url(../images/section_5/photo-1428660386617-8d277e7deaf2@2x.jpg);
+}
+
+.carte__title {
+  position: absolute;
+  top: 10%;
+  right: 50%;
+}
+
+.menu__carte {
+  position: absolute;
+  roght: 0;
+  top: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/*# sourceMappingURL=carte.css.map */

@@ -1,35 +1,46 @@
 /*nav*/
+/*.nav__wrap{
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content:center;
+  padding: rem(3px);
+}*/
 .nav {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: 756px;
-
-
+  align-items: baseline;
+  justify-content: flex-end;
+  /*width: rem(756px);*/
+  white-space:nowrap;
   &__link {
     color: $white;
-    font-size: 13px;
-    font-family: 'ubuntu';
+    font-size: rem(13px);
+    font-family: 'ubuntumedium';
     text-transform: uppercase;
     font-weight: 500;
-    line-height: 2.31;
-    margin-right: 10px;
+    
+    margin-right: rem(10px);
+  }
+
+  @include tablets{
+    display:none;
+    
   }
 }
 
 .nav__item {
   align-items: center;
-  display: inline-block;
-  margin-right: 10px;
-
+  display: inline-flex;
+  margin-right: rem(10px);
+  flex-wrap:nowrap;
+  
   &:after {
-    display: inline-block;
+    display: inline-flex;
     content: '';
     vertical-align: middle;
     background-color: $white;
-    width: 5px;
-    height: 5px;
+    width: rem(5px);
+    height: rem(5px);
     border-radius: 100%;
   }
 
@@ -48,8 +59,59 @@
 
   &__item {
     display: inline-flex;
-    margin-right: 17px;
+    margin-right: rem(17px);
   }
   
 }
 
+
+
+
+.order{
+  display:flex;
+  align-items:center;
+  @include tablets{
+    align-items:center;
+    
+  }
+}
+
+
+.hamburger {
+  box-sizing: border-box;
+  margin-left: 15px;
+  width: 24px;
+  cursor: pointer;
+ visibility: hidden;
+
+  
+  @include tablets{
+    visibility: visible;
+  }
+}
+ 
+
+.hamburger .line {
+  border-radius:10px;
+  display: block;
+  height: 4px;
+  margin-bottom: 5px; 
+  background: $white;
+}
+
+.hamburger.active .line:nth-child(1){
+ 
+    transform: rotate(-45deg) translate(-10px, 6px);
+    background-color:$tomato;
+}
+.hamburger.active .line:nth-child(2){
+  opacity: 0;
+}
+.hamburger.active .line:nth-child(3){
+
+  transform: rotate(44deg) translate(-6px, -3px);
+  background-color:$tomato;
+}
+.line:last-child{
+  margin-bottom:0;
+}

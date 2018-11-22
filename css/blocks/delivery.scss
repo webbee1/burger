@@ -1,0 +1,27 @@
+.delivery {
+  background-image: url("../images/section_7/form-bg.jpg");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+
+  &form {
+    color: $white;
+    font-family: 'ubuntubold';
+    font-size: rem(14px);
+  }
+  
+}
+
+.delivery__title{
+
+
+    @include tablets {
+      font-size:rem(72px);
+     
+    }
+    @include phones {
+      font-size:rem(50px);
+      
+    }
+}

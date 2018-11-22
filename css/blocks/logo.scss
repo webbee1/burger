@@ -1,11 +1,21 @@
 /* logo*/
 .logo {
-  display: block;
-  width: 92px;
-  height: 69px;
+  display: flex;
+  width: rem(92px);
+  height: rem(69px);
   
   &__img {
     max-width: 100%;
     min-height: 100%;
   }
+  
+  @include tablets{
+   width: 70%;
+   height:70%;
+  }
+
+  @include phones{
+    width: 60%;
+    height:60%;
+   }
 }

@@ -1,0 +1,30 @@
+.video{
+  background:url("../images/section_7/bg_video@2x.jpg") 0 0 no-repeat;
+  background-size: cover;
+  background-position:center center;
+  display:flex;
+  align-items:center;
+}
+
+.videowrap{
+  width:rem(660px);
+  height:rem(300px);
+  background-color:$grey;
+border-bottom:50px solid $black;
+
+@include phones {
+  width:95%;
+ }
+@include phones {
+ width:90%;
+}
+ 
+}
+.video__btn{
+  width:15%;
+  height:15%;
+  position: absolute;
+ left:45%;
+ top:50%;
+ 
+}
