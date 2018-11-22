@@ -1335,32 +1335,40 @@ table {
       -ms-flex-pack: center;
           justify-content: center;
   margin: auto;
-  position: relative;
-  overflow: hidden;
-  border: 1px solid red;
 }
 
 @media (max-width: 480px) {
   .slider__content {
     margin: auto;
-    position: relative;
-    max-width: 100%;
     padding: 1%;
   }
 }
 
-.slides__slides {
-  border: 2px solid violet;
-  background-color: red;
+.slider__tape {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 970px;
+  margin: 0 10px;
+  overflow: hidden;
+}
+
+.slider__all {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  will-change: right;
+  -webkit-transition: right 1.3s;
+  transition: right 1.3s;
 }
 
 .slider__wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 93%;
+  width: 970px;
   margin: auto;
-  border: 1px solid green;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -1408,8 +1416,8 @@ table {
       -ms-flex-pack: center;
           justify-content: center;
   height: 330px;
+  margin-right: 35px;
   position: relative;
-  border: 5px solid pink;
 }
 
 @media (max-width: 768px) {
@@ -1559,7 +1567,13 @@ span.rub {
 }
 
 .slider__control-left {
-  left: 0%;
+  left: 10%;
+}
+
+@media (max-width: 768px) {
+  .slider__control-left {
+    left: 1%;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1569,7 +1583,13 @@ span.rub {
 }
 
 .slider__control-right {
-  right: 0%;
+  right: 10%;
+}
+
+@media (max-width: 768px) {
+  .slider__control-right {
+    right: 1%;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1583,8 +1603,8 @@ span.rub {
   display: -ms-flexbox;
   display: flex;
   position: absolute;
-  left: 5%;
-  top: 5%;
+  left: 26%;
+  top: 27%;
   cursor: pointer;
 }
 
@@ -1641,9 +1661,9 @@ span.rub {
   background: rgba(255, 255, 255, 0.9);
   border-radius: 0.35714rem;
   padding: 0.71429rem;
-  position: absolute;
-  top: 0;
-  left: 100%;
+  position: fixed;
+  top: 5%;
+  left: 2%;
   opacity: 0;
   -webkit-transition: opacity .5s;
   transition: opacity .5s;
@@ -1715,7 +1735,7 @@ span.rub {
   min-width: 5.71429rem;
   max-height: 5.71429rem;
   bottom: 60px;
-  left: 5%;
+  left: 26%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
