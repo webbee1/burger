@@ -139,6 +139,10 @@
  .hamburger.hidden{
    visibility:hidden;
  }
+ .noscroll {
+  position: relative; 
+  overflow: hidden;
+}
 
 /*hamburger_btn*/
 .hamburger__btn {

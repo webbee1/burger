@@ -7,23 +7,22 @@
   display: flex;
   justify-content:center;
   margin:auto;
-  // border:5px solid red;
+//  border:5px solid red;
 
   @include phones {
   margin:auto;
   padding:1%;
-  
   }
 }
 
 .slider__tape{
   display:flex;
-  width:970px;
-  // justify-content: center;
-  // align-items: center;
-  margin:0 10px;
+  width:rem(930px);
   overflow:hidden;
   // border:5px solid violet;
+  transition: right 1.3s;
+
+ 
  
 }
 
@@ -32,16 +31,23 @@
   display:flex;
   position: relative;
   will-change:right;
-  transition: right 1.3s;
-  
+  transition: all 1.5s ease-in;
+
+  @include tablets {
+    flex-direction:column;
+   justify-content:center;
+   align-items:center;
+   width:35rem;
+   
+  }
 }
 
 .slider__wrap {
   display: flex;
-
+  transition: all 1.2s ease-in-out;
 //  width:93%;
-  width:970px;
-  margin:auto;
+  width:rem(930px);
+  // margin:auto;
   // border:5px solid #444;
   flex-direction: row;
   justify-content: center;
@@ -69,7 +75,10 @@
   position: relative;
    @include tablets {
      flex-direction:column;
-  padding:5%;
+    justify-content:center;
+    align-items:center;
+    width:35rem;
+    margin-right:0;
    }
  
 }
@@ -96,8 +105,6 @@
   justify-content:space-between;
   align-items:center;
 
-
-
   @include phones {
   justify-content:space-around;
   align-items:center;
@@ -117,8 +124,6 @@
   text-align:left;
   max-width:440px;
  
-
-
   @include tablets {
     width:100%;
     line-height: 20px;
@@ -137,7 +142,6 @@
    
   }
 }
-
 
 
 .slider__price {
@@ -176,22 +180,22 @@ span.rub {
 }
 
 .slider__control-left{
-  left:10%;
+  left:20%;
   @include tablets {
-    left:1%;
+    left:3%;
     }
   @include phones {
-    left:1%;
+    left:4%;
     }
 }
 
 .slider__control-right{
-  right:10%;
+  right:20%;
   @include tablets {
-    right:1%;
+    right:3%;
     }
   @include phones {
-    right:1%;
+    right:4%;
     }
 }
 

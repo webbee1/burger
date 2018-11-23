@@ -1,11 +1,15 @@
 .ingredients {
   display: flex;
+  align-items:center;
+  justify-content:center;
   position: absolute;
-  left: 26%;
-  top: 27%;
+  left: 0%;
+  top: -12%;
+  width:rem(92px);
+  height:rem(91px);
   cursor: pointer;
   @include tablets {
-    left: 4%;
+    left: -25%;
     top: 1%;
    }
 }
@@ -46,9 +50,9 @@
   background: rgba(255, 255, 255, 0.9);
   border-radius: rem(5px);
   padding: rem(10px);
-  position: fixed;
-  top: 5%;
-  left: 2%;
+  position: absolute;
+  top: -2%;
+  left: 100%;
   opacity: 0;
   transition: opacity .5s;
   width: rem(260px);
@@ -56,6 +60,10 @@
   display: none;
   transition: opacity .5s;
   right: rem(-9999px);
+  @include tablets {
+    top: 46%;
+  left: 22%;
+    }
 }
 
 .ingredients__btn:hover .ingredients__info {
@@ -99,10 +107,10 @@
 
 .calories {
   position: absolute;
-  min-width:rem(80px);
-  max-height:rem(80px);
-  bottom: 60px;
-  left: 26%;
+  width:rem(90px);
+  height:rem(90px);
+  bottom:-7%;
+  left: 0%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -112,8 +120,8 @@
   color: rgba(255, 255, 255, 0.6);
 
   @include tablets {
-    top: 0%;
-    left:77%;
+    top: -5%;
+    left:92%;
   }
 }
 
@@ -133,7 +141,7 @@
 
 .calories__name {
   position: absolute;
-  bottom:-85%;
+  bottom:-45%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: rem(25px);
