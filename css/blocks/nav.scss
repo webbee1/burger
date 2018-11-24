@@ -119,9 +119,12 @@
 .hamburger.active{
   visibility: visible;
   opacity:1;
+  overflow: hidden;
   transition-delay:0s;
      @include tablets{
      visibility: visible;
+ 
+    
      }
      @include phones{
      visibility: visible;
@@ -139,10 +142,7 @@
  .hamburger.hidden{
    visibility:hidden;
  }
- .noscroll {
-  position: relative; 
-  overflow: hidden;
-}
+
 
 /*hamburger_btn*/
 .hamburger__btn {
@@ -151,7 +151,6 @@
   width: 24px;
   cursor: pointer;
  visibility: hidden;
-
   @include tablets{
     visibility: visible;
   }

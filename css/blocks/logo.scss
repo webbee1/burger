@@ -3,7 +3,10 @@
   display: flex;
   width: rem(92px);
   height: rem(69px);
-z-index:1;
+// z-index:1;
+
+
+
   &__img {
     max-width: 100%;
     min-height: 100%;
@@ -12,6 +15,7 @@ z-index:1;
   @include tablets{
    width: 70%;
    height:70%;
+   
   }
 
   @include phones{

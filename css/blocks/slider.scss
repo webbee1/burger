@@ -17,13 +17,10 @@
 
 .slider__tape{
   display:flex;
-  width:rem(930px);
+  width:rem(940px);
   overflow:hidden;
   // border:5px solid violet;
   transition: right 1.3s;
-
- 
- 
 }
 
 .slider__all{
@@ -33,20 +30,13 @@
   will-change:right;
   transition: all 1.5s ease-in;
 
-  @include tablets {
-    flex-direction:column;
-   justify-content:center;
-   align-items:center;
-   width:35rem;
-   
-  }
 }
 
 .slider__wrap {
   display: flex;
   transition: all 1.2s ease-in-out;
 //  width:93%;
-  width:rem(930px);
+  width:rem(940px);
   // margin:auto;
   // border:5px solid #444;
   flex-direction: row;

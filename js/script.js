@@ -31,23 +31,25 @@
     //hamburger_menu
    
 var btn = document.querySelector('.hamburger__btn');
-     menu = document.querySelector('.hamburger');
+    menu = document.querySelector('.hamburger');
+    body = document.querySelector('body');	
+
     btn.addEventListener('click', function(e) {
         event.preventDefault();
-    
     menu.classList.toggle('active');
     btn.classList.toggle('active'); // при клике на иконку активировать функцию 
-    });
-
+    body.classList.toggle('noscroll');
+  });
 
 
     //slider
 
-    const left = document.querySelector("#left");
+const left = document.querySelector("#left");
 const right = document.querySelector("#right");
 const slider__all = document.querySelector("#show");
 const computed = getComputedStyle(slider__all);
 let currentRight = 0;
+
 //при обработчике клика на кнопку делаем preventDefault, 
 //чтоб не подбрасывало страницу вверх
 
@@ -68,8 +70,8 @@ right.addEventListener("click", function(e) {
   //и переводим в пиксели
   //если текущая координата мееньше 3880 - значит ещё не конец слайдов
 
-  if (currentRight < 3720) {
-    slider__all.style.right = currentRight + 930 + "px";
+  if (currentRight < 3760) {
+    slider__all.style.right = currentRight + 940 + "px";
   } else {
     currentRight = 0;
     slider__all.style = 0;
@@ -90,9 +92,9 @@ left.addEventListener("click", function(e) {
   //зацикливаем слайдер
 
   if (currentRight > 0) {
-    slider__all.style.right = currentRight - 930 + "px";
+    slider__all.style.right = currentRight - 940 + "px";
   } else {
-    currentRight = 3720;
+    currentRight = 3760;
     slider__all.style = currentRight + 'px';
   }
 });
