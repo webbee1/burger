@@ -16,5 +16,16 @@
 .btn--black{
   background-color:$black;
   padding:rem(12px) rem(17px);
+  &:hover{
+    background-color:$charcoal;
+  }
+  // @include tablets {
+  //   padding:rem(10px) rem(15px);
+  //   font-size:10px;
+  // }
+  // @include phones {
+  //   padding:rem(10px) rem(15px);
+  //   font-size:12px;
+  // }
 }
 

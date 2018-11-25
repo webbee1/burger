@@ -90,6 +90,41 @@ left.addEventListener("click", function(e) {
 
 //modal__review
 
+// const review = document.querySelector('.review');
+// const overlay = document.querySelector('.overlay');
+// const popupText = document.querySelector('.popup__text');
+// const closeBtn = document.querySelector('.close__button');
+
+// review.addEventListener('click', e => {
+//   let element = e.target;
+  
+  
+//   if (element.tagName === "BUTTON") {
+//     let modalText = element.previousElementSibling.innerHTML;
+//     popupText.innerHTML = modalText;
+//     overlay.style.display = 'block';
+
+//   } 
+// });
+
+// document.addEventListener('keyup', e => {
+//   let keyNumb = e.keyCode;
+  
+//   if (keyNumb === 27) {
+//     overlay.style.display = 'none';
+//     event.preventDefault();
+//   }
+// });
+
+
+//     closeBtn.addEventListener("click", function(event) {
+//         event.preventDefault();
+//         overlay.style.display = 'none';
+       
+//     });
+
+
+
 const review = document.querySelector('.review');
 const overlay = document.querySelector('.overlay');
 const popupText = document.querySelector('.popup__text');
