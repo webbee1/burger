@@ -38,7 +38,7 @@ var btn = document.querySelector('.hamburger__btn');
         event.preventDefault();
     menu.classList.toggle('active');
     btn.classList.toggle('active'); // при клике на иконку активировать функцию 
-    body.classList.toggle('noscroll');
+    // body.classList.toggle('noscroll');
   });
 
 
@@ -52,24 +52,19 @@ let currentRight = 0;
 
 //при обработчике клика на кнопку делаем preventDefault, 
 //чтоб не подбрасывало страницу вверх
-
 right.addEventListener("click", function(e) {
   e.preventDefault();
 
    //получаем текущее значение right для выполнения след.шага
   //на какой позиции находимся?
-
   let currentRight = parseInt(computed.right);
 
   if (!currentRight) {
     currentRight = 0;
   }
-  
-
  //берём текущее значение для свойства right и прибавляем к нему ширину 
   //и переводим в пиксели
   //если текущая координата мееньше 3880 - значит ещё не конец слайдов
-
   if (currentRight < 3760) {
     slider__all.style.right = currentRight + 940 + "px";
   } else {
@@ -77,20 +72,14 @@ right.addEventListener("click", function(e) {
     slider__all.style = 0;
   }
 });
-
-
 //добавляем обработчики событий на кнопки 
-
 left.addEventListener("click", function(e) {
   e.preventDefault();
   let currentRight = parseInt(computed.right);
-
   if (!currentRight) {
     currentRight = 0;
   }
-
   //зацикливаем слайдер
-
   if (currentRight > 0) {
     slider__all.style.right = currentRight - 940 + "px";
   } else {
@@ -99,6 +88,37 @@ left.addEventListener("click", function(e) {
   }
 });
 
-//accordeon
+//modal__review
+
+const review = document.querySelector('.review');
+const overlay = document.querySelector('.overlay');
+const popupText = document.querySelector('.popup__text');
+const closeBtn = document.querySelector('.close__button');
+
+review.addEventListener('click', e => {
+  let element = e.target;
+  
+  
+  if (element.tagName === "BUTTON") {
+    let modalText = element.previousElementSibling.innerHTML;
+    popupText.innerHTML = modalText;
+    overlay.style.display = 'block';
+
+  } 
+});
+
+document.addEventListener('keyup', e => {
+  let keyNumb = e.keyCode;
+  
+  if (keyNumb === 27) {
+    overlay.style.display = 'none';
+    event.preventDefault();
+  }
+});
 
 
+    closeBtn.addEventListener("click", function(event) {
+        event.preventDefault();
+        overlay.style.display = 'none';
+       
+    });
