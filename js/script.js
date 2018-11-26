@@ -65,8 +65,8 @@ right.addEventListener("click", function(e) {
  //берём текущее значение для свойства right и прибавляем к нему ширину 
   //и переводим в пиксели
   //если текущая координата мееньше 3880 - значит ещё не конец слайдов
-  if (currentRight < 3760) {
-    slider__all.style.right = currentRight + 940 + "px";
+  if (currentRight < 3840) {
+    slider__all.style.right = currentRight + 960 + "px";
   } else {
     currentRight = 0;
     slider__all.style = 0;
@@ -81,53 +81,19 @@ left.addEventListener("click", function(e) {
   }
   //зацикливаем слайдер
   if (currentRight > 0) {
-    slider__all.style.right = currentRight - 940 + "px";
+    slider__all.style.right = currentRight - 960 + "px";
   } else {
-    currentRight = 3760;
+    currentRight = 3840;
     slider__all.style = currentRight + 'px';
   }
 });
 
 //modal__review
 
-// const review = document.querySelector('.review');
-// const overlay = document.querySelector('.overlay');
-// const popupText = document.querySelector('.popup__text');
-// const closeBtn = document.querySelector('.close__button');
-
-// review.addEventListener('click', e => {
-//   let element = e.target;
-  
-  
-//   if (element.tagName === "BUTTON") {
-//     let modalText = element.previousElementSibling.innerHTML;
-//     popupText.innerHTML = modalText;
-//     overlay.style.display = 'block';
-
-//   } 
-// });
-
-// document.addEventListener('keyup', e => {
-//   let keyNumb = e.keyCode;
-  
-//   if (keyNumb === 27) {
-//     overlay.style.display = 'none';
-//     event.preventDefault();
-//   }
-// });
-
-
-//     closeBtn.addEventListener("click", function(event) {
-//         event.preventDefault();
-//         overlay.style.display = 'none';
-       
-//     });
-
-
-
 const review = document.querySelector('.review');
 const overlay = document.querySelector('.overlay');
 const popupText = document.querySelector('.popup__text');
+// const popupName = document.querySelector('.subreview__name');
 const closeBtn = document.querySelector('.close__button');
 
 review.addEventListener('click', e => {
@@ -152,8 +118,34 @@ document.addEventListener('keyup', e => {
 });
 
 
-    closeBtn.addEventListener("click", function(event) {
+    closeBtn.addEventListener("click", e => {
         event.preventDefault();
         overlay.style.display = 'none';
        
     });
+
+
+//accordeon
+
+var	accordeon = document.getElementById('accordeon');
+//открыть\закрыть элемент списка
+function openClose(e){
+
+  let target = e.target.closest('li')
+   //есть ли активный элемент
+  if (target.classList.contains('active')) {
+    //убрать активный класс
+    target.classList.remove('active')
+   } else {
+     let active = document.querySelector('.active')
+     
+       if (active) {
+          //удалим класс
+          active.classList.remove('active')
+           //при клике на пункт меню открыть его спиcок
+          target.classList.add('active')
+      }
+       target.classList.add('active')
+  }
+}
+accordeon.addEventListener('click', openClose);

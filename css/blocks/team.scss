@@ -26,7 +26,8 @@
 
 .team__container {
 	width: 100%;
-
+	min-height:450px;
+	transition: all 0.4s;
 	&__item {
 		width: 100%;
 		margin-bottom: rem(40px);
@@ -34,6 +35,10 @@
 		&:last-child {
 			margin-bottom: 0;
 		}
+		
+	@include tablets {
+	width:75%;
+	}
 	}
 
 	@include tablets {
@@ -41,22 +46,37 @@
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
-
+		min-height:em(300px);
 	}
 }
 
 .team__list {
+	width:90%;
 	display: inline-flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+
+	@include tablets {
+		display: inline-flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
 }
 
 .team__item {
 	width: 90%;
-
+	margin-bottom:3%;
+	&:last-child{
+		margin-bottom:0;
+	}
 	@include tablets {
-		text-align: center;
+		display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+		align-items: center;
+		// width:75%;
 	}
 
 }
@@ -65,42 +85,58 @@
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
+	transition: all 0.8s;
 	display: none;
-margin-bottom:6%;
+	margin:4% 0;
+	font-family: 'ubuntulight';
+	line-height: rem(24px);
+	font-size:rem(15px);
+
 
 	@include tablets {
-		width: 100%;
+		align-items:center;
 		margin: auto;
+		justify-content:Center;
+	
 	}
-
 }
 
-.team__trigger {
+.team__trigger  {
 	font-size: rem(20px);
 	font-family: 'gagalinregular';
 	line-height: rem(28px);
 	color: $white;
 	position: relative;
 	margin-bottom: 2%;
-
-	@include tablets {
-		display: inline-block;
-		font-size:rem(20px);
-	}
+	
 
 }
+
+	.team__item.active .team__trigger{
+		color: $yellow;	
+		transition: 0.5s;
+		
+	}
+	
 
 .team__photo {
 	width: rem(100px);
 	height: rem(100px);
 	border-radius: 50%;
+	display:inline-flex;
 	overflow: hidden;
 	background-size: cover;
 	margin-right: rem(15px);
 	text-align: center;
-	display: flex;
 	align-items: center;
 	justify-content: center;
+
+	@include tablets {
+		text-align:center;
+		display:flex;
+		align-items:center;
+		justify-content:center;
+	}
 }
 
 .team__title {
@@ -108,23 +144,36 @@ margin-bottom:6%;
 
 	@include tablets {
 		text-align: center;
+		display:flex;
+		justify-content:center;
+
+	}
+	@include phones {
+		text-align: center;
+		display:flex;
+		justify-content:center;
 
 	}
 }
 
 .team__text {
 	justify-content: flex-start;
+width:75%;
 }
 
 .team__occ {
-	width: 50%;
-	line-height: rem(24px);
-	font-size:rem(15px);
-
+	width:80%;
+	flex-direction:column;
 
 	@include tablets {
-		text-align: center;
-		width: 100%;
+		text-align:center;
+		display:flex;
+		align-items:center;
+		justify-content:center;
+	}
+	@include phones {
+		width:75%;
+		text-align:center;
 	}
 }
 
@@ -132,46 +181,49 @@ margin-bottom:6%;
 	display: block;
 	position: absolute;
 	left: -5%;
-	top: rem(-5px);
+	top: -5px;
 	width: 0;
 	height: 0;
-	border: rem(6px) solid transparent;
+	border: rem(5px) solid transparent;
 	border-top: rem(8px) solid $yellow;
-	margin: rem(15px) rem(20px) 0 0;
-	transition: .6s;
-
-	@include tablets {
-		left: -20%;
+	margin: 1.07143rem 1.42857rem 0 0;
+	@include tablets{
+		left: -18%;
+		top: -5px;
 	}
 }
 
-.team__item--active .triangle {
-	border: rem(6px) solid transparent;
+.active .triangle{
+	border: rem(5px) solid transparent;
 	border-bottom: rem(8px) solid $yellow;
-	margin: rem(9px) rem(20px) 0 0;
+	margin: 0.64286rem 1.42857rem 0 0;
+	left: -5%;
+	top: -5px;
 	color: $yellow;
 
+	@include tablets{
+		left: 32%;
+		top: -5px;
+	}
+
+	@include phones{
+		left: 25%;
+		top: -5px;
+	}
+}
+
+.active .team__content{
+	display:flex;
+	color:$white;
 	@include tablets {
-		text-align: center;
+		display:flex;
+		flex-direction:column;
+		align-items:center;
+		justify-content:center;
 	}
 }
 
 //временный активный класс
 .team__content--active {
 	display: flex;
-	margin-bottom:6%;
-
-	@include tablets {
-		display: flex;
-		justify-content: center;
-		flex-direction: column;
-		align-items: center;
-	}
-
-}
-
-
-.team__trigger--active {
-	color: $yellow;
-	
 }

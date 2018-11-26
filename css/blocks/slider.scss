@@ -7,7 +7,9 @@
   display: flex;
   justify-content:center;
   margin:auto;
-//  border:5px solid red;
+  width:65%;
+  padding:0 5%;
+  // border:5px solid red;
 
   @include phones {
   margin:auto;
@@ -17,7 +19,7 @@
 
 .slider__tape{
   display:flex;
-  width:rem(940px);
+  width:rem(960px);
   overflow:hidden;
   // border:5px solid violet;
   transition: right 1.3s;
@@ -30,23 +32,24 @@
   will-change:right;
   transition: all 1.5s ease-in;
 
+  @include phones {
+   width:90%;
+   height:100vh;
+    }
 }
 
 .slider__wrap {
   display: flex;
   transition: all 1.2s ease-in-out;
-//  width:93%;
-  width:rem(940px);
-  // margin:auto;
-  // border:5px solid #444;
+  width:rem(960px);
   flex-direction: row;
-  justify-content: center;
   align-items: center;
- 
+  justify-content:space-around;
  
   @include tablets {
     flex-direction:column;
     align-items:center;
+    height:500px;
   }
 
   @include phones {
@@ -63,6 +66,7 @@
   height:330px;
   margin-right:35px;
   position: relative;
+
    @include tablets {
      flex-direction:column;
     justify-content:center;
@@ -74,7 +78,7 @@
 }
 
 .slider__info{
-  text-align:center;
+  padding:1%;
   align-items:center;
   justify-content:center;
 }
@@ -82,9 +86,10 @@
  background-size:cover;
   max-width: 100%;
   max-height: 100%;
+  
    @include phones {
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 260px;
+    max-height: 260px;
     text-align:center;
    }
 }
@@ -124,12 +129,10 @@
   }
 
   @include phones {
-  
     line-height: 20px;
     text-align:center;
     align-items:center;
     justify-content:center;
-   
   }
 }
 
@@ -160,6 +163,7 @@ span.rub {
 .slider__control-left, 
 .slider__control-right{
   position: absolute;
+  z-index:3;
   align-items:center;
   top:50%;
   min-width:rem(15px);
@@ -170,7 +174,7 @@ span.rub {
 }
 
 .slider__control-left{
-  left:20%;
+  left:17%;
   @include tablets {
     left:3%;
     }
@@ -180,7 +184,7 @@ span.rub {
 }
 
 .slider__control-right{
-  right:20%;
+  right:17%;
   @include tablets {
     right:3%;
     }
