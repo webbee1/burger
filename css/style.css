@@ -499,15 +499,27 @@ table {
   padding: 0.71429rem 1.07143rem;
   border-radius: 0.35714rem;
   color: #fff;
+  text-transform: uppercase;
 }
 
 .btn--black {
   background-color: rgba(20, 20, 20, 0.7);
-  padding: 0.85714rem 1.21429rem;
 }
 
 .btn--black:hover {
   background-color: #000;
+}
+
+@media (max-width: 768px) {
+  .btn--black {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn--black {
+    font-size: 12px;
+  }
 }
 
 .about {
@@ -1316,7 +1328,7 @@ table {
   font-weight: 400;
   font-size: 1.42857rem;
   line-height: 1.57143rem;
-  margin-bottom: 10%;
+  margin-bottom: 7%;
 }
 
 .subreview__text {
@@ -1324,8 +1336,11 @@ table {
   font-family: 'ubuntulight';
   font-size: 1rem;
   font-weight: 300;
-  line-height: 1.71429rem;
+  line-height: 1.57143rem;
   margin-bottom: 2%;
+  min-width: 360px;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 @media (max-width: 768px) {
@@ -1348,7 +1363,7 @@ table {
 .popup {
   background: #fff;
   border-radius: 3px;
-  padding: 3%;
+  padding: 0% 2%;
   display: block;
   position: absolute;
   top: 50%;
@@ -1357,6 +1372,7 @@ table {
           transform: translate(-50%, -50%);
   width: 35%;
   height: 300px;
+  overflow: auto;
   z-index: 10;
   -webkit-box-shadow: 0 0 1px 1px #f1efed;
           box-shadow: 0 0 1px 1px #f1efed;
@@ -1371,20 +1387,14 @@ table {
   overflow: hidden;
 }
 
-.popup__name {
-  color: red;
-}
-
 @media (max-width: 768px) {
   .popup {
-    min-height: 40%;
     width: 80%;
   }
 }
 
 @media (max-width: 480px) {
   .popup {
-    min-height: 40%;
     width: 70%;
   }
 }
@@ -2450,6 +2460,9 @@ span.rub {
 
 .carte__occ {
   width: 100%;
+  overflow: hidden;
+  -webkit-animation: .5s linear forwards;
+          animation: .5s linear forwards;
 }
 
 @media (max-width: 768px) {
@@ -2460,7 +2473,6 @@ span.rub {
 
 @media (max-width: 480px) {
   .carte__occ {
-    width: 90%;
     overflow: hidden;
   }
 }
@@ -2496,6 +2508,9 @@ span.rub {
 
 .carte__content.active {
   width: 25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .delivery {

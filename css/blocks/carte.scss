@@ -99,12 +99,14 @@
  
 .carte__occ{
   width:100%;
-  
+  overflow:hidden;
+  animation:.5s linear forwards;
   @include tablets{
     overflow:hidden;
+  
     }
     @include phones{
-      width:90%;
+      
       overflow:hidden;
       }
  
@@ -138,5 +140,6 @@
 
   &.active{
     width:rem(350px);
+  display:flex;
   }
 }
