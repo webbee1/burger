@@ -1,8 +1,7 @@
 .carte{
-  background:url('../images/section_5/burger.jpg') 0 0 no-repeat;
+  background:url('../images/section_5/burger.jpg')0 0 no-repeat;
   background-size: cover;
   background-position:center center;
-
 }
 .carte__title{
   position:absolute;
@@ -12,8 +11,8 @@
 
  @include phones {
   top:5%;
+ 
 }
-
 }
 
 .carte__list{
@@ -24,15 +23,17 @@
   bottom:0;
   display:flex;
   justify-content:flex-end;
+  cursor:pointer;
 }
 
-.carte__item{
- display:flex;
- justify-content:flex-end;
-}
+
 .carte__trigger{
   width:rem(80px);
-  @include phones {
+  display:block;
+  height:100%;
+  position: relative;
+    z-index:4;
+  @include tablets {
     width:rem(60px);
   }
 }
@@ -53,57 +54,89 @@
   -ms-transform-origin: left top;
   transform-origin: left top;
   top: 90%;
-
-  &--active{
+ 
+  &.active{
     color:$yellow;
+
     @include tablets {
       color:$white;
      }
+
     @include phones {
      color:$white;
     }
-  }
 
+  }
 } 
 
-.carte__occ{
+
+
+.carte__item.active .carte__content{
+  width:440px;
+
+  @include tablets{
+  width:290px;
+  margin-right:0;
+  
+  }
+}
+.carte__item.active.carte__name{
   height:100%;
+  display:flex;
+  color:$yellow;
+}
+.carte__item{
+  display:flex;
+  height:100%;
+  &.active{
+ .carte__name{
+   color:$yellow;
+ }
+  }
+
+
+ }
+ 
+.carte__occ{
+  width:100%;
+  
+  @include tablets{
+    overflow:hidden;
+    }
+    @include phones{
+      width:90%;
+      overflow:hidden;
+      }
+ 
+}
+ 
+ .carte__item.active .carte__text{
+  min-height:100%;
   position: relative;
+  font-size:rem(14px);
+    font-family: 'ubuntulight';
+    color:$white;
+    line-height:1.5;
+  z-index:3;
   padding:5%;
+  text-align:left;
   color:$white;
   font-weight:300;
   background: $grey;
-  width: rem(540px);
- 
-  overflow:hidden;
   
+  
+ 
 }
 
-.carte__text{
-  font-size:rem(14px);
-  font-family: 'ubuntubold';
-  color:$white;
-  padding:rem(30px) rem(40px);
-  font-weight:300;
-  height:100%;
-  line-height:1.8;
-  
-}
 .carte__content{
   width: 0;
-  overflow:hidden;display:flex;
+  display:none;
+  display:flex;
   transition: .2s ease-in-out;
   display:flex;
   justify-content:flex-end;
-  &--active{
-    width:rem(430px);
 
-    @include tablets {
-      width:0;
-    }
-
-    @include phones {
-      width:0;
-    }
+  &.active{
+    width:rem(350px);
   }
 }

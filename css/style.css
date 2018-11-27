@@ -1026,6 +1026,7 @@ table {
   display: block;
   top: 6.07143rem;
   right: 1%;
+  z-index: 4;
 }
 
 .sidescroll__link {
@@ -2368,22 +2369,18 @@ span.rub {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-}
-
-.carte__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  cursor: pointer;
 }
 
 .carte__trigger {
   width: 5.71429rem;
+  display: block;
+  height: 100%;
+  position: relative;
+  z-index: 4;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .carte__trigger {
     width: 4.28571rem;
   }
@@ -2405,46 +2402,87 @@ span.rub {
   top: 90%;
 }
 
-.carte__name--active {
+.carte__name.active {
   color: #f9b43b;
 }
 
 @media (max-width: 768px) {
-  .carte__name--active {
+  .carte__name.active {
     color: #fff;
   }
 }
 
 @media (max-width: 480px) {
-  .carte__name--active {
+  .carte__name.active {
     color: #fff;
   }
 }
 
-.carte__occ {
+.carte__item.active .carte__content {
+  width: 440px;
+}
+
+@media (max-width: 768px) {
+  .carte__item.active .carte__content {
+    width: 290px;
+    margin-right: 0;
+  }
+}
+
+.carte__item.active.carte__name {
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #f9b43b;
+}
+
+.carte__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+.carte__item.active .carte__name {
+  color: #f9b43b;
+}
+
+.carte__occ {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .carte__occ {
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 480px) {
+  .carte__occ {
+    width: 90%;
+    overflow: hidden;
+  }
+}
+
+.carte__item.active .carte__text {
+  min-height: 100%;
   position: relative;
+  font-size: 1rem;
+  font-family: 'ubuntulight';
+  color: #fff;
+  line-height: 1.5;
+  z-index: 3;
   padding: 5%;
+  text-align: left;
   color: #fff;
   font-weight: 300;
   background: rgba(39, 40, 41, 0.9);
-  width: 38.57143rem;
-  overflow: hidden;
-}
-
-.carte__text {
-  font-size: 1rem;
-  font-family: 'ubuntubold';
-  color: #fff;
-  padding: 2.14286rem 2.85714rem;
-  font-weight: 300;
-  height: 100%;
-  line-height: 1.8;
 }
 
 .carte__content {
   width: 0;
-  overflow: hidden;
+  display: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2456,20 +2494,8 @@ span.rub {
           justify-content: flex-end;
 }
 
-.carte__content--active {
-  width: 30.71429rem;
-}
-
-@media (max-width: 768px) {
-  .carte__content--active {
-    width: 0;
-  }
-}
-
-@media (max-width: 480px) {
-  .carte__content--active {
-    width: 0;
-  }
+.carte__content.active {
+  width: 25rem;
 }
 
 .delivery {

@@ -125,7 +125,7 @@ document.addEventListener('keyup', e => {
     });
 
 
-//accordeon
+//accordeon_team
 
 var	accordeon = document.getElementById('accordeon');
 //открыть\закрыть элемент списка
@@ -149,3 +149,29 @@ function openClose(e){
   }
 }
 accordeon.addEventListener('click', openClose);
+
+//accordeon_carte
+
+var	accordeon = document.getElementById('acco');
+//открыть\закрыть элемент списка
+function openClose(e){
+
+  let target = e.target.closest('li')
+   //есть ли активный элемент
+  if (target.classList.contains('active')) {
+    //убрать активный класс
+    target.classList.remove('active')
+   } else {
+     let active = document.querySelector('.active')
+     
+       if (active) {
+          //удалим класс
+          active.classList.remove('active')
+           //при клике на пункт меню открыть его спиcок
+          target.classList.add('active')
+      }
+       target.classList.add('active')
+  }
+}
+accordeon.addEventListener('click', openClose);
+
