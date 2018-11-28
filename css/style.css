@@ -368,6 +368,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body.noscroll {
+  overflow: hidden;
+  border: 2px solid green;
+}
+
 *,
 *:before,
 *:after {
@@ -1988,7 +1993,6 @@ span.rub {
 
 .team__container {
   width: 100%;
-  min-height: 450px;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
@@ -2003,12 +2007,6 @@ span.rub {
 }
 
 @media (max-width: 768px) {
-  .team__container__item {
-    width: 75%;
-  }
-}
-
-@media (max-width: 768px) {
   .team__container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2016,14 +2014,10 @@ span.rub {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    min-height: em(300px);
   }
 }
 
@@ -2036,9 +2030,7 @@ span.rub {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  min-height: 28.57143rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -2053,9 +2045,8 @@ span.rub {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    text-align: center;
+    vertical-align: middle;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -2064,7 +2055,7 @@ span.rub {
 
 .team__item {
   width: 90%;
-  margin-bottom: 3%;
+  margin-bottom: 2%;
 }
 
 .team__item:last-child {
@@ -2121,12 +2112,10 @@ span.rub {
 }
 
 .team__trigger {
-  font-size: 1.42857rem;
+  font-size: 1.71429rem;
   font-family: 'gagalinregular';
-  line-height: 2rem;
   color: #fff;
   position: relative;
-  margin-bottom: 2%;
 }
 
 .team__item.active .team__trigger {
@@ -2152,6 +2141,7 @@ span.rub {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-right: 10px;
 }
 
 @media (max-width: 768px) {
@@ -2197,15 +2187,8 @@ span.rub {
   }
 }
 
-.team__text {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  width: 75%;
-}
-
 .team__occ {
-  width: 80%;
+  width: 65%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -2229,7 +2212,6 @@ span.rub {
 
 @media (max-width: 480px) {
   .team__occ {
-    width: 75%;
     text-align: center;
   }
 }
@@ -2253,25 +2235,37 @@ span.rub {
   }
 }
 
+@media (max-width: 480px) {
+  .triangle {
+    left: -18%;
+    top: -5px;
+  }
+}
+
 .active .triangle {
+  display: block;
+  position: absolute;
   border: 0.35714rem solid transparent;
   border-bottom: 0.57143rem solid #f9b43b;
   margin: 0.64286rem 1.42857rem 0 0;
+  position: absolute;
   left: -5%;
   top: -5px;
+  width: 0;
+  height: 0;
   color: #f9b43b;
 }
 
 @media (max-width: 768px) {
   .active .triangle {
-    left: 32%;
+    left: 28%;
     top: -5px;
   }
 }
 
 @media (max-width: 480px) {
   .active .triangle {
-    left: 25%;
+    left: 18%;
     top: -5px;
   }
 }

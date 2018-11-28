@@ -31,6 +31,18 @@
 
     //hamburger_menu
 
+    // var btn = document.querySelector('.hamburger__btn');
+    // menu = document.querySelector('.hamburger');
+    // body = document.querySelector('body');
+
+    // btn.addEventListener('click', function (e) {
+    //   event.preventDefault();
+    //   menu.classList.toggle('active');
+    //   btn.classList.toggle('active'); // при клике на иконку активировать функцию 
+    //   // body.classList.toggle('noscroll');
+    // });
+
+
     var btn = document.querySelector('.hamburger__btn');
     menu = document.querySelector('.hamburger');
     body = document.querySelector('body');
@@ -39,9 +51,8 @@
       event.preventDefault();
       menu.classList.toggle('active');
       btn.classList.toggle('active'); // при клике на иконку активировать функцию 
-      // body.classList.toggle('noscroll');
+      body.classList.toggle('noscroll');
     });
-
 
     //slider
 
@@ -176,12 +187,12 @@
 
     
 		
-const loadButton = document.querySelector('#orderButton');
-const result = document.querySelector('#result');
+// const loadButton = document.querySelector('#orderButton');
+// const result = document.querySelector('#result');
 
-loadButton.addEventListener('click', () => {
-	const xhr = new XMLHttpRequest();
-//отправка запроса и получение содержимого
-	xhr.open('GET', '../js/content.txt');
-	xhr.send();
-});
+// loadButton.addEventListener('click', () => {
+// 	const xhr = new XMLHttpRequest();
+// //отправка запроса и получение содержимого
+// 	xhr.open('GET', '../js/content.txt');
+// 	xhr.send();
+// });

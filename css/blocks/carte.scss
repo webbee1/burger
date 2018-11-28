@@ -1,51 +1,52 @@
-.carte{
-  background:url('../images/section_5/burger.jpg')0 0 no-repeat;
+.carte {
+  background: url('../images/section_5/burger.jpg')0 0 no-repeat;
   background-size: cover;
-  background-position:center center;
-}
-.carte__title{
-  position:absolute;
-  display:flex;
-  top:4%;
- left:8%;
-
- @include phones {
-  top:5%;
- 
-}
+  background-position: center center;
 }
 
-.carte__list{
+.carte__title {
   position: absolute;
-  top:0;
-  right:0;
-  top:0;
-  bottom:0;
-  display:flex;
-  justify-content:flex-end;
-  cursor:pointer;
-}
+  display: flex;
+  top: 4%;
+  left: 8%;
 
+  @include phones {
+    top: 5%;
 
-.carte__trigger{
-  width:rem(80px);
-  display:block;
-  height:100%;
-  position: relative;
-    z-index:4;
-  @include tablets {
-    width:rem(60px);
   }
 }
 
-.carte__name{
+.carte__list {
   position: absolute;
-  font-family:'gagalinregular';
-  font-size:rem(40px);
-  color:$white;
-  font-weight:400;
-  line-height:rem(64px);
-  white-space:nowrap;
+  top: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+.carte__trigger {
+  width: rem(80px);
+  display: block;
+  height: 100%;
+  position: relative;
+  z-index: 4;
+
+  @include tablets {
+    width: rem(60px);
+  }
+}
+
+.carte__name {
+  position: absolute;
+  font-family: 'gagalinregular';
+  font-size: rem(40px);
+  color: $white;
+  font-weight: 400;
+  line-height: rem(64px);
+  white-space: nowrap;
   display: block;
   -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
@@ -54,92 +55,94 @@
   -ms-transform-origin: left top;
   transform-origin: left top;
   top: 90%;
- 
-  &.active{
-    color:$yellow;
+
+  &.active {
+    color: $yellow;
 
     @include tablets {
-      color:$white;
-     }
+      color: $white;
+    }
 
     @include phones {
-     color:$white;
+      color: $white;
     }
 
   }
-} 
+}
 
 
+.carte__item.active .carte__content {
+  width: 440px;
 
-.carte__item.active .carte__content{
-  width:440px;
+  @include tablets {
+    width: 290px;
+    margin-right: 0;
 
-  @include tablets{
-  width:290px;
-  margin-right:0;
-  
   }
 }
-.carte__item.active.carte__name{
-  height:100%;
-  display:flex;
-  color:$yellow;
+
+.carte__item.active.carte__name {
+  height: 100%;
+  display: flex;
+  color: $yellow;
 }
-.carte__item{
-  display:flex;
-  height:100%;
-  &.active{
- .carte__name{
-   color:$yellow;
- }
-  }
 
+.carte__item {
+  display: flex;
+  height: 100%;
 
- }
- 
-.carte__occ{
-  width:100%;
-  overflow:hidden;
-  animation:.5s linear forwards;
-  @include tablets{
-    overflow:hidden;
-  
+  &.active {
+    .carte__name {
+      color: $yellow;
     }
-    @include phones{
-      
-      overflow:hidden;
-      }
- 
+  }
+
 }
- 
- .carte__item.active .carte__text{
-  min-height:100%;
+
+.carte__occ {
+  width: 100%;
+  overflow: hidden;
+  animation: .5s linear forwards;
+
+  @include tablets {
+    overflow: hidden;
+
+  }
+
+  @include phones {
+    overflow: hidden;
+  }
+
+}
+
+.carte__item.active .carte__text {
+  min-height: 100%;
   position: relative;
-  font-size:rem(14px);
-    font-family: 'ubuntulight';
-    color:$white;
-    line-height:1.5;
-  z-index:3;
-  padding:5%;
-  text-align:left;
-  color:$white;
-  font-weight:300;
+  font-size: rem(14px);
+  font-family: 'ubuntulight';
+  color: $white;
+  line-height: 1.5;
+  z-index: 3;
+  padding: 5%;
+  text-align: left;
+  color: $white;
+  font-weight: 300;
   background: $grey;
-  
-  
- 
+
+
+
 }
 
-.carte__content{
+.carte__content {
   width: 0;
-  display:none;
-  display:flex;
+  display: none;
+  display: flex;
   transition: .2s ease-in-out;
-  display:flex;
-  justify-content:flex-end;
+  display: flex;
+  justify-content: flex-end;
 
-  &.active{
-    width:rem(350px);
-  display:flex;
+  &.active {
+    width: rem(350px);
+    display: flex;
   }
 }
