@@ -12,6 +12,9 @@
   border-radius: rem(5px);
   color: $white;
   text-transform: uppercase;
+  &:hover{
+    background-color:#a03318;
+  }
 }
 
 .btn--black{

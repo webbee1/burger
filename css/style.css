@@ -507,6 +507,10 @@ table {
   text-transform: uppercase;
 }
 
+.btn:hover {
+  background-color: #a03318;
+}
+
 .btn--black {
   background-color: rgba(20, 20, 20, 0.7);
 }
@@ -2056,6 +2060,7 @@ span.rub {
 .team__item {
   width: 90%;
   margin-bottom: 2%;
+  cursor: pointer;
 }
 
 .team__item:last-child {
@@ -2774,7 +2779,7 @@ span.rub {
 }
 
 @media (max-width: 480px) {
-  .form__row--botom {
+  .form__row--bottom {
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2783,6 +2788,10 @@ span.rub {
         -ms-flex-pack: center;
             justify-content: center;
   }
+}
+
+.error {
+  color: red;
 }
 
 .contacts {

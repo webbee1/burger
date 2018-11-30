@@ -31,22 +31,9 @@
 
     //hamburger_menu
 
-    // var btn = document.querySelector('.hamburger__btn');
-    // menu = document.querySelector('.hamburger');
-    // body = document.querySelector('body');
-
-    // btn.addEventListener('click', function (e) {
-    //   event.preventDefault();
-    //   menu.classList.toggle('active');
-    //   btn.classList.toggle('active'); // при клике на иконку активировать функцию 
-    //   // body.classList.toggle('noscroll');
-    // });
-
-
     var btn = document.querySelector('.hamburger__btn');
     menu = document.querySelector('.hamburger');
     body = document.querySelector('body');
-
     btn.addEventListener('click', function (e) {
       event.preventDefault();
       menu.classList.toggle('active');
@@ -110,30 +97,24 @@
     review.addEventListener('click', e => {
       let element = e.target;
 
-
       if (element.tagName === "BUTTON") {
-       
-        let modalText = element.previousElementSibling.previousElementSibling.innerHTML+element.previousElementSibling.innerHTML;
+        let modalText = element.previousElementSibling.previousElementSibling.innerHTML + element.previousElementSibling.innerHTML;
         popupText.innerHTML = modalText;
         overlay.style.display = 'block';
-
       }
     });
 
     document.addEventListener('keyup', e => {
       let keyNumb = e.keyCode;
-
       if (keyNumb === 27) {
         overlay.style.display = 'none';
         event.preventDefault();
       }
     });
 
-
     closeBtn.addEventListener("click", e => {
       event.preventDefault();
       overlay.style.display = 'none';
-
     });
 
 
@@ -161,11 +142,8 @@
       }
     }
     accordeon.addEventListener('click', openClose);
-
     //accordeon_carte
-
     var accordeon = document.getElementById('acco');
-
     function openClose(e) {
 
       let target = e.target.closest('li')
@@ -184,15 +162,62 @@
     accordeon.addEventListener('click', openClose);
 
     //form
+    const myForm = document.querySelector('#myForm');
+    const orderButton = document.querySelector('#orderButton');
+    
 
     
-		
-// const loadButton = document.querySelector('#orderButton');
-// const result = document.querySelector('#result');
+    const popup = document.querySelector('.popup');
+    const close = document.querySelector('.close');
+    const text = document.querySelector('.text');
 
-// loadButton.addEventListener('click', () => {
-// 	const xhr = new XMLHttpRequest();
-// //отправка запроса и получение содержимого
-// 	xhr.open('GET', '../js/content.txt');
-// 	xhr.send();
-// });
+    orderButton.addEventListener('click', () => {
+    event.preventDefault();
+
+      //отправка данных на сервер
+      const data = new FormData(myForm);
+      data.append('name', myForm.elements.name.value);
+      data.append('phone', myForm.elements.phone.value);
+      data.append('comment', myForm.elements.comment.value);
+      data.append('to', 'hell.web@yandex.ru');
+
+      const xhr = new XMLHttpRequest();
+      xhr.responseType = 'json';
+      // xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail/fail');
+      xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+      xhr.send(data);
+
+      function validateField(field) {
+      field.textContent = field.validationMessage;
+      return field.checkValidity();
+      }
+      
+      //три проверки на валидность
+      function validateForm(myForm) {
+        let valid = true;
+
+        if (!validateField(myForm.elements.name)) {
+          valid = false;
+        }
+        if (!validateField(myForm.elements.phone)) {
+          valid = false;
+        }
+        if (!validateField(myForm.elements.comment)) {
+          valid = false;
+        }
+        return valid;
+      }
+    });
+  
+
+    //выводим инфо об ошибке в соседний элемент
+      function validateField(field) {
+      field.nextElementSibling.textContent = field.validationMessage;
+      
+      if (!field.checkValidity()) {
+        field.nextElementSibling.classList.add('error');
+      } else {
+        field.nextElementSibling.classList.remove('error');
+      }
+      return field.checkValidity();
+    };

@@ -89,7 +89,6 @@
     border: none;
   }
 }
-
 .form__buttons {
   margin-right: rem(20px);
   display: flex;
@@ -190,10 +189,15 @@
   transition: .2s;
 }
 
-.form__row--botom{
+.form__row--bottom{
   @include phones{
  width:100%;
   display:flex;
   justify-content:center;
   }
 }
+
+.error{
+  color:red;
+}
+

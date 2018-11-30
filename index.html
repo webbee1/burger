@@ -53,7 +53,7 @@
        </nav>
        <div class="order">
          <a href="#section delivery" class="del">
-       <button type="button" class ="btn" id = "orderButton" value= "order">Заказать</button></a>
+       <button type="button" class ="btn"  value= "order">Заказать</button></a>
 
        <div class="hamburger">
           <ul class="hamburger__list">
@@ -972,33 +972,34 @@
 <section class="section delivery" id="section delivery">
 <div class="container">
   <h2 class="section__title section__title--orange delivery__title">Закажите доставку</h2>
-  <form class="form" action="" method="get">
-    <form  class="form">
+  
+    <form  class="form" id ="myForm">
       <div class="form__left">
          <div class="form__row">
             <label for="user-name" class="form__block">
                <div class="form__title">Имя</div>
-               <input id="user-name" name="user-name" type="text" maxlength="20" class="form__input"
-                      placeholder="">
+               <input id="user-name" name="name" type="text" maxlength="20" class="form__input"
+                      placeholder="имя" required>
+                      <div class="error"></div>
             </label>
             <label for="phone-number" class="form__block">
                <div class="form__title">Телефон</div>
-               <input id="phone-number" type="tel" name="phone-number" maxlength="16" class="form__input"
-                      placeholder="89212264923">
+               <input id="phone-number" type="tel" name="phone" maxlength="16" class="form__input"
+                      placeholder="89212264923" required>
+                      <div class="error"></div>
             </label>
          </div>
          <div class="form__row">
             <label for="street" class="form__block">
                <div class="form__title">Улица</div>
                <input id="street" type="text" name="street" maxlength="20" class="form__input"
-                      placeholder="">
+                      placeholder="улица">
             </label>
          </div>
          <div class="form__row">
             <label for="house" class="form__block">
                <div class="form__title">Дом</div>
-               <input id="house" type="text" name="house" maxlength="5" class="form__input"
-                      placeholder="">
+               <input id="house" type="text" name="house" maxlength="5" class="form__input">
             </label>
             <label for="block" class="form__block">
                <div class="form__title">Корпус</div>
@@ -1006,7 +1007,9 @@
             </label>
             <label for="apartment" class="form__block">
                <div class="form__title">Квартира</div>
-               <input id="apartment" type="text" name="apartment" maxlength="5" class="form__input">
+               <input id="apartment" type="text" name="apartment" maxlength="5" 
+               class="form__input">
+             
             </label>
             <label for="floor" class="form__block">
                <div class="form__title">Этаж</div>
@@ -1023,31 +1026,31 @@
                          cols="45" maxlength="200"></textarea>
             </label>
          </div>
-         <div class="form__row form__row--botom">
+         <div class="form__row form__row--bottom">
             <label for="pay-cash" class="form__block--radio">
-               <input id="pay-cash" type="radio" name="pay-option" value="" class="form__radio"/>
+               <input id="pay-cash" type="radio" name="pay" value="cash" class="form__radio"/>
                <span class="radio"></span>
                <div class="form__text--radio">Потребуется сдача</div>
             </label>
             <label for="pay-card" class="form__block--radio">
-               <input id="pay-card" type="radio" name="pay-option" value="" class="form__radio"
-                      checked/>
+               <input id="pay-card" type="radio" name="pay" value="card" class="form__radio"
+                      checked>
                <span class="radio"></span>
                <div class="form__text--radio">Оплата по карте</div>
             </label>
          </div>
-         <div class="form__row form__row--botom">
+         <div class="form__row form__row--bottom">
             <label for="no" class="form__block--checkbox">
-               <input id="no" type="checkbox" name="no" value="" class="form__checkbox"
+               <input id="no" type="checkbox" name="no" value="no" class="form__checkbox"
                       checked>
                <span class="checkmark"></span>
                <div class="form__text--checkbox">Не перезванивать</div>
             </label>
          </div>
 
-         <div class="form__row form__row--botom">
+         <div class="form__row form__row--bottom">
             <label for="make-order" class="form__buttons">
-               <button type="submit" class="btn" value="">Заказать
+               <button type="submit" class="btn" id = "orderButton" name="send" value="Заказать">Заказать
                </button>
             </label>
             <label for="clear" class="form__buttons">
@@ -1055,9 +1058,12 @@
             </label>
          </div>
       </div>
+     
    </form>
-  </form>
 </div>
+
+
+
 </section>
 
 <section class="section contacts" id="section contacts">
