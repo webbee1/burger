@@ -90,7 +90,7 @@
 .carte__item {
   display: flex;
   height: 100%;
-
+  background:$black;
   &.active {
     .carte__name {
       color: $yellow;
@@ -127,7 +127,7 @@
   text-align: left;
   color: $white;
   font-weight: 300;
-  background: $grey;
+  background: $black;
 
 
 

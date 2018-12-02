@@ -1372,7 +1372,7 @@ table {
 .popup {
   background: #fff;
   border-radius: 3px;
-  padding: 0% 2%;
+  padding: 1% 2%;
   display: block;
   position: absolute;
   top: 50%;
@@ -2451,6 +2451,7 @@ span.rub {
   display: -ms-flexbox;
   display: flex;
   height: 100%;
+  background: rgba(20, 20, 20, 0.7);
 }
 
 .carte__item.active .carte__name {
@@ -2488,7 +2489,7 @@ span.rub {
   text-align: left;
   color: #fff;
   font-weight: 300;
-  background: rgba(39, 40, 41, 0.9);
+  background: rgba(20, 20, 20, 0.7);
 }
 
 .carte__content {
