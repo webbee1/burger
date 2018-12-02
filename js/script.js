@@ -221,3 +221,22 @@
       }
       return field.checkValidity();
     };
+
+    //videoplayer
+
+    var video;
+    window.onload = function(){
+      video = document.getElementById('video');
+    }
+// реализуем функцию пауза/запуск
+    function playPauseVideo(){
+      if(video.paused){
+        video.play();
+      } else {
+        video.pause();
+      }
+    }
+// полноэкранный режим
+function fullScreen() {
+  video.webkitEnterFullscreen();
+}

@@ -269,7 +269,7 @@
                   <div class="slider__order">
                     <div class="slider__price">  500
                     <span class="rub"> рублей </span></div> 
-                  <button type="button" class="btn" href="#" value="order">Заказать</button>
+                    <a class="btn" href="#section delivery">Заказать</a>
                 </div>
                 </div>
               </div>
@@ -367,7 +367,7 @@
               <div class="slider__order">
                 <div class="slider__price">  500
                 <span class="rub"> рублей </span></div> 
-              <button type="button" class="btn" href="#" value="order">Заказать</button>
+                <a class="btn" href="#section delivery">Заказать</a>
             </div>
             </div>
           </div>
@@ -465,7 +465,7 @@
                 <div class="slider__order">
                   <div class="slider__price">  500
                   <span class="rub"> рублей </span></div> 
-                <button type="button" class="btn" href="#" value="order">Заказать</button>
+                  <a class="btn" href="#section delivery">Заказать</a>
               </div>
               </div>
             </div>
@@ -560,7 +560,7 @@
                   <div class="slider__order">
                     <div class="slider__price">  500
                     <span class="rub"> рублей </span></div> 
-                  <button type="button" class="btn" href="#" value="order">Заказать</button>
+                    <a class="btn" href="#section delivery">Заказать</a>
                 </div>
                 </div>
               </div>
@@ -657,7 +657,7 @@
                     <div class="slider__order">
                       <div class="slider__price">  500
                       <span class="rub"> рублей </span></div> 
-                    <button type="button" class="btn" href="#" value="order">Заказать</button>
+                    <a class="btn" href="#section delivery">Заказать</a>
                   </div>
                   </div>
                 </div>
@@ -754,9 +754,24 @@
   <div class="container">
   <h2 class="section__title section__title--black">как мы работаем</h2>
   <div class="videowrap">
-    <!-- <div class="video__btn">
-      <img src="images/icons/play.svg#play" alt="" class ="play_button">
-    </div> -->
+    <div class="videoplayer">
+    <video id="video" src=" http://webbee.eu/media/burger.mp4" width = "660" ></video>
+    <div class="video__controls">
+      <div class="video__toolbar">
+      <input type="image" src="images/icons/sound.svg" class="video__toolbar-play">
+        <input type="image" src = "images/icons/play.svg#play" class="video__btn" value = "playOrPause" onClick = "playPauseVideo()">
+          <div class="video__toolbar-track"> </div>
+            <div class="video__toolbar-sound">
+        <input type="image" src ="images/icons/volume.svg" class="toolbar-sound">
+            </div>
+            <div class="video__toolbar-track video__toolbar-track--sound"></div>
+        <input type="image" src = "images/icons/fullscreen.svg" class="video__fullscreen" onClick = "fullScreen()" 
+      value = "fullScreen" >
+   
+    </div>
+  </div>
+
+  </div>
   </div>
   </div>
 
