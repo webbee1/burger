@@ -368,11 +368,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-body.noscroll {
-  overflow: hidden;
-  border: 2px solid green;
-}
-
 *,
 *:before,
 *:after {
@@ -2699,8 +2694,8 @@ span.rub {
   position: absolute;
   top: 0;
   left: 0;
-  width: 1.07143rem;
-  height: 1.07143rem;
+  width: 1.14286rem;
+  height: 1.14286rem;
   border-radius: 100%;
   background-color: #fff;
 }
