@@ -412,7 +412,7 @@ table {
 .wrapper {
   position: relative;
   min-width: 100%;
-  min-height: 100%;
+  height: 100%;
   overflow: hidden;
 }
 
@@ -435,6 +435,13 @@ table {
       -ms-flex-pack: start;
           justify-content: flex-start;
   padding: 0 1.07143rem;
+}
+
+.maincontent {
+  height: 100%;
+  -webkit-transition: 1s;
+  transition: 1s;
+  will-change: transform;
 }
 
 @font-face {
@@ -540,6 +547,7 @@ table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  overflow: hidden;
 }
 
 @media (max-width: 768px) {
@@ -547,7 +555,7 @@ table {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    min-height: initial;
+    height: 100%;
   }
 }
 
@@ -1071,6 +1079,13 @@ table {
 }
 
 .sidescroll .sidescroll__item--active {
+  width: 1.21429rem;
+  height: 1.21429rem;
+  border: 0.07143rem solid white;
+  border-radius: 100%;
+}
+
+.sidescroll .sidescroll__item.active {
   width: 1.21429rem;
   height: 1.21429rem;
   border: 0.07143rem solid white;
@@ -2371,7 +2386,6 @@ span.rub {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  fill: #5a5a5a;
 }
 
 .video__toolbar-track {
@@ -2392,8 +2406,7 @@ span.rub {
   border-radius: 1px;
 }
 
-.video__toolbar-track:after {
-  content: '';
+.video__toolbar-button {
   display: block;
   width: 14px;
   height: 14px;
@@ -2446,6 +2459,55 @@ span.rub {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  background: transparent;
+  margin: 0 5px;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  background: #5a5a5a;
+  border-radius: 4px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  height: 12px;
+  width: 12px;
+  border-radius: 100%;
+  background: #5a5a5a;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -3.5px;
+}
+
+input[type=range]:focus::-wefbkit-slider-runnable-track {
+  background: #5a5a5a;
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: #5a5a5a;
+  border-radius: 1.3px;
+  border: 4px;
+}
+
+input[type=range]::-moz-range-thumb {
+  height: 12px;
+  width: 12px;
+  border-radius: 100%;
+  background: #5a5a5a;
+  cursor: pointer;
 }
 
 .carte {

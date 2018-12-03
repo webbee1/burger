@@ -38,7 +38,7 @@
       event.preventDefault();
       menu.classList.toggle('active');
       btn.classList.toggle('active'); // при клике на иконку активировать функцию 
-      body.classList.toggle('noscroll');
+      // body.classList.toggle('noscroll');
     });
 
     //slider
@@ -123,10 +123,10 @@
     var accordeon = document.getElementById('accordeon');
     //открыть\закрыть элемент списка
     function openClose(e) {
-
+     
       let target = e.target.closest('li')
       //есть ли активный элемент
-      if (target.classList.contains('.active')) {
+      if (target.classList.contains('active')) {
         //убрать активный класс
         target.classList.remove('active')
       } else {
@@ -142,6 +142,7 @@
       }
     }
     accordeon.addEventListener('click', openClose);
+   
     //accordeon_carte
     var accordeon = document.getElementById('acco');
     function openClose(e) {
@@ -164,9 +165,6 @@
     //form
     const myForm = document.querySelector('#myForm');
     const orderButton = document.querySelector('#orderButton');
-    
-
-    
     const popup = document.querySelector('.popup');
     const close = document.querySelector('.close');
     const text = document.querySelector('.text');
@@ -222,21 +220,143 @@
       return field.checkValidity();
     };
 
-    //videoplayer
 
-    var video;
-    window.onload = function(){
-      video = document.getElementById('video');
+// Video
+// var video = document.getElementById("video");
+
+// // Buttons
+// var playButton = document.getElementById("play-pause");
+// var muteButton = document.getElementById("mute");
+// var fullScreenButton = document.getElementById("full-screen");
+
+// // Event listener for the play/pause button
+// playButton.addEventListener("click", function() {
+//   if (video.paused == true) {
+   
+//     video.play();
+
+//       document.getElementById("play").classList.add('fa-pause');
+
+//     video.pause();
+
+//     document.getElementById("play").classList.remove('fa-pause');
+
+//     document.getElementById("play").classList.add('fa-play');
+
+//   }
+// });
+
+
+
+//one page scroll
+
+
+const sections = $(".section");
+const display = $(".maincontent");
+let inScroll = false;
+const mobileDetect = new MobileDetect(window.navigator.userAgent);
+const isMobile = mobileDetect.mobile();
+
+
+$(document).on({
+    wheel: e => {
+        const deltaY = e.originalEvent.deltaY;
+        const direction = deltaY > 0 ? "down" : "up";
+        scrollToSection(direction);
+    },
+
+    keydown: e => {
+        switch (e.keyCode) {
+        case 40:
+            scrollToSection("down");
+            break;
+
+        case 38:
+            scrollToSection("up");
+            break;
+        }
+    },
+
+    touchmove: e => e.preventDefault()
+
+    // touchstart/hend/move 
+});
+
+
+const scrollToSection = direction => {
+    const activeSection = sections.filter(".active");
+    const nextSection = activeSection.next();
+    const prevSection = activeSection.prev();
+
+    if (direction === "up" && prevSection.length) {
+        performTransition(prevSection.index());
     }
-// реализуем функцию пауза/запуск
-    function playPauseVideo(){
-      if(video.paused){
-        video.play();
-      } else {
-        video.pause();
-      }
+
+    if (direction === "down" && nextSection.length) {
+        performTransition(nextSection.index());
+        
+        if (nextSection.next().length === 0) {
+            $(".arrow__scroll").css("display", "none"); 
+        }
+
     }
-// полноэкранный режим
-function fullScreen() {
-  video.webkitEnterFullscreen();
+
 }
+
+const performTransition = sectionEq => {
+    if (inScroll) return;
+
+    sections
+        .eq(sectionEq)
+        .addClass("active")
+        .siblings()
+        .removeClass("active");
+
+    const position = `${sectionEq * -100}%`;
+
+    display.css({
+        transform: `translate(0, ${position})`,
+        "-webkit-transform": `translate(0, ${position})`
+    });
+
+    inScroll = true;
+    setTimeout(() => {
+        inScroll = false;
+        setActiveMenuItem(sectionEq);
+    }, 1300); 
+};
+
+
+$(".arrow__scroll").on("click", e =>{
+    e.preventDefault();
+    scrollToSection("down");
+})
+
+
+$('[data-scroll-to]').on('click', e => {
+    e.preventDefault();
+    const target = parseInt($(e.currentTarget).attr('data-scroll-to'));
+    performTransition(target);
+
+})
+
+
+const setActiveMenuItem = itemEq => {
+    $('.sidescroll__item').eq(itemEq).addClass('sidescroll__item--active').siblings().removeClass('sidescroll__item--active')
+} 
+
+
+if (isMobile) {
+    $(document).swipe({
+      swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+    
+        const scrollDirection = direction === 'down' ? 'up' : 'down';
+        
+        scrollToSection(scrollDirection);
+      }
+    });
+  }
+
+
+
+

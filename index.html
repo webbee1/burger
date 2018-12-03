@@ -11,8 +11,8 @@
 <body>
 
  <div class="wrapper">  
-  
- <section class="section about" id="section about">
+  <div class="maincontent"> 
+ <section class="section about active">
    <div class="container">
         <header class="header">
            
@@ -24,26 +24,26 @@
       
        <nav class="nav">
          <ul class="nav__list">
-           <li class ="nav__item nav__item--active">
-              <a href="#section products" class="nav__link">О нас</a>
+           <li class ="nav__item">
+            <a class="nav__link" href="" data-scroll-to="0">О нас</a>
            </li>
            <li class ="nav__item">
-              <a href="#section slider" class="nav__link">Бургеры</a>
+            <a class="nav__link" href="" data-scroll-to="1">Бургеры</a>
            </li>
            <li class ="nav__item">
-              <a href="#section team" class="nav__link">Команда</a>
+            <a class="nav__link" href="" data-scroll-to="2">Команда</a>
            </li>
            <li class ="nav__item">
-              <a href="#section carte" class="nav__link">Меню</a>
+            <a class="nav__link" href="" data-scroll-to="3">Меню</a>
            </li>
            <li class ="nav__item">
-              <a href="#section review" class="nav__link">Отзывы</a>
+            <a class="nav__link" href="" data-scroll-to="4">Отзывы</a>
            </li>
            <li class ="nav__item">
-              <a href="#section video" class="nav__link">Как мы работаем</a>
+            <a class="nav__link" href="" data-scroll-to="5">Как мы работаем</a>
            </li>
            <li class ="nav__item">
-              <a href="#section contacts" class="nav__link">Контакты</a>
+            <a class="nav__link" href="" data-scroll-to="7">Контакты</a>
            </li>
           
          </ul>
@@ -53,35 +53,35 @@
        </nav>
        <div class="order">
          <a href="#section delivery" class="del">
-       <button type="button" class ="btn"  value= "order">Заказать</button></a>
+       <button type="button" class ="btn" href ="#" data-scroll-to="7"  value= "order">Заказать</button></a>
 
-       <div class="hamburger">
+       <div class="hamburger" id ="fullscreen">
           <ul class="hamburger__list">
             <li class="hamburger__item">
-              <a href="#section products" class="hamburger__link">О нас</a>
+              <a class="hamburger__link" href="#" data-scroll-to="1">О нас</a>
             </li>
             <li class="hamburger__item">
-              <a href="#section slider" class="hamburger__link">Бургеры</a>
+              <a  class="hamburger__link" href="#" data-scroll-to="2">Бургеры</a>
             </li>
             <li class="hamburger__item">
-              <a href="#section team" class="hamburger__link">Команда</a>
+              <a  class="hamburger__link" href="#" data-scroll-to="3">Команда</a>
             </li>
             <li class="hamburger__item">
-              <a href="#section carte" class="hamburger__link">Меню</a>
+              <a  class="hamburger__link" href="#" data-scroll-to="4">Меню</a>
             </li>
             <li class="hamburger__item">
-              <a href="#section review" class="hamburger__link">Отзывы</a>
+              <a  class="hamburger__link" href="#" data-scroll-to="5">Отзывы</a>
             </li>
             <li class="hamburger__item">
-              <a href="#section video" class="hamburger__link">Как мы работаем</a>
+              <a  class="hamburger__link" href="#" data-scroll-to="6">Как мы работаем</a>
             </li>
             <li class="hamburger__item">
-              <a href="#section contacts" class="hamburger__link">Контакты</a>
+              <a  class="hamburger__link" href="#" data-scroll-to="8">Контакты</a>
             </li>
           </ul>
         
       </div>
-      <div class="hamburger__btn">
+      <div class="hamburger__btn" id = "hamburgermenu">
         <span class="line"></span>
         <span class="line"></span>
         <span class="line"></span>
@@ -107,7 +107,7 @@
 </div>
 
 <div class="arrow">
-  <a href="#section products">
+  <a href="#" data-scroll-to="1">
   <svg  class ="arrow__scroll" src="images/icons/arrow-scroll.svg" alt="arrow">
     <use xlink:href="images/sprite.svg#arrow-scroll"></use>
   </svg>
@@ -115,7 +115,7 @@
 </div>
 </section>
 
-<section class="section products" id="section products">
+<section class="section products">
 <div class="container">
   <h2 class ="section__title">Мы лучшие</h2>
   <ul class="products__list">
@@ -164,7 +164,7 @@
 </div>
 </section>
 
-<section class="section slider" id="section slider">
+<section class="section slider">
   
   <div class="slider__content">
 
@@ -269,7 +269,7 @@
                   <div class="slider__order">
                     <div class="slider__price">  500
                     <span class="rub"> рублей </span></div> 
-                    <a class="btn" href="#section delivery">Заказать</a>
+                    <a class="btn" href ="#" data-scroll-to="7" >Заказать</a>
                 </div>
                 </div>
               </div>
@@ -367,7 +367,7 @@
               <div class="slider__order">
                 <div class="slider__price">  500
                 <span class="rub"> рублей </span></div> 
-                <a class="btn" href="#section delivery">Заказать</a>
+                <a class="btn"  href ="#" data-scroll-to="7" >Заказать</a>
             </div>
             </div>
           </div>
@@ -465,7 +465,7 @@
                 <div class="slider__order">
                   <div class="slider__price">  500
                   <span class="rub"> рублей </span></div> 
-                  <a class="btn" href="#section delivery">Заказать</a>
+                  <a class="btn" href ="#" data-scroll-to="7" >Заказать</a>
               </div>
               </div>
             </div>
@@ -560,7 +560,7 @@
                   <div class="slider__order">
                     <div class="slider__price">  500
                     <span class="rub"> рублей </span></div> 
-                    <a class="btn" href="#section delivery">Заказать</a>
+                    <a class="btn"  href ="#" data-scroll-to="7" >Заказать</a>
                 </div>
                 </div>
               </div>
@@ -657,7 +657,7 @@
                     <div class="slider__order">
                       <div class="slider__price">  500
                       <span class="rub"> рублей </span></div> 
-                    <a class="btn" href="#section delivery">Заказать</a>
+                    <a class="btn" href ="#" data-scroll-to="7" >Заказать</a>
                   </div>
                   </div>
                 </div>
@@ -676,7 +676,7 @@
 
 </section>
 
-<section class="section team" id="section team">
+<section class="section team">
 <div class="team__desc">
   <div class="team__container">
     <h2 class="section__title section__title--orange">команда</h2>  
@@ -750,27 +750,25 @@
 </div>
 </section>
 
-<section class="section video" id="section video">
+<section class="section video">
   <div class="container">
   <h2 class="section__title section__title--black">как мы работаем</h2>
   <div class="videowrap">
     <div class="videoplayer">
-    <video id="video" src=" http://webbee.eu/media/burger.mp4" width = "660" ></video>
+    <video id="video" src=" http://webbee.eu/media/burgers.mp4" width = "660" ></video>
     <div class="video__controls">
       <div class="video__toolbar">
-      <input type="image" src="images/icons/sound.svg" class="video__toolbar-play">
-        <input type="image" src = "images/icons/play.svg#play" class="video__btn" value = "playOrPause" onClick = "playPauseVideo()">
-          <div class="video__toolbar-track"> </div>
+      <input type="image" src="images/icons/sound.svg" class="video__toolbar-play" id='play-pause'>
+        <input type="image" src = "images/icons/play.svg#play" class="video__btn">
+            <input type = 'range' id= "bar" value='0'class="video__toolbar-track">
             <div class="video__toolbar-sound">
         <input type="image" src ="images/icons/volume.svg" class="toolbar-sound">
             </div>
-            <div class="video__toolbar-track video__toolbar-track--sound"></div>
-        <input type="image" src = "images/icons/fullscreen.svg" class="video__fullscreen" onClick = "fullScreen()" 
-      value = "fullScreen" >
+                <input type = 'range' id= "mute" min='0' max='1' step = '0.001' value='1' class="video__toolbar-track video__toolbar-track--sound" >
+        <input type="image" src = "images/icons/fullscreen.svg" class="video__fullscreen">
    
     </div>
   </div>
-
   </div>
   </div>
   </div>
@@ -840,7 +838,7 @@
 
 </section>
 
-<section class="section review" id="section review">
+<section class="section review">
      
   <ul class="review__list">
     <li class="review__item">
@@ -984,7 +982,7 @@
 
 </section>
 
-<section class="section delivery" id="section delivery">
+<section class="section delivery">
 <div class="container">
   <h2 class="section__title section__title--orange delivery__title">Закажите доставку</h2>
   
@@ -1080,7 +1078,7 @@
 
 </section>
 
-<section class="section contacts" id="section contacts">
+<section class="section contacts">
   <div id="map" style="width: 100%; height: 100%"></div>
 
 
@@ -1131,40 +1129,48 @@
 </div>
 </section>
 
+</div>
 <!-- scroll -->
 <div class="sidescroll">
   <ul class="sidescroll__list">
-    <li class="sidescroll__item sidescroll__item--active">
-        <a href="#section about" class="sidescroll__link sidescroll--active"></a>
+    <li class="sidescroll__item">
+        <a  class="sidescroll__link sidescroll--active" href="#"data-scroll-to="0"></a>
     </li>
     <li class="sidescroll__item">
-        <a href="#section products" class="sidescroll__link"></a>
+        <a class="sidescroll__link" href="#" data-scroll-to="1"></a>
     </li>
     <li class="sidescroll__item">
-        <a href="#section slider" class="sidescroll__link"></a>
+        <a class="sidescroll__link" href="#" data-scroll-to="2"></a>
     </li>
     <li class="sidescroll__item">
-        <a href="#section team" class="sidescroll__link"></a>
+        <a class="sidescroll__link" href ="#" data-scroll-to="3"></a>
     </li>
     <li class="sidescroll__item">
-        <a href="#section carte" class="sidescroll__link"></a>
+        <a   class="sidescroll__link" href="#" data-scroll-to="4"></a>
     </li>
     <li class="sidescroll__item">
-        <a href="#section review" class="sidescroll__link"></a>
+        <a   class="sidescroll__link" href="#" data-scroll-to="5"></a>
     </li>
     <li class="sidescroll__item">
-        <a href="#section video" class="sidescroll__link"></a>
+        <a   class="sidescroll__link" href="#" data-scroll-to="6"></a>
     </li>
     <li class="sidescroll__item">
-        <a href="#section contacts" class="sidescroll__link"></a>
+        <a   class="sidescroll__link" href="#" data-scroll-to="7"></a>
     </li>
+    <li class="sidescroll__item">
+      <a   class="sidescroll__link" href="#" data-scroll-to="8"></a>
+  </li>
     
   </ul>
 </div>
 
 
-
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.3.6/mobile-detect.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
+<!-- <script src ="js/fullpage.js"></script> -->
 <script src="js/script.js"></script>
  
 </body>
