@@ -42,13 +42,11 @@
     });
 
     //slider
-
     const left = document.querySelector("#left");
     const right = document.querySelector("#right");
     const slider__all = document.querySelector("#show");
     const computed = getComputedStyle(slider__all);
     let currentRight = 0;
-
     //при обработчике клика на кнопку делаем preventDefault, 
     //чтоб не подбрасывало страницу вверх
     right.addEventListener("click", function (e) {
@@ -88,12 +86,10 @@
     });
 
     //modal__review
-
     const review = document.querySelector('.review');
     const overlay = document.querySelector('.overlay');
     const popupText = document.querySelector('.popup__text');
     const closeBtn = document.querySelector('.close__button');
-
     review.addEventListener('click', e => {
       let element = e.target;
 
@@ -103,7 +99,6 @@
         overlay.style.display = 'block';
       }
     });
-
     document.addEventListener('keyup', e => {
       let keyNumb = e.keyCode;
       if (keyNumb === 27) {
@@ -111,7 +106,6 @@
         event.preventDefault();
       }
     });
-
     closeBtn.addEventListener("click", e => {
       event.preventDefault();
       overlay.style.display = 'none';
@@ -119,19 +113,16 @@
 
 
     //accordeon_team
-
     var accordeon = document.getElementById('accordeon');
     //открыть\закрыть элемент списка
-    function openClose(e) {
-     
+    function openClose(e) {    
       let target = e.target.closest('li')
       //есть ли активный элемент
       if (target.classList.contains('active')) {
         //убрать активный класс
-        target.classList.remove('active')
+        target.classList.remove('.active')
       } else {
         let active = document.querySelector('.active')
-
         if (active) {
           //удалим класс
           active.classList.remove('active')
@@ -146,13 +137,11 @@
     //accordeon_carte
     var accordeon = document.getElementById('acco');
     function openClose(e) {
-
       let target = e.target.closest('li')
       if (target.classList.contains('active')) {
-        target.classList.remove('active')
+        target.classList.remove('.active')
       } else {
         let active = document.querySelector('.active')
-
         if (active) {
           active.classList.remove('active')
           target.classList.add('active')
@@ -168,7 +157,6 @@
     const popup = document.querySelector('.popup');
     const close = document.querySelector('.close');
     const text = document.querySelector('.text');
-
     orderButton.addEventListener('click', () => {
     event.preventDefault();
 
@@ -206,8 +194,6 @@
         return valid;
       }
     });
-  
-
     //выводим инфо об ошибке в соседний элемент
       function validateField(field) {
       field.nextElementSibling.textContent = field.validationMessage;
@@ -220,43 +206,12 @@
       return field.checkValidity();
     };
 
-
-// Video
-// var video = document.getElementById("video");
-
-// // Buttons
-// var playButton = document.getElementById("play-pause");
-// var muteButton = document.getElementById("mute");
-// var fullScreenButton = document.getElementById("full-screen");
-
-// // Event listener for the play/pause button
-// playButton.addEventListener("click", function() {
-//   if (video.paused == true) {
-   
-//     video.play();
-
-//       document.getElementById("play").classList.add('fa-pause');
-
-//     video.pause();
-
-//     document.getElementById("play").classList.remove('fa-pause');
-
-//     document.getElementById("play").classList.add('fa-play');
-
-//   }
-// });
-
-
-
 //one page scroll
-
-
 const sections = $(".section");
 const display = $(".maincontent");
 let inScroll = false;
 const mobileDetect = new MobileDetect(window.navigator.userAgent);
 const isMobile = mobileDetect.mobile();
-
 
 $(document).on({
     wheel: e => {
@@ -264,7 +219,6 @@ $(document).on({
         const direction = deltaY > 0 ? "down" : "up";
         scrollToSection(direction);
     },
-
     keydown: e => {
         switch (e.keyCode) {
         case 40:
@@ -276,13 +230,10 @@ $(document).on({
             break;
         }
     },
-
     touchmove: e => e.preventDefault()
 
     // touchstart/hend/move 
 });
-
-
 const scrollToSection = direction => {
     const activeSection = sections.filter(".active");
     const nextSection = activeSection.next();
@@ -298,14 +249,10 @@ const scrollToSection = direction => {
         if (nextSection.next().length === 0) {
             $(".arrow__scroll").css("display", "none"); 
         }
-
     }
-
 }
-
 const performTransition = sectionEq => {
     if (inScroll) return;
-
     sections
         .eq(sectionEq)
         .addClass("active")
@@ -313,39 +260,29 @@ const performTransition = sectionEq => {
         .removeClass("active");
 
     const position = `${sectionEq * -100}%`;
-
     display.css({
         transform: `translate(0, ${position})`,
         "-webkit-transform": `translate(0, ${position})`
     });
-
     inScroll = true;
     setTimeout(() => {
         inScroll = false;
         setActiveMenuItem(sectionEq);
     }, 1300); 
 };
-
-
 $(".arrow__scroll").on("click", e =>{
     e.preventDefault();
     scrollToSection("down");
 })
-
-
 $('[data-scroll-to]').on('click', e => {
     e.preventDefault();
     const target = parseInt($(e.currentTarget).attr('data-scroll-to'));
     performTransition(target);
-
 })
-
 
 const setActiveMenuItem = itemEq => {
     $('.sidescroll__item').eq(itemEq).addClass('sidescroll__item--active').siblings().removeClass('sidescroll__item--active')
 } 
-
-
 if (isMobile) {
     $(document).swipe({
       swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
@@ -358,5 +295,49 @@ if (isMobile) {
   }
 
 
+ //video
 
+ document.addEventListener('DOMContentLoaded', () => {
+  const video = document.querySelector('vid');
+  const videoPlayButton = document.querySelector('.vid__play');
+  const videoProgressBar = document.querySelector('#vid__progress-bar');
+  const videoMute = document.querySelector('.vid__mute');
+  const videoMuteBar = document.querySelector('#vid__mute-bar');
+ 
+
+  videoPlayButton.addEventListener('click', () => {
+    playToggle();
+  });
+
+  vid.addEventListener('ended', () => {
+    videoEnd();
+  });
+
+  vid.addEventListener('timeupdate', () => {
+    videoChange();
+  });
+
+  function playToggle() {
+    if(vid.paused) {
+      vid.play();
+      vidPlayButton.classList.remove('vid__play_paused');
+      vidPlayButton.classList.add('vid__play_played');
+     
+    } else {
+      vid.pause();
+      vidPlayButton.classList.remove('vid__play_played');
+      vidPlayButton.classList.add('vid__play_paused');
+     
+    }
+  }
+
+
+
+  function vidEnd() {
+    
+    vidPlayButton.classList.remove('vid__play_paused', 'vid__play_played');
+    vidPlayButton.classList.add('vid__play_ended');
+   
+  }
+});
 

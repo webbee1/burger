@@ -6,6 +6,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import url(d:\Loftschool\Loft_2\burger\burger\css\_misk\fullpage.css);
 html {
   line-height: 1.15;
   /* 1 */
@@ -441,7 +442,6 @@ table {
   height: 100%;
   -webkit-transition: 1s;
   transition: 1s;
-  will-change: transform;
 }
 
 @font-face {
@@ -1081,14 +1081,7 @@ table {
 .sidescroll .sidescroll__item--active {
   width: 1.21429rem;
   height: 1.21429rem;
-  border: 0.07143rem solid white;
-  border-radius: 100%;
-}
-
-.sidescroll .sidescroll__item.active {
-  width: 1.21429rem;
-  height: 1.21429rem;
-  border: 0.07143rem solid white;
+  border: 0.07143rem solid #f5ebe9;
   border-radius: 100%;
 }
 
@@ -2007,8 +2000,6 @@ span.rub {
 
 .team__container {
   width: 100%;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
 }
 
 .team__container__item {
@@ -2105,8 +2096,6 @@ span.rub {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -webkit-transition: all 0.8s;
-  transition: all 0.8s;
   display: none;
   margin: 4% 0;
   font-family: 'ubuntulight';
@@ -2135,8 +2124,6 @@ span.rub {
 
 .team__item.active .team__trigger {
   color: #f9b43b;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
 }
 
 .team__photo {
@@ -2326,9 +2313,18 @@ span.rub {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.videowrap {
+.vid__window {
+  height: 405px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2340,56 +2336,14 @@ span.rub {
           justify-content: center;
 }
 
-.videoplayer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 660px;
-  height: 405px;
-}
-
-.video__controls {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
+.vid__controls {
+  z-index: 300;
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
   background-color: #2f3234;
-}
-
-.video__toolbar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 0 15px;
-}
-
-.video__btn {
-  width: 15%;
-  height: 15%;
-  position: absolute;
-  left: 45%;
-  top: 50%;
-}
-
-.video__fullscreen {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 16px;
-  height: 20px;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-}
-
-.video__toolbar-track {
-  width: 65%;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2397,74 +2351,69 @@ span.rub {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0 30px;
-  -webkit-box-flex: 2;
-      -ms-flex-positive: 2;
-          flex-grow: 2;
-  height: 4px;
-  background: #5a5a5a;
-  border-radius: 1px;
 }
 
-.video__toolbar-button {
-  display: block;
-  width: 14px;
-  height: 14px;
-  background-color: #5a5a5a;
-  border-radius: 100%;
-  top: 50%;
-  left: 0%;
-  will-change: left;
-  -webkit-transition: all .5s;
-  transition: all .5s;
+.vid__play {
+  height: 40px;
+  text-align: center;
+  cursor: pointer;
+  width: 35px;
 }
 
-.video__toolbar-track--sound {
-  width: 30%;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  will-change: right;
-  margin-left: 0px;
-}
-
-.video__toolbar-play {
-  width: 30px;
-  height: 35px;
-  fill: #5a5a5a;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+.vid__progress-bar {
+  width: 60%;
+  padding: 1%;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  vertical-align: middle;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-right: 5%;
 }
 
-.toolbar-sound {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+@media (max-width: 768px) {
+  .vid__progress-bar {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+.vid__mute-bar {
+  width: 60px;
+}
+
+@media (max-width: 768px) {
+  .vid__mute-bar {
+    display: none;
+  }
+}
+
+.vid__mute {
+  height: 35px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-right: 0;
+  cursor: pointer;
   width: 35px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+}
+
+@media (max-width: 768px) {
+  .vid__mute {
+    display: none;
+  }
 }
 
 input[type=range] {
   -webkit-appearance: none;
   background: transparent;
   margin: 0 5px;
+  vertical-align: middle;
 }
 
 input[type=range]:focus {

@@ -753,24 +753,31 @@
 <section class="section video">
   <div class="container">
   <h2 class="section__title section__title--black">как мы работаем</h2>
-  <div class="videowrap">
-    <div class="videoplayer">
-    <video id="video" src=" http://webbee.eu/media/burgers.mp4" width = "660" ></video>
-    <div class="video__controls">
-      <div class="video__toolbar">
-      <input type="image" src="images/icons/sound.svg" class="video__toolbar-play" id='play-pause'>
-        <input type="image" src = "images/icons/play.svg#play" class="video__btn">
-            <input type = 'range' id= "bar" value='0'class="video__toolbar-track">
-            <div class="video__toolbar-sound">
-        <input type="image" src ="images/icons/volume.svg" class="toolbar-sound">
-            </div>
-                <input type = 'range' id= "mute" min='0' max='1' step = '0.001' value='1' class="video__toolbar-track video__toolbar-track--sound" >
-        <input type="image" src = "images/icons/fullscreen.svg" class="video__fullscreen">
-   
+  <div class="vid">
+										
+    <video id="vid"  class="vid__window">
+      <source src='http://webbee.eu/media/burgers.mp4' type="video/mp4" width="660" height:'405'>
+     
+    </video>
+
+    <div class="vid__overlay">
+      <!-- <img src = "images/icons/play.svg#play" alt="play" clas="overlay__play"> -->
     </div>
-  </div>
-  </div>
-  </div>
+
+    <div class="vid__controls">
+      <div class="vid__play vid__play_paused">
+          <img src = "images/icons/sound.svg#sound" alt="sound" class="vid__play">
+      </div>
+      <div class="vid__progress-bar">
+        <input id="vid__progress-bar" type="range" min="0" max="100" step="1" value="0">
+      </div>
+      <div class="vid__mute vid__mute_high">
+          <img src = "images/icons/volume.svg" alt="volume" class="vid__play">
+      </div>
+      <div class="vid__mute-bar">
+        <input id="vid__mute-bar" type="range" min="0" max="1" step="0.1" value="1">
+      </div>
+    </div>
   </div>
 
 </section>
@@ -1133,7 +1140,7 @@
 <!-- scroll -->
 <div class="sidescroll">
   <ul class="sidescroll__list">
-    <li class="sidescroll__item">
+    <li class="sidescroll__item sidescroll__item--active ">
         <a  class="sidescroll__link sidescroll--active" href="#"data-scroll-to="0"></a>
     </li>
     <li class="sidescroll__item">
@@ -1170,7 +1177,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.3.6/mobile-detect.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
-<!-- <script src ="js/fullpage.js"></script> -->
+<script src ="js/fullpage.js"></script>
 <script src="js/script.js"></script>
  
 </body>
