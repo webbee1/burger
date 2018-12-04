@@ -6,7 +6,6 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url(d:\Loftschool\Loft_2\burger\burger\css\_misk\fullpage.css);
 html {
   line-height: 1.15;
   /* 1 */
@@ -442,6 +441,7 @@ table {
   height: 100%;
   -webkit-transition: 1s;
   transition: 1s;
+  will-change: transform;
 }
 
 @font-face {
@@ -2000,6 +2000,9 @@ span.rub {
 
 .team__container {
   width: 100%;
+  min-height: 450px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 .team__container__item {
@@ -2096,6 +2099,8 @@ span.rub {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
   display: none;
   margin: 4% 0;
   font-family: 'ubuntulight';
@@ -2124,6 +2129,8 @@ span.rub {
 
 .team__item.active .team__trigger {
   color: #f9b43b;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .team__photo {
@@ -2319,6 +2326,26 @@ span.rub {
           flex-direction: column;
 }
 
+#vid {
+  background: black;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  #vid {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) and (max-width: 480px) {
+  #vid {
+    max-width: 450px;
+  }
+}
+
 .vid__window {
   height: 405px;
   -webkit-box-orient: vertical;
@@ -2353,11 +2380,19 @@ span.rub {
           align-items: center;
 }
 
+.vid__controls:hover {
+  background-color: #242424;
+}
+
 .vid__play {
-  height: 40px;
+  line-height: 10px;
   text-align: center;
   cursor: pointer;
   width: 35px;
+}
+
+.vid__play:hover {
+  background-color: #000;
 }
 
 .vid__progress-bar {
@@ -2401,12 +2436,6 @@ span.rub {
   margin-right: 0;
   cursor: pointer;
   width: 35px;
-}
-
-@media (max-width: 768px) {
-  .vid__mute {
-    display: none;
-  }
 }
 
 input[type=range] {

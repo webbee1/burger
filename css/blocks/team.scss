@@ -28,7 +28,7 @@
 	// position: absolute;
 	width: 100%;
 	// min-height:450px;
-	// transition: all 0.4s;
+	transition: all 0.4s;
 // padding:3%;
 
 	&__item {
@@ -89,7 +89,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
-	// transition: all 0.8s;
+ transition: all 0.8s;
 	display: none;
 	margin:4% 0;
 	font-family: 'ubuntulight';
@@ -115,7 +115,7 @@
 
 	.team__item.active .team__trigger{
 		color: $yellow;	
-		// transition: 0.5s;
+		transition: 0.5s;
 		
 	}
 	

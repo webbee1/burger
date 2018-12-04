@@ -113,7 +113,7 @@
 
 
     //accordeon_team
-    var accordeon = document.getElementById('accordeon');
+    var accordeon = document.getElementById('team');
     //открыть\закрыть элемент списка
     function openClose(e) {    
       let target = e.target.closest('li')
@@ -132,7 +132,8 @@
         target.classList.add('active')
       }
     }
-    accordeon.addEventListener('click', openClose);
+    team.addEventListener('click', openClose);
+    
    
     //accordeon_carte
     var accordeon = document.getElementById('acco');
@@ -206,6 +207,41 @@
       return field.checkValidity();
     };
 
+
+
+ //video
+
+ document.addEventListener('DOMContentLoaded', () => {
+  const video = document.querySelector('vid');
+  const videoPlayButton = document.querySelector('.vid__play');
+  const videoProgressBar = document.querySelector('#vid__progress-bar');
+  const videoMute = document.querySelector('.vid__mute');
+  const videoMuteBar = document.querySelector('#vid__mute-bar');
+ 
+
+  videoPlayButton.addEventListener('click', () => {
+    playToggle();
+  });
+
+
+  function playToggle() {
+    if(vid.paused) {
+      vid.play();
+      videoPlayButton.classList.remove('vid__play_paused');
+      videoPlayButton.classList.add('vid__play_played');
+     
+    } else {
+      vid.pause();
+      videoPlayButton.classList.remove('vid__play_played');
+      videoPlayButton.classList.add('vid__play_paused');
+     
+    }
+  }
+
+});
+
+
+   
 //one page scroll
 const sections = $(".section");
 const display = $(".maincontent");
@@ -293,51 +329,3 @@ if (isMobile) {
       }
     });
   }
-
-
- //video
-
- document.addEventListener('DOMContentLoaded', () => {
-  const video = document.querySelector('vid');
-  const videoPlayButton = document.querySelector('.vid__play');
-  const videoProgressBar = document.querySelector('#vid__progress-bar');
-  const videoMute = document.querySelector('.vid__mute');
-  const videoMuteBar = document.querySelector('#vid__mute-bar');
- 
-
-  videoPlayButton.addEventListener('click', () => {
-    playToggle();
-  });
-
-  vid.addEventListener('ended', () => {
-    videoEnd();
-  });
-
-  vid.addEventListener('timeupdate', () => {
-    videoChange();
-  });
-
-  function playToggle() {
-    if(vid.paused) {
-      vid.play();
-      vidPlayButton.classList.remove('vid__play_paused');
-      vidPlayButton.classList.add('vid__play_played');
-     
-    } else {
-      vid.pause();
-      vidPlayButton.classList.remove('vid__play_played');
-      vidPlayButton.classList.add('vid__play_paused');
-     
-    }
-  }
-
-
-
-  function vidEnd() {
-    
-    vidPlayButton.classList.remove('vid__play_paused', 'vid__play_played');
-    vidPlayButton.classList.add('vid__play_ended');
-   
-  }
-});
-
