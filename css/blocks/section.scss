@@ -4,11 +4,11 @@
  min-height:rem(650px);
   position: relative;
   display: flex;
-  overflow: hidden;
+  // overflow: hidden;
   @include tablets{
     justify-content: flex-start;
-    // min-height: initial;
-    height:100%;
+    min-height: initial;
+    // height:100%;
   }
 
 }

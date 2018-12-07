@@ -4,37 +4,41 @@
   background-position: center center;
   display: flex;
   align-items: center;
-  flex-direction: column;
+}
+.vid{
+  max-width:660px;
+  position: relative;
+  height:auto;
+  @include phones {
+    max-width:450px;
+    height:auto;
+    padding-bottom:0;
+   }
 }
 #vid{
-  background:black;
   width:100%;
-  @include tablets {
-		justify-content:center;
-    padding:20px;
-    @include phones {
-     max-width:450px;
-    }
-	}
-}
-.vid__window {
-  height: 405px;
   flex-direction: column;
   display: flex;
   align-items: center;
   justify-content: center;
-
+  @include tablets {
+		justify-content:center;
+   
+    
+	}
 }
+
 
 .vid__controls {
   z-index: 300;
-  width: 100%;
+  max-width: 100%;
+  margin:auto;
   left: 0;
   right: 0;
   bottom: 0;
+  padding:0 10px;
   background-size: cover;
   background-color: $charcoal;
-  position: relative;
   display: flex;
   align-items: center;
 

@@ -113,16 +113,19 @@
 
 
     //accordeon_team
-    var accordeon = document.getElementById('team');
+
+    var accordeon = document.getElementById('accordeon');
     //открыть\закрыть элемент списка
-    function openClose(e) {    
+    function openClose(e) {
+
       let target = e.target.closest('li')
       //есть ли активный элемент
-      if (target.classList.contains('active')) {
+      if (target.classList.contains('.active')) {
         //убрать активный класс
-        target.classList.remove('.active')
+        target.classList.remove('active')
       } else {
         let active = document.querySelector('.active')
+
         if (active) {
           //удалим класс
           active.classList.remove('active')
@@ -132,17 +135,18 @@
         target.classList.add('active')
       }
     }
-    team.addEventListener('click', openClose);
-    
+    accordeon.addEventListener('click', openClose);
    
     //accordeon_carte
     var accordeon = document.getElementById('acco');
     function openClose(e) {
+
       let target = e.target.closest('li')
       if (target.classList.contains('active')) {
-        target.classList.remove('.active')
+        target.classList.remove('active')
       } else {
         let active = document.querySelector('.active')
+
         if (active) {
           active.classList.remove('active')
           target.classList.add('active')
@@ -151,62 +155,6 @@
       }
     }
     accordeon.addEventListener('click', openClose);
-
-    //form
-    const myForm = document.querySelector('#myForm');
-    const orderButton = document.querySelector('#orderButton');
-    const popup = document.querySelector('.popup');
-    const close = document.querySelector('.close');
-    const text = document.querySelector('.text');
-    orderButton.addEventListener('click', () => {
-    event.preventDefault();
-
-      //отправка данных на сервер
-      const data = new FormData(myForm);
-      data.append('name', myForm.elements.name.value);
-      data.append('phone', myForm.elements.phone.value);
-      data.append('comment', myForm.elements.comment.value);
-      data.append('to', 'hell.web@yandex.ru');
-
-      const xhr = new XMLHttpRequest();
-      xhr.responseType = 'json';
-      // xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail/fail');
-      xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
-      xhr.send(data);
-
-      function validateField(field) {
-      field.textContent = field.validationMessage;
-      return field.checkValidity();
-      }
-      
-      //три проверки на валидность
-      function validateForm(myForm) {
-        let valid = true;
-
-        if (!validateField(myForm.elements.name)) {
-          valid = false;
-        }
-        if (!validateField(myForm.elements.phone)) {
-          valid = false;
-        }
-        if (!validateField(myForm.elements.comment)) {
-          valid = false;
-        }
-        return valid;
-      }
-    });
-    //выводим инфо об ошибке в соседний элемент
-      function validateField(field) {
-      field.nextElementSibling.textContent = field.validationMessage;
-      
-      if (!field.checkValidity()) {
-        field.nextElementSibling.classList.add('error');
-      } else {
-        field.nextElementSibling.classList.remove('error');
-      }
-      return field.checkValidity();
-    };
-
 
 
  //video
@@ -242,90 +190,90 @@
 
 
    
-//one page scroll
-const sections = $(".section");
-const display = $(".maincontent");
-let inScroll = false;
-const mobileDetect = new MobileDetect(window.navigator.userAgent);
-const isMobile = mobileDetect.mobile();
+// //one page scroll
+// const sections = $(".section");
+// const display = $(".maincontent");
+// let inScroll = false;
+// const mobileDetect = new MobileDetect(window.navigator.userAgent);
+// const isMobile = mobileDetect.mobile();
 
-$(document).on({
-    wheel: e => {
-        const deltaY = e.originalEvent.deltaY;
-        const direction = deltaY > 0 ? "down" : "up";
-        scrollToSection(direction);
-    },
-    keydown: e => {
-        switch (e.keyCode) {
-        case 40:
-            scrollToSection("down");
-            break;
+// $(document).on({
+//     wheel: e => {
+//         const deltaY = e.originalEvent.deltaY;
+//         const direction = deltaY > 0 ? "down" : "up";
+//         scrollToSection(direction);
+//     },
+//     keydown: e => {
+//         switch (e.keyCode) {
+//         case 40:
+//             scrollToSection("down");
+//             break;
 
-        case 38:
-            scrollToSection("up");
-            break;
-        }
-    },
-    touchmove: e => e.preventDefault()
+//         case 38:
+//             scrollToSection("up");
+//             break;
+//         }
+//     },
+//     touchmove: e => e.preventDefault()
 
-    // touchstart/hend/move 
-});
-const scrollToSection = direction => {
-    const activeSection = sections.filter(".active");
-    const nextSection = activeSection.next();
-    const prevSection = activeSection.prev();
+//     // touchstart/hend/move 
+// });
+// const scrollToSection = direction => {
+//     const activeSection = sections.filter(".active");
+//     const nextSection = activeSection.next();
+//     const prevSection = activeSection.prev();
 
-    if (direction === "up" && prevSection.length) {
-        performTransition(prevSection.index());
-    }
+//     if (direction === "up" && prevSection.length) {
+//         performTransition(prevSection.index());
+//     }
 
-    if (direction === "down" && nextSection.length) {
-        performTransition(nextSection.index());
+//     if (direction === "down" && nextSection.length) {
+//         performTransition(nextSection.index());
         
-        if (nextSection.next().length === 0) {
-            $(".arrow__scroll").css("display", "none"); 
-        }
-    }
-}
-const performTransition = sectionEq => {
-    if (inScroll) return;
-    sections
-        .eq(sectionEq)
-        .addClass("active")
-        .siblings()
-        .removeClass("active");
+//         if (nextSection.next().length === 0) {
+//             $(".arrow__scroll").css("display", "none"); 
+//         }
+//     }
+// }
+// const performTransition = sectionEq => {
+//     if (inScroll) return;
+//     sections
+//         .eq(sectionEq)
+//         .addClass("active")
+//         .siblings()
+//         .removeClass("active");
 
-    const position = `${sectionEq * -100}%`;
-    display.css({
-        transform: `translate(0, ${position})`,
-        "-webkit-transform": `translate(0, ${position})`
-    });
-    inScroll = true;
-    setTimeout(() => {
-        inScroll = false;
-        setActiveMenuItem(sectionEq);
-    }, 1300); 
-};
-$(".arrow__scroll").on("click", e =>{
-    e.preventDefault();
-    scrollToSection("down");
-})
-$('[data-scroll-to]').on('click', e => {
-    e.preventDefault();
-    const target = parseInt($(e.currentTarget).attr('data-scroll-to'));
-    performTransition(target);
-})
+//     const position = `${sectionEq * -100}%`;
+//     display.css({
+//         transform: `translate(0, ${position})`,
+//         "-webkit-transform": `translate(0, ${position})`
+//     });
+//     inScroll = true;
+//     setTimeout(() => {
+//         inScroll = false;
+//         setActiveMenuItem(sectionEq);
+//     }, 1300); 
+// };
+// $(".arrow__scroll").on("click", e =>{
+//     e.preventDefault();
+//     scrollToSection("down");
+// })
+// $('[data-scroll-to]').on('click', e => {
+//     e.preventDefault();
+//     const target = parseInt($(e.currentTarget).attr('data-scroll-to'));
+//     performTransition(target);
+// })
 
-const setActiveMenuItem = itemEq => {
-    $('.sidescroll__item').eq(itemEq).addClass('sidescroll__item--active').siblings().removeClass('sidescroll__item--active')
-} 
-if (isMobile) {
-    $(document).swipe({
-      swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+// const setActiveMenuItem = itemEq => {
+//     $('.sidescroll__item').eq(itemEq).addClass('sidescroll__item--active').siblings().removeClass('sidescroll__item--active')
+// } 
+// if (isMobile) {
+//     $(document).swipe({
+//       swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
     
-        const scrollDirection = direction === 'down' ? 'up' : 'down';
+//         const scrollDirection = direction === 'down' ? 'up' : 'down';
         
-        scrollToSection(scrollDirection);
-      }
-    });
-  }
+//         scrollToSection(scrollDirection);
+//       }
+//     });
+//   }
