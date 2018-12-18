@@ -7,10 +7,12 @@
   display: flex;
   justify-content:center;
   margin:auto;
-  width:65%;
-  padding:0 5%;
+  // width:65%;
+  // padding:0 5%;
   // border:5px solid red;
-
+border:3px solid red;
+width:960px;
+height:500px;
   @include phones {
   margin:auto;
   padding:1%;
@@ -22,7 +24,8 @@
   width:rem(960px);
   overflow:hidden;
   // border:5px solid violet;
-  transition: right 1.3s;
+ 
+  
 }
 
 .slider__all{
@@ -40,7 +43,7 @@
 
 .slider__wrap {
   display: flex;
-  transition: all 1.2s ease-in-out;
+  
   width:rem(960px);
   flex-direction: row;
   align-items: center;
@@ -168,6 +171,8 @@ span.rub {
   top:50%;
   min-width:rem(15px);
   min-height:rem(30px);
+  display:block;
+  cursor:pointer;
   @include phones {
    top:35%;
     }

@@ -1453,8 +1453,9 @@ table {
       -ms-flex-pack: center;
           justify-content: center;
   margin: auto;
-  width: 65%;
-  padding: 0 5%;
+  border: 3px solid red;
+  width: 960px;
+  height: 500px;
 }
 
 @media (max-width: 480px) {
@@ -1470,8 +1471,6 @@ table {
   display: flex;
   width: 68.57143rem;
   overflow: hidden;
-  -webkit-transition: right 1.3s;
-  transition: right 1.3s;
 }
 
 .slider__all {
@@ -1495,8 +1494,6 @@ table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-transition: all 1.2s ease-in-out;
-  transition: all 1.2s ease-in-out;
   width: 68.57143rem;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -1694,6 +1691,8 @@ span.rub {
   top: 50%;
   min-width: 1.07143rem;
   min-height: 2.14286rem;
+  display: block;
+  cursor: pointer;
 }
 
 @media (max-width: 480px) {

@@ -46,44 +46,73 @@
     const right = document.querySelector("#right");
     const slider__all = document.querySelector("#show");
     const computed = getComputedStyle(slider__all);
-    let currentRight = 0;
-    //при обработчике клика на кнопку делаем preventDefault, 
-    //чтоб не подбрасывало страницу вверх
-    right.addEventListener("click", function (e) {
+   
+
+
+    right.addEventListener("click", function(e) {
       e.preventDefault();
-
-      //получаем текущее значение right для выполнения след.шага
-      //на какой позиции находимся?
       let currentRight = parseInt(computed.right);
-
+    
       if (!currentRight) {
         currentRight = 0;
       }
-      //берём текущее значение для свойства right и прибавляем к нему ширину 
-      //и переводим в пиксели
-      //если текущая координата мееньше 3880 - значит ещё не конец слайдов
+      
       if (currentRight < 3840) {
         slider__all.style.right = currentRight + 960 + "px";
-      } else {
-        currentRight = 0;
-        slider__all.style = 0;
       }
     });
-    //добавляем обработчики событий на кнопки 
-    left.addEventListener("click", function (e) {
+    
+    left.addEventListener("click", function(e) {
       e.preventDefault();
       let currentRight = parseInt(computed.right);
+    
       if (!currentRight) {
         currentRight = 0;
       }
-      //зацикливаем слайдер
+    
       if (currentRight > 0) {
         slider__all.style.right = currentRight - 960 + "px";
-      } else {
-        currentRight = 3840;
-        slider__all.style = currentRight + 'px';
       }
     });
+
+    //при обработчике клика на кнопку делаем preventDefault, 
+    //чтоб не подбрасывало страницу вверх
+    // right.addEventListener("click", function (e) {
+    //   e.preventDefault();
+
+    //   //получаем текущее значение right для выполнения след.шага
+    //   //на какой позиции находимся?
+    //   let currentRight = parseInt(computed.right);
+
+    //   if (!currentRight) {
+    //     currentRight = 0;
+    //   }
+    //   //берём текущее значение для свойства right и прибавляем к нему ширину 
+    //   //и переводим в пиксели
+    //   //если текущая координата мееньше 3880 - значит ещё не конец слайдов
+    //   if (currentRight < 3840) {
+    //     slider__all.style.right = currentRight + 960 + "px";
+    //   } else {
+    //     currentRight = 0;
+    //     slider__all.style = 0;
+    //   }
+    // });
+    // //добавляем обработчики событий на кнопки 
+    // left.addEventListener("click", function (e) {
+    //   e.preventDefault();
+    //   let currentRight = parseInt(computed.right);
+    //   if (!currentRight) {
+    //     currentRight = 0;
+    //   }
+    //   //зацикливаем слайдер
+    //   if (currentRight > 0) {
+    //     slider__all.style.right = currentRight - 960 + "px";
+    //   } else {
+    //     currentRight = 3840;
+    //     slider__all.style = currentRight + 'px';
+    //   }
+    // });
+
 
     //modal__review
     const review = document.querySelector('.review');
